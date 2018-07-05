@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 04 - Event Handling</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.w3schools.com/js/js_htmldom_events.asp">W3Schools HTML DOM Events Tutorial</a></li>
+<li><a href="http://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools HTML DOM Event Object Reference</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<ul>
+<li>You&rsquo;ve already used event handling!</li>
+<li>When you specify a function for a button&rsquo;s <strong>onclick</strong> attribute,
+
+<ul>
+<li>the <strong>event</strong> is <strong>onclick</strong></li>
+<li>when the button is clicked, the event if <strong>fired</strong> (a.k.a. <strong>raised</strong>, <strong>triggered</strong>)</li>
+<li>the <strong>event handler</strong> is the function you specify</li>
+</ul></li>
+<li>Review your button click handling code from previous notes/worksheets/etc.</li>
+</ul>
+
+<h2 id="assigning-event-handlers">Assigning Event Handlers</h2>
+
+<ul>
+<li>Three ways to do this
+
+<ul>
+<li>Set attribute in HTML</li>
+<li>Set attribute in JS</li>
+<li>Use <strong>addEventListener</strong> function</li>
+</ul></li>
+</ul>
+
+<h4 id="html">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;foo()&#39;</span>&gt; Method 1  &lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">b2</span>&gt; Method 2 &lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">b3</span>&gt; Method 3 &lt;/<span style="font-weight:bold">button</span>&gt;</code></pre></div>
+<h4 id="js">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> foo(){ console.log(<span style="color:#0ff;font-weight:bold">&#39;foo&#39;</span>) }
+<span style="color:#fff;font-weight:bold">function</span> goo(){ console.log(<span style="color:#0ff;font-weight:bold">&#39;goo&#39;</span>) }
+<span style="color:#fff;font-weight:bold">function</span> hoo(){ console.log(<span style="color:#0ff;font-weight:bold">&#39;hoo&#39;</span>) }
+
+<span style="color:#007f7f">// method 2
+</span><span style="color:#007f7f"></span>b2.onclick = goo;
+
+<span style="color:#007f7f">// method 3
+</span><span style="color:#007f7f"></span>b3.addEventListener( <span style="color:#0ff;font-weight:bold">&#39;click&#39;</span>, hoo );
+</code></pre></div>
+<h2 id="anonymous-functions">Anonymous functions</h2>
+
+<ul>
+<li>You can implement functions directly as event handlers, rather than defining them separately</li>
+<li><strong>Anonymous functions</strong> are not named, nut assigned directly as event handlers</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// method 2 with anonymous function
+</span><span style="color:#007f7f"></span>b2.onclick = <span style="color:#fff;font-weight:bold">function</span>(){
+  console.log( <span style="color:#0ff;font-weight:bold">&#39;goo&#39;</span> )
+}
+
+<span style="color:#007f7f">// method 3 with anonymous function
+</span><span style="color:#007f7f"></span>b3.addEventListener( <span style="color:#0ff;font-weight:bold">&#39;click&#39;</span>, <span style="color:#fff;font-weight:bold">function</span>(){
+  console.log( <span style="color:#0ff;font-weight:bold">&#39;hoo&#39;</span> )
+})  <span style="color:#007f7f">// don&#39;t forget to close the parentheses here!
+</span><span style="color:#007f7f"></span></code></pre></div>
+<h2 id="form-input-change-events">Form input change events</h2>
+
+<h3 id="oninput-and-onchange"><strong>oninput and onchange</strong></h3>
+
+<ul>
+<li>These event handlers will fire when input changes
+
+<ul>
+<li><strong>oninput</strong>: continuously updates as input</li>
+<li><strong>onchange</strong> updates when focus moves away from the input</li>
+</ul></li>
+<li>Note: the keyword **this(( gives you a reference to the element that is being used</li>
+</ul>
+
+<h4 id="html-1">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">oninput</span>=<span style="color:#0ff;font-weight:bold">&#39;updateText(this.value)&#39;</span>/&gt;
+&lt;<span style="font-weight:bold">span</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;result1&#39;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt; &lt;<span style="font-weight:bold">br</span>&gt;
+
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">oninput</span>=<span style="color:#0ff;font-weight:bold">&#39;updateRange(this.value)&#39;</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;range&#39;</span> <span style="color:#007f7f">min</span>=<span style="color:#0ff;font-weight:bold">0</span> <span style="color:#007f7f">max</span>=<span style="color:#0ff;font-weight:bold">5/</span>&gt;
+&lt;<span style="font-weight:bold">span</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;result2&#39;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt;</code></pre></div>
+<h4 id="js-1">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> updateText(val){
+    result1.innerHTML = val
+}
+
+<span style="color:#fff;font-weight:bold">function</span> updateRange(val){
+    result2.innerHTML = val
+}
+</code></pre></div>
+<h4 id="result">Result</h4>
+
+<p><img src="/images/cp1/unit-09/event1.png" alt="" /></p>
+
+<h2 id="file-input-loading-a-picture">File input - loading a picture</h2>
+
+<ul>
+<li>To select a profile picture, use a <code>&lt;input type='file'&gt;</code> element</li>
+<li>Attach an event listener to this input, so you know when the file has been selected</li>
+<li>Use a <code>FileReader</code> object to load the file and display it</li>
+</ul>
+
+<h4 id="html-2">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;file&#39;</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;fopen&#39;</span>&gt;
+&lt;<span style="font-weight:bold">img</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;pic&#39;</span>&gt;</code></pre></div>
+<h4 id="js-2">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">fopen.addEventListener( <span style="color:#0ff;font-weight:bold">&#39;change&#39;</span>, <span style="color:#fff;font-weight:bold">function</span>(e){
+  <span style="color:#fff;font-weight:bold">var</span> reader = <span style="color:#fff;font-weight:bold">new</span> FileReader()
+  reader.onload = <span style="color:#fff;font-weight:bold">function</span>( evt ){
+    pic.src = evt.target.result;
+  }
+  reader.readAsDataURL( fopen.files[<span style="color:#ff0;font-weight:bold">0</span>] )
+})
+</code></pre></div>
+<h2 id="input-devices">Input Devices</h2>
+
+<h3 id="mouse-events">Mouse Events</h3>
+
+<ul>
+<li><a href="https://repl.it/HC2J/1">Demo</a></li>
+<li>Useful mouse events
+
+<ul>
+<li><code>onclick</code></li>
+<li><code>onmouseover</code> / <code>onmouseout</code></li>
+<li><code>onmousedown</code> / <code>onmouseup</code></li>
+<li><code>onmousemove</code></li>
+</ul></li>
+<li><strong>click</strong> function with <strong>event</strong> parameter
+
+<ul>
+<li><strong>event.target</strong> is a reference to the element that received a click event</li>
+<li><strong>event.x</strong>/<strong>y</strong> are coordinates relative to the upper-left corner of the page</li>
+<li><strong>event.offsetX</strong>/<strong>offsetY</strong> are relative to the containing element</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">document</span>.body.onclick=<span style="color:#fff;font-weight:bold">function</span>(event){
+
+  console.log( event )
+  console.log( event.target )  <span style="color:#007f7f">// this is the element that was clicked
+</span><span style="color:#007f7f"></span>  console.log( event.x, event.y )
+
+}
+</code></pre></div>
+<h3 id="keyboard-events">Keyboard events</h3>
+
+<ul>
+<li><a href="https://repl.it/HC2O/1">Demo</a></li>
+<li>From now on, we will specify most event handlers using DOM</li>
+<li>In the <code>initialize()</code> function, get a handle to the document body ( or whatever element you want to handle keyboard events), and set it&rsquo;s <strong>onkeyup</strong> attribute</li>
+<li>Why <strong>onkeyup</strong>?
+
+<ul>
+<li><strong>onkeydown</strong> repeats for as long as the key is depressed</li>
+<li><strong>onkeyup</strong> only fires once per key press</li>
+</ul></li>
+<li>Notice that <strong>keyup</strong> function takes a parameter <strong>event</strong>
+
+<ul>
+<li><strong>event</strong> is a JS keyword - the parameter is an event object</li>
+<li>Inspect the event object in the JS debugger</li>
+<li>Check out the values of <strong>event.keyCode</strong></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">document</span>.body.onkeyup=<span style="color:#fff;font-weight:bold">function</span>(event){
+    console.log( event.keyCode )
+}
+</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

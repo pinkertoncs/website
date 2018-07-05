@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Procedures</span></h1>
+
+
+</div>
+
+<main>
+
+
+<p>A <strong>function</strong>/<strong>procedure</strong> is a named set of instructions that can be executed on command</p>
+
+<p>To define a <strong>function</strong>/<strong>procedure</strong>, the programmer needs to write the <strong>header</strong> and <strong>body</strong></p>
+
+<h3 id="header">Header</h3>
+
+<p>The header line begins with the keyword <strong>def</strong> and the programmer defined name of the function, followed by parentheses.</p>
+
+<p>The header may or may not take <strong>parameter(s)</strong> in the parentheses, separated by commas.</p>
+
+<p><strong>Parameters</strong> are a mechanism of giving information <em>to</em> the <strong>function</strong>/<strong>procedure</strong></p>
+
+<h3 id="body">Body</h3>
+
+<p>The body (which is indented one level), is the set of instructions associated with this function.</p>
+
+<p>The body may or may not have a <strong>return</strong> value. A <strong>return</strong> is a mechanism to receive information back <em>from</em> the <strong>function</strong>.</p>
+
+<h2 id="calling-a-function-procedure">Calling a Function/Procedure</h2>
+
+<p>To <strong>call</strong> a function/procedure, is just to use it&rsquo;s name followed by parentheses (and possible arguments)</p>
+
+<h2 id="example">Example</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># define the procedure, but don&#39;t execute the body yet…</span>
+<span style="color:#fff;font-weight:bold">def</span> foo():
+    msg = <span style="color:#0ff;font-weight:bold">&#34;Hello, world!&#34;</span>
+    <span style="color:#007f7f">#return</span>
+    <span style="color:#007f7f">#uncomment the return statement to exit early</span>
+    <span style="color:#fff;font-weight:bold">print</span>( msg )
+
+<span style="color:#007f7f"># call the procedure 3 times</span>
+foo()
+foo()
+foo()</code></pre></div>
+<h2 id="more-input-validation-nested-blocks">More input validation / Nested blocks</h2>
+
+<ul>
+<li>If you put a block of code inside of another block, you need to <strong>nest</strong> the blocks using indents
+
+<ul>
+<li>You can indent a block by highlighting it and pressing the &ldquo;Tab&rdquo; key</li>
+<li>You can un-indent a block by using Shift-Tab</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">def</span> getANumber():
+
+    <span style="color:#fff;font-weight:bold">try</span>:
+        x = <span style="color:#fff;font-weight:bold">int</span>(<span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">&#34;Enter a number: &#34;</span>))
+        <span style="color:#007f7f"># try to read an int</span>
+        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;you entered:&#34;</span>, x)
+    <span style="color:#fff;font-weight:bold">except</span>:
+        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;I said enter a number!&#34;</span>)
+        <span style="color:#fff;font-weight:bold">return</span>
+         <span style="color:#007f7f"># use return to exit the function early</span>
+
+    <span style="color:#007f7f"># continue to do stuff with valid input…</span>
+
+getANumber()</code></pre></div>
+<h2 id="program-structure">Program structure</h2>
+
+<ul>
+<li>A well organized program is easier to write, read, and maintain!</li>
+<li>The template below is a good starting point</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
+</span><span style="color:#0ff;font-weight:bold">Name:
+</span><span style="color:#0ff;font-weight:bold">Assignment
+</span><span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;</span>
+
+<span style="color:#fff;font-weight:bold">def</span> proc1():
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;boo!&#34;</span> )
+
+
+<span style="color:#fff;font-weight:bold">def</span> proc2():
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;blah blah blah&#34;</span> )
+
+<span style="color:#007f7f">#--------test procedures in a function called &#39;main&#39;</span>
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    proc1()
+    proc2()
+
+<span style="color:#007f7f">#---------- run main if this file is run</span>
+<span style="color:#fff;font-weight:bold">if</span> __name__ == <span style="color:#0ff;font-weight:bold">&#34;__main__&#34;</span>:
+    main()</code></pre></div>
+<h2 id="using-a-test-input-file">Using a test input file</h2>
+
+<ul>
+<li>When you are testing, you should read input from a file</li>
+<li>In order to <strong>redirect</strong> the input function so that it reads from a file (e.g. &lsquo;input.txt&rsquo;), insert the code below at the beginning of your program</li>
+<li>Also, make sure you close the file (see modified __main__ below)</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f">#-------------- redirect input</span>
+f = <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;input.txt&#39;</span>)
+<span style="color:#fff;font-weight:bold">def</span> input( s=<span style="color:#0ff;font-weight:bold">&#39;&#39;</span> ):
+    line = f.readline()
+    <span style="color:#007f7f"># skip comments / blank lines</span>
+    <span style="color:#fff;font-weight:bold">if</span>( line[<span style="color:#ff0;font-weight:bold">0</span>] in [<span style="color:#0ff;font-weight:bold">&#39;#&#39;</span>,<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#39;</span>] ):
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">input</span>(s)
+    <span style="color:#fff;font-weight:bold">return</span> line.strip()
+
+<span style="color:#007f7f">#--------------</span>
+<span style="color:#007f7f"># DEFINE PROCEDURES HERE</span>
+<span style="color:#007f7f">#---------------</span>
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    <span style="color:#007f7f"># CALL PROCEDURES HERE</span>
+    <span style="color:#fff;font-weight:bold">pass</span>
+
+<span style="color:#fff;font-weight:bold">if</span> __name__==<span style="color:#0ff;font-weight:bold">&#34;__main__&#34;</span>:
+    <span style="color:#fff;font-weight:bold">try</span>:
+        main()
+    <span style="color:#fff;font-weight:bold">finally</span>:
+        f.close()</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

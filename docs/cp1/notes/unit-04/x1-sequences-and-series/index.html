@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Enrichment 01 -  Sequences and Series</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="directions">Directions</h2>
+
+<ul>
+<li>implement the functions defined in <em>sequences_and_series.py</em></li>
+</ul>
+
+<h2 id="sample-main-output">Sample Main Output</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">sorted</span>: [<span style="color:#ff0;font-weight:bold">23</span>, <span style="color:#ff0;font-weight:bold">32</span>, <span style="color:#ff0;font-weight:bold">43</span>, <span style="color:#ff0;font-weight:bold">45</span>, <span style="color:#ff0;font-weight:bold">45</span>, <span style="color:#ff0;font-weight:bold">65</span>, <span style="color:#ff0;font-weight:bold">65</span>, <span style="color:#ff0;font-weight:bold">67</span>, <span style="color:#ff0;font-weight:bold">76</span>, <span style="color:#ff0;font-weight:bold">89</span>]
+n: <span style="color:#ff0;font-weight:bold">10</span>
+<span style="color:#fff;font-weight:bold">range</span>: <span style="color:#ff0;font-weight:bold">66</span>
+<span style="color:#fff;font-weight:bold">sum</span>: <span style="color:#ff0;font-weight:bold">550</span>
+mean: <span style="color:#ff0;font-weight:bold">55.0</span>
+median: <span style="color:#ff0;font-weight:bold">55.0</span>
+mode(s): [<span style="color:#ff0;font-weight:bold">45</span>, <span style="color:#ff0;font-weight:bold">65</span>]
+---------------------------
+arithmetic: [<span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">11</span>, <span style="color:#ff0;font-weight:bold">14</span>, <span style="color:#ff0;font-weight:bold">17</span>, <span style="color:#ff0;font-weight:bold">20</span>, <span style="color:#ff0;font-weight:bold">23</span>, <span style="color:#ff0;font-weight:bold">26</span>, <span style="color:#ff0;font-weight:bold">29</span>, <span style="color:#ff0;font-weight:bold">32</span>]
+geometric: [<span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">4</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">16</span>, <span style="color:#ff0;font-weight:bold">32</span>, <span style="color:#ff0;font-weight:bold">64</span>, <span style="color:#ff0;font-weight:bold">128</span>, <span style="color:#ff0;font-weight:bold">256</span>, <span style="color:#ff0;font-weight:bold">512</span>, <span style="color:#ff0;font-weight:bold">1024</span>]
+sequence: [-<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, -<span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#ff0;font-weight:bold">4</span>, -<span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">6</span>, -<span style="color:#ff0;font-weight:bold">7</span>, <span style="color:#ff0;font-weight:bold">8</span>, -<span style="color:#ff0;font-weight:bold">9</span>, <span style="color:#ff0;font-weight:bold">10</span>]
+---------------------------
+prime: x is prime
+primes: [<span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">7</span>, <span style="color:#ff0;font-weight:bold">11</span>, <span style="color:#ff0;font-weight:bold">13</span>, <span style="color:#ff0;font-weight:bold">17</span>, <span style="color:#ff0;font-weight:bold">19</span>, <span style="color:#ff0;font-weight:bold">23</span>, <span style="color:#ff0;font-weight:bold">29</span>]
+factors: [<span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#ff0;font-weight:bold">3</span>]
+---------------------------
+fibs: [<span style="color:#ff0;font-weight:bold">0</span>, <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">13</span>, <span style="color:#ff0;font-weight:bold">21</span>, <span style="color:#ff0;font-weight:bold">34</span>]</code></pre></div>
+<h2 id="hints">Hints</h2>
+
+<ul>
+<li><p>Note</p>
+
+<ul>
+<li>use these hints only after you&rsquo;ve exhausted all other options!</li>
+<li>These are <strong>definitely</strong> not the only solutions for these problems, and probably not even the best</li>
+</ul></li>
+
+<li><p><strong>my_range</strong></p>
+
+<ol>
+<li>sort the list</li>
+<li>return the difference between the first and last element</li>
+</ol></li>
+
+<li><p><strong>my_sum</strong></p>
+
+<ol>
+<li>initialize a <strong>sum</strong> variable to zero</li>
+<li>use a for loop to
+
+<ul>
+<li>add a list element to <strong>sum</strong></li>
+</ul></li>
+<li>return sum</li>
+</ol></li>
+
+<li><p><strong>mode</strong></p>
+
+<ol>
+<li>initialize a <strong>max_count</strong> variable to zero</li>
+<li>initialize a <strong>modes</strong> list to <strong>[]</strong></li>
+<li>use a for loop to
+
+<ul>
+<li>count the frequency (f) of an element (x)</li>
+<li>if <strong>f</strong> is greater than <strong>max_count</strong>
+
+<ul>
+<li>set <strong>max_count</strong> to <strong>f</strong></li>
+<li>set <strong>modes</strong> to <strong>[x]</strong></li>
+</ul></li>
+<li>if <strong>f</strong> is equal to <strong>max_count</strong> and <strong>x</strong> is not already in <strong>modes</strong>
+
+<ul>
+<li>append <strong>x</strong> to <strong>modes</strong></li>
+</ul></li>
+</ul></li>
+<li>return <strong>modes</strong></li>
+</ol></li>
+
+<li><p><strong>prime</strong></p>
+
+<ol>
+<li>use a for loop to test the divisibility with each number <strong>x</strong> from 2 to (n//2 + 1)
+
+<ul>
+<li>if <strong>n</strong> is divisible by <strong>x</strong> ( i.e., the remainder is 0)
+
+<ul>
+<li>return False</li>
+</ul></li>
+</ul></li>
+<li>return True</li>
+</ol></li>
+
+<li><p><strong>primes</strong></p>
+
+<ol>
+<li>initialize a <strong>count</strong> variable to zero</li>
+<li>initialize a <strong>num</strong> variable to 1</li>
+<li>use a while loop to count primes up to the nth
+
+<ul>
+<li>increment <strong>num</strong></li>
+<li>if <strong>num</strong> is prime
+
+<ul>
+<li>increment <strong>count</strong></li>
+</ul></li>
+</ul></li>
+<li>return <strong>num</strong></li>
+</ol></li>
+
+<li><p><strong>factorize</strong></p>
+
+<ol>
+<li>initialize and empty list of factors</li>
+<li>use a loop to repeat division until <strong>n</strong> is prime
+
+<ul>
+<li>use an inner loop to try and divide <strong>n</strong> by <strong>i</strong> from 2 to n // 2
+
+<ul>
+<li>if <strong>n</strong> is divisible by <strong>i</strong>
+
+<ul>
+<li>append <strong>i</strong> to factors</li>
+<li>set <strong>n</strong> equals to n // i</li>
+<li><strong>break</strong> out of inner loop</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>return factors</li>
+</ol></li>
+
+<li><p><strong>fib (without recursion)</strong></p>
+
+<ol>
+<li>initialize a <strong>fibs</strong> list to [0, 1]</li>
+<li>use a loop to find as many values as you need
+
+<ul>
+<li>append the new value (sum of previous 2 elements) to <strong>fibs</strong></li>
+</ul></li>
+<li>return the last element in <strong>fibs</strong></li>
+</ol></li>
+
+<li><p><strong>fib (recursive)</strong></p>
+
+<ul>
+<li>base case 1 : if n is 0, return 0</li>
+<li>base case 2 : if n is 1,return 1</li>
+<li>recursive case : use the Fibonacci formula
+
+<ul>
+<li>Fn = Fn-1 + Fn-2</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

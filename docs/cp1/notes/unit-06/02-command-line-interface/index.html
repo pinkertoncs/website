@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - Command Line Interface</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="intro">Intro</h2>
+
+<ul>
+<li>A CLI is a <strong>Command-line interface</strong>
+
+<ul>
+<li>this is a way to operate a program using only text commands</li>
+<li>contrast with a GUI <strong>graphical user interface</strong></li>
+</ul></li>
+<li>Zork uses a CLI</li>
+<li>Below is a typical interaction in Zork (from <a href="http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork">from Zork @ textadventures.co.uk</a>)</li>
+</ul>
+
+<pre><code>&gt;look
+West of House
+This is an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+A rubber mat saying 'Welcome to Zork!' lies by the door.
+
+&gt;open mailbox
+You open the mailbox, revealing a small leaflet.
+
+&gt;take leaflet
+Taken.
+
+&gt;inventory
+You are carrying:
+A small leaflet
+
+&gt;read leaflet
+...
+</code></pre>
+
+<h2 id="commands">Commands</h2>
+
+<ul>
+<li>A command can take one or more arguments. An <strong>argument</strong> is a given value for a parameter</li>
+<li>The above demonstrates theses commands, and with the given parameter(s) in the form
+
+<ul>
+<li><strong>command</strong> [parameter&hellip;]</li>
+</ul></li>
+<li>Commands demonstrated above
+
+<ul>
+<li>look</li>
+<li>open [container]</li>
+<li>take [item]</li>
+<li>inventory</li>
+<li>read [item]</li>
+</ul></li>
+</ul>
+
+<h1 id="implementing">Implementing</h1>
+
+<h2 id="command-loop">Command loop</h2>
+
+<ul>
+<li>get input</li>
+<li>tokenize (split into words)</li>
+<li>look for exit keywords</li>
+<li>process command with parameters</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">def</span> startCLI():
+    <span style="color:#fff;font-weight:bold">while</span>(<span style="color:#ff0;font-weight:bold">1</span>):
+        line = <span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">&#39;&gt;&#39;</span>)
+        tokens = line.split()
+        cmd = tokens[<span style="color:#ff0;font-weight:bold">0</span>]
+        args = tokens[<span style="color:#ff0;font-weight:bold">1</span>:]
+        <span style="color:#fff;font-weight:bold">if</span> cmd in [<span style="color:#0ff;font-weight:bold">&#39;quit&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;exit&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;bye&#39;</span>]:
+            <span style="color:#fff;font-weight:bold">break</span>
+        process( cmd, args )</code></pre></div>
+<h2 id="command-processing">Command processing</h2>
+
+<ul>
+<li>Both of the options below assume that &lsquo;look&rsquo; and &lsquo;open&rsquo; are defined functions with one parameter that is a list of arguments
+
+<ul>
+<li>option 1 : use conditionals</li>
+<li>option 2 : use a command dictionary (a bit more advanced)</li>
+</ul></li>
+</ul>
+
+<p><strong>with conditionals</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">def</span> process( cmd, args ):
+    <span style="color:#fff;font-weight:bold">if</span>( cmd == <span style="color:#0ff;font-weight:bold">&#39;look&#39;</span> ):
+        look( args )
+    <span style="color:#fff;font-weight:bold">elif</span>( cmd == <span style="color:#0ff;font-weight:bold">&#39;open&#39;</span> ):
+        <span style="color:#fff;font-weight:bold">open</span>( args )
+    <span style="color:#fff;font-weight:bold">else</span>:
+        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Sorry, I don&#39;t understand.&#34;</span>)</code></pre></div>
+<p><strong>with a dictionary</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">commands = {
+    <span style="color:#0ff;font-weight:bold">&#39;look&#39;</span> : look,
+    <span style="color:#0ff;font-weight:bold">&#39;open&#39;</span> : <span style="color:#fff;font-weight:bold">open</span>
+}
+
+<span style="color:#fff;font-weight:bold">def</span> process( cmd, args ):
+    <span style="color:#fff;font-weight:bold">if</span>( cmd in commands):
+        foo = commands[cmd]
+        foo( args )
+    <span style="color:#fff;font-weight:bold">else</span>:
+        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Sorry, I don&#39;t understand.&#34;</span>)</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

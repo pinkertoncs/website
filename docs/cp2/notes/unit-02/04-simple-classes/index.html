@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 04 - Simple Classes</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="reading">Reading</h2>
+
+<ul>
+<li><a href="https://www.tutorialspoint.com/java/java_object_classes.htm">Object Classes</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<ul>
+<li>A <strong>class</strong> is a user-defined data type</li>
+<li>A class is a template used to create <strong>objects</strong>, which are specific instances of the class</li>
+<li>When you define a class, you specify <strong>attributes</strong> (data members) and <strong>methods</strong> (functions) that each instance has</li>
+<li>For example
+
+<ul>
+<li>A Rectangle has two attributes: width and height</li>
+<li>The Rectangle class has methods to set and get the values of those attributes</li>
+</ul></li>
+</ul>
+
+<h2 id="defining-and-implementing-a-class">Defining and implementing a Class</h2>
+
+<ul>
+<li>Define and implement a java class in it&rsquo;s own <strong>.java</strong> file, i.e. <strong><Classname>.java</strong>
+
+<ul>
+<li>attributes and methods have access or visibility &ldquo;properties&rdquo;
+
+<ul>
+<li><strong>public</strong>: accessible where ever the object is in scope</li>
+<li><strong>private</strong>: accessible only from within the class itself</li>
+</ul></li>
+<li>Methods
+
+<ul>
+<li>A <strong>constructor</strong> is called when a class instance is created</li>
+<li>Since the attributes are private, we need to define methods to set or get their values</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="compiling-executing-a-program-from-the-console-terminal">Compiling/Executing a program from the console/terminal</h2>
+
+<ul>
+<li><p>To compile Java source code into a binary use the <strong>javac</strong> command:</p>
+
+<pre><code>javac RunRectangle.java Rectangle.java
+</code></pre></li>
+
+<li><p>To run:</p>
+
+<pre><code>java RunRectangle
+</code></pre></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

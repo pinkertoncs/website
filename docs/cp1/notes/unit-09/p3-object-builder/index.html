@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 03 - Object Builder</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="builder-function">Builder function</h2>
+
+<ul>
+<li>Create an HTML form that allows you to choose options for a vehicle (or something of your choosing)
+
+<ul>
+<li>(see example below)</li>
+</ul></li>
+<li>The form should have
+
+<ul>
+<li>text input(s)</li>
+<li>select menu</li>
+<li>radio buttons</li>
+<li>checkboxes</li>
+<li>button</li>
+</ul></li>
+<li>In your JS function &lsquo;build&rsquo; should
+
+<ul>
+<li>read the data from the form</li>
+<li>construct a JavaScript object (obj) that represents the car (or other object)</li>
+<li>Log the object to the console for debugging</li>
+<li>call <strong>view(obj)</strong></li>
+</ul></li>
+</ul>
+
+<h2 id="viewer-function">Viewer function</h2>
+
+<ul>
+<li>In the <strong>view</strong> function
+
+<ul>
+<li>create a new <code>&lt;tr&gt;</code> using DOM method(s)</li>
+<li>use the properties of the parameter obj passe from the build function to set the innerHTML of the new row you created in step 1</li>
+<li>append the new row to the view table</li>
+</ul></li>
+</ul>
+
+<h2 id="screenshot-on-page-load">Screenshot - on page load</h2>
+
+<p><img src="/images/cp1/unit-09/obload.png" alt="" /></p>
+
+<h2 id="screenshot-after-building-a-few-cars">Screenshot - after building a few cars</h2>
+
+<p><img src="/images/cp1/unit-09/cars.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

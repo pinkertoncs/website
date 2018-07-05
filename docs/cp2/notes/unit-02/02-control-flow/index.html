@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - Control Flow</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="readings">Readings</h2>
+
+<ul>
+<li><a href="https://www.tutorialspoint.com/java/java_decision_making.htm">Java Decision Making</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_loop_control.htm">Java Loop Control</a></li>
+</ul>
+
+<h2 id="conditional-statements">Conditional Statements</h2>
+
+<ul>
+<li>Conditional statements in Java have the following syntax differences from Python
+
+<ul>
+<li><strong>The condition must be enclosed in parentheses</strong></li>
+<li>If the condition is true, then the subsequent <strong>statement or block</strong> will execute</li>
+</ul></li>
+</ul>
+
+<h3 id="demo">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// BASIC condition
+</span><span style="color:#007f7f"></span>
+Scanner in = <span style="color:#fff;font-weight:bold">new</span> Scanner(System.<span style="color:#007f7f">in</span>);
+
+<span style="color:#fff;font-weight:bold">int</span> x;
+
+x = in.<span style="color:#007f7f">nextInt</span>();
+
+<span style="color:#fff;font-weight:bold">if</span>( x &gt; 0 ){
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;x is positive&#34;</span>);
+} <span style="color:#fff;font-weight:bold">else</span> {
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;x is not positive&#34;</span>);
+}</code></pre></div>
+<h2 id="comparison-operators">Comparison Operators</h2>
+
+<ul>
+<li><strong>Comparable items</strong>
+
+<ul>
+<li>numerical types</li>
+<li>chars (ASCII order)</li>
+<li>Strings (lexicographically via the <strong>compareTo</strong> method)</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">Comparison</th>
+<th align="center">operator</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">less than</td>
+<td align="center">&lt;</td>
+</tr>
+
+<tr>
+<td align="left">less than or equal to</td>
+<td align="center">&lt;=</td>
+</tr>
+
+<tr>
+<td align="left">greater than</td>
+<td align="center">&gt;</td>
+</tr>
+
+<tr>
+<td align="left">greater than or equal to</td>
+<td align="center">&gt;=</td>
+</tr>
+
+<tr>
+<td align="left">equal to</td>
+<td align="center">==</td>
+</tr>
+
+<tr>
+<td align="left">not equal</td>
+<td align="center">!=</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Comparing floats</strong>
+
+<ul>
+<li>Floating point values are sometimes off by very small amounts</li>
+<li>When comparing floats, use a margin of error</li>
+<li>If the absolute value of the difference is below the margin, consider them equal</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// returns -1 if a &lt; b,
+</span><span style="color:#007f7f">//	    0 if a==b,
+</span><span style="color:#007f7f">//	    1 if a &gt; b
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> flt_cmp( <span style="color:#fff;font-weight:bold">float</span> a, <span style="color:#fff;font-weight:bold">float</span> b ){
+
+    <span style="color:#fff;font-weight:bold">float</span> diff = a-b;
+
+    <span style="color:#fff;font-weight:bold">if</span>(Math.<span style="color:#007f7f">abs</span>(diff) &lt; 0.<span style="color:#007f7f">001</span>)
+        <span style="color:#fff;font-weight:bold">return</span> 0;
+    <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span>(diff &lt; 0 )
+        <span style="color:#fff;font-weight:bold">return</span> -1;
+    <span style="color:#fff;font-weight:bold">else</span>
+        <span style="color:#fff;font-weight:bold">return</span> 1;
+
+}</code></pre></div>
+<h2 id="chaining-nesting">Chaining &amp; Nesting</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">if</span>( condition1 ){
+	<span style="color:#007f7f">//BLOCK1
+</span><span style="color:#007f7f"></span>} <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span>( condition2 ){
+	<span style="color:#007f7f">//BLOCK2
+</span><span style="color:#007f7f"></span>} <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span>( condition3 ){
+	<span style="color:#007f7f">//BLOCK3
+</span><span style="color:#007f7f"></span>} <span style="color:#fff;font-weight:bold">else</span> {
+	<span style="color:#007f7f">//CATCH ALL
+</span><span style="color:#007f7f"></span>}</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">if</span>( even ){
+	<span style="color:#fff;font-weight:bold">if</span> (prime){
+		System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(2);
+	}
+}</code></pre></div>
+<h2 id="boolean-expressions">Boolean Expressions</h2>
+
+<ul>
+<li>Can not use natural English words like in Python</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">logical operator</th>
+<th align="center">operator</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">and</td>
+<td align="center">&amp;&amp;</td>
+</tr>
+
+<tr>
+<td align="center">or</td>
+<td align="center">||</td>
+</tr>
+
+<tr>
+<td align="center">not</td>
+<td align="center">!</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>compound comparisons
+
+<ul>
+<li>In python is it possible to do a compound comparison with math syntax</li>
+<li>This is <strong>NOT VALID</strong> in Java</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">x = 15;
+
+<span style="color:#007f7f">// INCORRECT
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>( 0 &lt; x &lt; 10)                       <span style="color:#007f7f">// this will result in a error at compile time
+</span><span style="color:#007f7f"></span>    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;incorrect&#34;</span>);
+
+<span style="color:#007f7f">// CORRECT
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>( x &gt; 0 &amp;&amp; x &lt; 10 )      <span style="color:#007f7f">// this is the right way to test this
+</span><span style="color:#007f7f"></span>    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;correct&#34;</span>);</code></pre></div>
+<h2 id="switch-statements">Switch Statements</h2>
+
+<ul>
+<li>A <strong>switch statement</strong> is a more compact representation of chained if-else statements. The restriction is that it only does direct comparison (==)</li>
+</ul>
+
+<h3 id="demo-1">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">switch</span> (x) {
+  <span style="color:#fff;font-weight:bold">case</span> 1:
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;x is 1&#34;</span>);
+    <span style="color:#fff;font-weight:bold">break</span>;
+  <span style="color:#fff;font-weight:bold">case</span> 2:
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;x is 2&#34;</span>);
+    <span style="color:#fff;font-weight:bold">break</span>;
+  default:
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;some other value&#34;</span>);
+  }</code></pre></div>
+<h2 id="looping-statements">Looping Statements</h2>
+
+<h2 id="while-loop">While Loop</h2>
+
+<ul>
+<li>Nearly identical to Python&rsquo;s while loop</li>
+<li>Note that parentheses are required</li>
+</ul>
+
+<h3 id="demo-2">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// custom countdown using while
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+
+    <span style="color:#fff;font-weight:bold">int</span> n = 10;
+
+    <span style="color:#fff;font-weight:bold">while</span>(n &gt; 0) {
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(n);
+        --n;
+    }
+
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;liftoff!&#34;</span>);
+}</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+liftoff!
+</code></pre>
+
+<h2 id="for-loop">For Loop</h2>
+
+<ul>
+<li>Note that ant iteration can be done with a while loop. A for loop is a convenience.</li>
+<li>Java uses <strong>C-style for loops</strong>
+
+<ul>
+<li><strong>for( initialization; condition; step size) { &hellip; }</strong></li>
+</ul></li>
+</ul>
+
+<h3 id="demo-3">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// countdown using a for loop
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> n=10; n &gt; 0; n--) {
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(n);
+    }
+
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;liftoff!&#34;</span>);
+}</code></pre></div>
+<h3 id="multiple-statements-in-loop-header">Multiple statements in loop header</h3>
+
+<pre><code>- You can have **multiple initializations and/or multiple variable changes
+</code></pre>
+
+<h3 id="demo-4">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">for</span> ( <span style="color:#fff;font-weight:bold">int</span> n=0, i=100 ; n!=i ; ++n, --i )
+{
+   <span style="color:#007f7f">// whatever here...
+</span><span style="color:#007f7f"></span>}</code></pre></div>
+<h2 id="java-for-each-loop">Java For-each Loop</h2>
+
+<ul>
+<li>The java For-each loop is similar to Python&rsquo;s <strong>for-in</strong> loop</li>
+<li>The syntax for the for-each loop is
+_ <strong>for( declaration : collection)</strong>
+
+<ul>
+<li>where <strong>collection</strong> is any iterable element (more on these later)</li>
+</ul></li>
+</ul>
+
+<h3 id="demo-5">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// range-based for loop
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+    String str =<span style="color:#0ff;font-weight:bold">&#34;Hello!&#34;</span>;
+    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">char</span> c : str.<span style="color:#007f7f">toCharArray</span>()){
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">print</span>(<span style="color:#0ff;font-weight:bold">&#34;[&#34;</span> + c + <span style="color:#0ff;font-weight:bold">&#34;]&#34;</span>);
+    }
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>();
+}</code></pre></div>
+<h2 id="control-statements">Control Statements</h2>
+
+<ul>
+<li>You can use the following control flow statements in a loop
+
+<ul>
+<li><strong>continue</strong>
+
+<ul>
+<li>skip the rest of the loop and go to the next iteration</li>
+</ul></li>
+<li><strong>break</strong>
+
+<ul>
+<li>exit the loop</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

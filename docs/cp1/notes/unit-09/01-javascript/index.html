@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - JavaScript</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.w3schools.com/js/">JavaScript Tutorial</a></li>
+<li><a href="http://www.w3schools.com/jsref/default.asp">JavaScript Reference</a></li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ul>
+<li>JavaScript allows a website to be interactive and dynamic</li>
+<li>JavaScript is included in a <code>&lt;script&gt;</code> element.
+
+<ul>
+<li>Using the <code>src</code> attribute allows you to load JavaScript from an external file</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="font-weight:bold">html</span>&gt;
+    &lt;<span style="font-weight:bold">head</span>&gt;
+        &lt;<span style="font-weight:bold">title</span>&gt;Template Page&lt;/<span style="font-weight:bold">title</span>&gt;
+    &lt;/<span style="font-weight:bold">head</span>&gt;
+    &lt;<span style="font-weight:bold">body</span> <span style="color:#007f7f">onload</span>=<span style="color:#0ff;font-weight:bold">&#39;main()&#39;</span>&gt;
+        &lt;<span style="font-weight:bold">h1</span>&gt; JavaScript Template &lt;/<span style="font-weight:bold">h1</span>&gt;
+        &lt;<span style="font-weight:bold">h2</span>&gt; Hello JavaScript! &lt;/<span style="font-weight:bold">h2</span>&gt;
+        &lt;<span style="font-weight:bold">p</span>&gt; Go to the JS Console (F12) &lt;/<span style="font-weight:bold">p</span>&gt;
+
+        <span style="color:#007f7f">&lt;!-- optional external JS file
+</span><span style="color:#007f7f">        will show error if file doesn&#39;t exist  --&gt;</span>
+        &lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#39;myscript.js&#39;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+
+        &lt;<span style="font-weight:bold">script</span>&gt;
+
+            <span style="color:#007f7f">/* multi-line JS comment */</span>
+            <span style="color:#007f7f">// single-line JS comment
+</span><span style="color:#007f7f"></span>
+            <span style="color:#fff;font-weight:bold">function</span> main(){
+                console.log( <span style="color:#0ff;font-weight:bold">&#39;Hello, World!&#39;</span> )
+            }
+        &lt;/<span style="font-weight:bold">script</span>&gt;
+    &lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
+<h2 id="basics">Basics</h2>
+
+<ul>
+<li>JS expressions and types are similar to Python</li>
+<li>User the <strong>var</strong> keyword to declare a variable
+
+<ul>
+<li>In JS, you can <strong>declare</strong> a variable without initializing it</li>
+<li>an undeclared variable has an <strong>undefined</strong> value</li>
+</ul></li>
+<li><strong>Increment</strong> (increasing by 1) the value of an integer
+
+<ul>
+<li><code>i = i + 1</code></li>
+<li><code>i += 1</code></li>
+<li><code>i++</code></li>
+<li><code>++i</code></li>
+</ul></li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> x;
+console.log(x)
+
+x=<span style="color:#ff0;font-weight:bold">5</span>
+console.log(x++)
+console.log(++x)
+</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>undefined
+5
+7
+</code></pre>
+
+<h2 id="conditions">Conditions</h2>
+
+<ul>
+<li>Conditions syntax
+
+<ul>
+<li>Conditions must be in parentheses</li>
+<li>Blocks in JS are enclosed in <strong>curly braces {}</strong></li>
+<li>curly braces are only required if the block has more than 1 statement</li>
+<li>Unlike Python code, indentation does not matter (except for style)</li>
+<li>JS has no <code>elif</code>, you need to use the full <code>elseif</code> for chaining conditions</li>
+</ul></li>
+<li>Boolean Operations</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>JavaScript</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td><code>&amp;&amp;</code></td>
+</tr>
+
+<tr>
+<td><code>or</code></td>
+<td>&#124;&#124;</td>
+</tr>
+
+<tr>
+<td><code>not</code></td>
+<td><code>!</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example-1">Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> x = <span style="color:#ff0;font-weight:bold">5</span>;
+
+<span style="color:#007f7f">// chained conditions
+</span><span style="color:#007f7f">// the &#39;else if&#39; and &#39;else&#39; clauses are optional
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ){
+  console.log( <span style="color:#0ff;font-weight:bold">&#39;x is positive&#39;</span> )
+} <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span> (x == <span style="color:#ff0;font-weight:bold">0</span>) {
+  console.log( <span style="color:#0ff;font-weight:bold">&#39;x is zero&#39;</span> )
+} <span style="color:#fff;font-weight:bold">else</span> {
+  console.log( <span style="color:#0ff;font-weight:bold">&#39;x is negative&#39;</span> )
+}
+
+<span style="color:#007f7f">// nested conditions
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ){
+  <span style="color:#fff;font-weight:bold">if</span>( x%<span style="color:#ff0;font-weight:bold">2</span> == <span style="color:#ff0;font-weight:bold">0</span> ){
+    console.log(<span style="color:#0ff;font-weight:bold">&#39;x is positive and even&#39;</span> )
+  }
+}
+
+<span style="color:#007f7f">// boolean AND
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>( x &gt; <span style="color:#ff0;font-weight:bold">0</span> &amp;&amp; x%<span style="color:#ff0;font-weight:bold">2</span>==<span style="color:#ff0;font-weight:bold">0</span> ){
+    console.log(<span style="color:#0ff;font-weight:bold">&#39;x is positive and even&#39;</span> )
+}
+</code></pre></div>
+<h2 id="strings">Strings</h2>
+
+<ul>
+<li>see <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">JS String Reference</a></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>JS operators / attributes / methods</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>string concatenation</td>
+</tr>
+
+<tr>
+<td><code>length</code></td>
+<td>get the number of characters</td>
+</tr>
+
+<tr>
+<td><code>indexOf(sub, i)</code></td>
+<td>find substring (<em>sub</em>) starting at index <em>i</em></td>
+</tr>
+
+<tr>
+<td><code>slice(start, end)</code></td>
+<td>get a substring start at <em>start</em> and stopping at <em>end-1</em></td>
+</tr>
+
+<tr>
+<td><code>toLowerCase()</code></td>
+<td>returns string as all lower</td>
+</tr>
+
+<tr>
+<td><code>toUpperCase()</code></td>
+<td>returns  string as all UPPER</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example-2">Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> s = <span style="color:#0ff;font-weight:bold">&#34;Mr. Kulik&#34;</span>
+
+console.log( s.length )
+console.log( s + <span style="color:#0ff;font-weight:bold">&#39; &#39;</span> + s )
+console.log( s.toUpperCase() )
+
+console.log( s.indexOf(<span style="color:#0ff;font-weight:bold">&#39;uli&#39;</span>) )
+console.log( s.slice(<span style="color:#ff0;font-weight:bold">0</span>,<span style="color:#ff0;font-weight:bold">4</span>)  )
+console.log( s.slice(<span style="color:#ff0;font-weight:bold">4</span>)  )
+
+console.log( s.split(<span style="color:#0ff;font-weight:bold">&#39; &#39;</span>) )
+</code></pre></div>
+<h3 id="output-1">Output</h3>
+
+<pre><code>9
+Mr. Kulik Mr. Kulik
+MR. KULIK
+
+5
+Mr.
+Kulik
+
+[&quot;Mr.&quot;, &quot;Kulik&quot;]
+</code></pre>
+
+<h2 id="arrays">Arrays</h2>
+
+<ul>
+<li>JS Arrays are just like Python&rsquo;s List type
+
+<ul>
+<li>Note that you can not use the <code>+</code> operator to concatenate arrays</li>
+<li>Splicing is a powerful method the add or remove elements</li>
+</ul></li>
+<li>Debugging
+
+<ul>
+<li>you can log (i.e. print) and array object and inspect it</li>
+<li>or use <code>toString()</code> to convert to <em>neat</em> representation</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Array operations / methods / attributes</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>[]</code></td>
+<td align="left">index operator</td>
+</tr>
+
+<tr>
+<td><code>length</code></td>
+<td align="left">length attribute</td>
+</tr>
+
+<tr>
+<td><code>indexOf(e, i)</code></td>
+<td align="left">return the index of element <em>e</em> starting at index <em>i</em></td>
+</tr>
+
+<tr>
+<td><code>slice(start, end)</code></td>
+<td align="left">return part of the array from <em>start</em> to <em>end-1</em></td>
+</tr>
+
+<tr>
+<td><code>push(e)</code></td>
+<td align="left">add element <em>e</em> to the end of the array</td>
+</tr>
+
+<tr>
+<td><code>concat(a)</code></td>
+<td align="left">add all the elements of array <em>a</em> to the end</td>
+</tr>
+
+<tr>
+<td><code>shift()</code></td>
+<td align="left">remove and return first element</td>
+</tr>
+
+<tr>
+<td><code>pop()</code></td>
+<td align="left">remove and return last element</td>
+</tr>
+
+<tr>
+<td><code>splice(i, n, item1 ... item2)</code></td>
+<td align="left">start at <em>i</em>, remove <em>n</em> things, add remaining</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example-3">Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> a = [<span style="color:#0ff;font-weight:bold">&#39;bread&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;eggs&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;cheese&#39;</span>,<span style="color:#0ff;font-weight:bold">&#39;milk&#39;</span>]
+
+console.log( a.toString() )
+console.log( a.length )
+console.log( a.indexOf(<span style="color:#0ff;font-weight:bold">&#39;cheese&#39;</span>) )
+console.log( a[<span style="color:#ff0;font-weight:bold">2</span>] )
+console.log( a.slice(<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">3</span>).toString())
+
+a.push( <span style="color:#0ff;font-weight:bold">&#39;broccoli&#39;</span> )
+<span style="color:#fff;font-weight:bold">var</span> a2 = [<span style="color:#0ff;font-weight:bold">&#39;bananas&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;apples&#39;</span>]
+a = a.concat( a2 )
+console.log(a.toString())
+
+console.log( a.shift() )
+console.log( a.pop() )
+console.log( a.toString() )
+
+<span style="color:#007f7f">// remove 3 items at index 1
+</span><span style="color:#007f7f">// and add &#39;cookies&#39;
+</span><span style="color:#007f7f"></span>a.splice( <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#0ff;font-weight:bold">&#39;cookies&#39;</span> )
+console.log(a)
+</code></pre></div>
+<h3 id="output-2">Output</h3>
+
+<pre><code>bread,eggs,cheese,milk
+4
+2
+cheese
+eggs,cheese
+bread,eggs,cheese,milk,broccoli,bananas,apples
+bread
+apples
+eggs,cheese,milk,broccoli,bananas
+eggs,cookies,bananas
+</code></pre>
+
+<h2 id="loops-iteration">Loops &amp; Iteration</h2>
+
+<ul>
+<li>JS while loops similar to Python while loops</li>
+<li>JS uses <em>C-style</em> for loops</li>
+<li>Syntax: <strong>for(initialization; condition; post-operation)</strong>
+
+<ul>
+<li><strong>initialization</strong> is performed once at the beginning of the loop</li>
+<li><strong>condition</strong> determines when the loop stops</li>
+<li><strong>post-operation</strong> is performed after each run of the loop</li>
+</ul></li>
+<li>Example: <strong>for(var i = 0; i &lt; 10; i++)</strong></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>var i = 0</code></td>
+<td>initialize a counter variable, <em>i</em>, to 0</td>
+</tr>
+
+<tr>
+<td><code>i &lt; 10</code></td>
+<td>loop as long as <em>i</em> is less than 10</td>
+</tr>
+
+<tr>
+<td><code>i++</code></td>
+<td>after each loop, increment <em>i</em> by 1</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example-1-1">Example 1</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// while loop to count from 0 to 4
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> i = <span style="color:#ff0;font-weight:bold">0</span>
+<span style="color:#fff;font-weight:bold">while</span>( i &lt; <span style="color:#ff0;font-weight:bold">5</span>){
+  console.log( i )
+  i += <span style="color:#ff0;font-weight:bold">1</span>
+}
+</code></pre></div>
+<h3 id="output-1-1">Output 1</h3>
+
+<pre><code>0
+1
+2
+3
+4
+</code></pre>
+
+<h3 id="example-2-1">Example 2</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// for loop to count from 0 to 4
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">var</span> j = <span style="color:#ff0;font-weight:bold">0</span>; j &lt; <span style="color:#ff0;font-weight:bold">5</span>; j++){
+  console.log( j )
+}
+</code></pre></div>
+<h3 id="output-2-1">Output 2</h3>
+
+<pre><code>0
+1
+2
+3
+4
+</code></pre>
+
+<h3 id="example-3-1">Example 3</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// array iteration
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> a = [<span style="color:#0ff;font-weight:bold">&#34;bread&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;eggs&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;milk&#34;</span>]
+<span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;a.length; i++ ){
+  console.log( a[i] )
+}
+</code></pre></div>
+<h3 id="output-3">Output 3</h3>
+
+<pre><code>bread
+eggs
+cheese
+</code></pre>
+
+<h3 id="example-4">Example 4</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// string iteration
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> s = <span style="color:#0ff;font-weight:bold">&#34;Mr.K&#34;</span>
+<span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;s.length; i++ ){
+  console.log( s[i] )
+}
+</code></pre></div>
+<h3 id="output-4">Output 4</h3>
+
+<pre><code>M
+r
+.
+K
+</code></pre>
+
+<h3 id="example-5">Example 5</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// string tokenizing
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> s = <span style="color:#0ff;font-weight:bold">&#34;How are you?&#34;</span>
+<span style="color:#fff;font-weight:bold">var</span> tokens = s.split(<span style="color:#0ff;font-weight:bold">&#39; &#39;</span>)
+<span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;tokens.length; i++){
+  console.log(tokens[i])
+}
+</code></pre></div>
+<h3 id="output-5">Output 5</h3>
+
+<pre><code>How
+are
+you?
+</code></pre>
+
+<h2 id="functions">Functions</h2>
+
+<ul>
+<li>JS functions are similar to Python functions
+
+<ul>
+<li>Parameters and return values are optional</li>
+<li>A function with no parameters still needs <code>()</code></li>
+<li>A function with no return statement will return <code>undefined</code></li>
+<li>Review parameters and return values if needed</li>
+</ul></li>
+<li>Two different ways to define functions</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// method 1
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">function</span> foo( a, b ){
+  <span style="color:#fff;font-weight:bold">return</span> a + b
+}
+
+<span style="color:#007f7f">// method 2
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> goo = <span style="color:#fff;font-weight:bold">function</span>(a, b){
+  <span style="color:#fff;font-weight:bold">return</span> a + b
+}
+
+<span style="color:#007f7f">// function calls
+</span><span style="color:#007f7f"></span>console.log( foo( <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span> ) )
+console.log( goo( <span style="color:#0ff;font-weight:bold">&#39;me&#39;</span>,  <span style="color:#0ff;font-weight:bold">&#39;you&#39;</span> ) )
+</code></pre></div>
+<h2 id="objects">Objects</h2>
+
+<ul>
+<li>JS Objects are similar to Python Objects</li>
+<li>Variables in objects are called <strong>object properties</strong></li>
+</ul>
+
+<h3 id="example-1-2">Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// define object properties
+</span><span style="color:#007f7f">// on initialization
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> point = {
+  x: <span style="color:#ff0;font-weight:bold">1</span>,
+  y: <span style="color:#ff0;font-weight:bold">2</span>
+}
+
+console.log( point.x )
+console.log( point.y )
+
+<span style="color:#007f7f">// define object properties
+</span><span style="color:#007f7f">// after initialization
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">var</span> obj = { }
+obj.prop1 = <span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>
+obj.prop2 = <span style="color:#0ff;font-weight:bold">&#39;b&#39;</span>
+
+console.log( obj.prop1 )
+console.log( obj.prop2 )
+
+<span style="color:#007f7f">// turn object into string
+</span><span style="color:#007f7f"></span>console.log( JSON.stringify( obj ) )
+</code></pre></div>
+<h3 id="output-1-2">Output</h3>
+
+<pre><code>1
+2
+a
+b
+{&quot;prop1&quot;:&quot;a&quot;,&quot;prop2&quot;:&quot;b&quot;}
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

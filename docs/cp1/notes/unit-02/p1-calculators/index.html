@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 01 - Calculators</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="overview">Overview</h2>
+
+<ul>
+<li>Use Python to solve a variety of generalized mathematical problems.</li>
+<li>Your solutions should work for <strong>any</strong> valid input.</li>
+</ul>
+
+<h2 id="problems">Problems</h2>
+
+<h3 id="1-elapsed-time">1. Elapsed Time</h3>
+
+<p>In the provided template file <code>time.py</code>, write a python program that
+will ask for the starting time in 24 four format and duration and output (print)
+the end time.</p>
+
+<ul>
+<li><p>Input</p>
+
+<ul>
+<li>Starting time (24 hour format)</li>
+<li>time duration in hours</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>The end time</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/time-demo.gif" alt="" /></p>
+
+<h3 id="2-tips">2. Tips</h3>
+
+<p>In the provided template file <code>tips.py</code>, write a python program that will ask
+for the cost of a meal, the tax rate (as decimal), and tip rate (as decimal) and output
+(print) the total amount to pay</p>
+
+<ul>
+<li><p>Input</p>
+
+<ul>
+<li>cost of a meal</li>
+<li>tax rate (as a decimal, for example 9% is 0.09)</li>
+<li>tip rate (as a decimal, for example 0.20)</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>total amount to pay</li>
+</ul></li>
+
+<li><p>Note</p>
+
+<ul>
+<li>tax and tip should both be a percent of the base meal cost</li>
+<li>Hint: there is a built-in function to <strong>round</strong> numbers</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/tips-demo.gif" alt="" /></p>
+
+<h3 id="3-celsius-to-fahrenheit">3. Celsius to Fahrenheit</h3>
+
+<p>In the provided template file <code>ctof.py</code>, write a python program that will ask for the
+temperature in degrees Celsius and output (print) the degrees in Fahrenheit.</p>
+
+<ul>
+<li><p>Formula</p>
+
+<ul>
+<li>$$F^{\circ} = C^{\circ} \cdot \frac{9}{5} + 32$$</li>
+</ul></li>
+
+<li><p>Input</p>
+
+<ul>
+<li>Degrees Celsius</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>Degrees Fahrenheit</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/ctof-demo.gif" alt="" /></p>
+
+<h3 id="4-fahrenheit-to-celsius">4. Fahrenheit to Celsius</h3>
+
+<p>In the provided template file <code>ftoc.py</code>, write a python program that will ask for the
+temperature in degrees Fahrenheit and output (print) the degrees in Celsius.</p>
+
+<ul>
+<li><p>Formula</p>
+
+<ul>
+<li>$$C^{\circ} = (F^{\circ} - 32) \cdot \frac{5}{9}$$</li>
+</ul></li>
+
+<li><p>Input</p>
+
+<ul>
+<li>Degrees Fahrenheit</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>Degrees Celsius</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/ftoc-demo.gif" alt="" /></p>
+
+<h3 id="5-interest">5. Interest</h3>
+
+<p>In the provided template file <code>interest.py</code>, write a python program that will ask for the
+principal, annual interest rate, number of times compounded, and number of years and output
+(print) the final amount.</p>
+
+<ul>
+<li><p>Formula</p>
+
+<ul>
+<li>$$P&rsquo; = P \Big( 1 + \frac{r}{n} \Big)^{nt}$$</li>
+</ul></li>
+
+<li><p>Input</p>
+
+<ul>
+<li>principal amount (<code>P</code>)</li>
+<li>annual nominal interest rate (<code>r</code>)</li>
+<li>number of times the interest is compounded per year (<code>n</code>)</li>
+<li>number of years (<code>t</code>)</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>final amount (<code>P'</code>)</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/interest-demo.gif" alt="" /></p>
+
+<h3 id="6-distance">6. Distance</h3>
+
+<p>In the provided template file <code>distance.py</code>, write a python program that will ask for
+two points: x1, y1, x2, and y2 and output (print) the distance between the two points</p>
+
+<ul>
+<li><p>Formula</p>
+
+<ul>
+<li>$$d = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$</li>
+</ul></li>
+
+<li><p>Input</p>
+
+<ul>
+<li>first point x (<code>x1</code>)</li>
+<li>first point y (<code>y1</code>)</li>
+<li>second point x (<code>x2</code>)</li>
+<li>second point y (<code>y2</code>)</li>
+</ul></li>
+
+<li><p>Output</p>
+
+<ul>
+<li>approximate distance</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/distance-demo.gif" alt="" /></p>
+
+<h3 id="7-change">7. Change</h3>
+
+<p>In the provided template file <code>change.py</code>, write a python program that will ask for a price
+and the amount of given currency and will output (print) the numbers of 20s, 10s, 5s, 1s, .25s,
+,10s, .05s, and .01s</p>
+
+<ul>
+<li>Input
+
+<ul>
+<li>price</li>
+<li>amount paid</li>
+</ul></li>
+<li>Output
+
+<ul>
+<li>total change amount</li>
+<li>amount of each currency denomination (from 20s to pennies) that should be returned</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-02/change-demo.gif" alt="" /></p>
+
+<h3 id="8-madlib">8. Madlib</h3>
+
+<ul>
+<li>Make a madlib!</li>
+<li>For examples, see <a href="http://www.madglibs.com/">http://www.madglibs.com/</a></li>
+</ul>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script>
+MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    displayAlign: "left"
+});
+</script>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

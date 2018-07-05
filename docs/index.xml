@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on PinkertonCS</title>
+    <link>/</link>
+    <description>Recent content in Home on PinkertonCS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Capstone</title>
+      <link>/cp2/notes/unit-10/capstone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-10/capstone/</guid>
+      <description>Part 1 : Proposal You will create a document (Google Doc) that will outline what you want to accomplish for your capstone. At the minimum it should include the following information
+ Paragraph describing what you will be working on Paragraph(s) detailing the different components/aspects of your project A time line for completion Paragraph(s) outlining your expected outcome for this project Paragraph describing future work for this project.  Use this sample for reference.</description>
+    </item>
+    
+    <item>
+      <title>Enrichment 01 -  Sequences and Series</title>
+      <link>/cp1/notes/unit-04/x1-sequences-and-series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-04/x1-sequences-and-series/</guid>
+      <description>Directions  implement the functions defined in sequences_and_series.py  Sample Main Output sorted: [23, 32, 43, 45, 45, 65, 65, 67, 76, 89] n: 10 range: 66 sum: 550 mean: 55.0 median: 55.0 mode(s): [45, 65] --------------------------- arithmetic: [5, 8, 11, 14, 17, 20, 23, 26, 29, 32] geometric: [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024] sequence: [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10] --------------------------- prime: x is prime primes: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29] factors: [2, 2, 3, 3] --------------------------- fibs: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] Hints  Note</description>
+    </item>
+    
+    <item>
+      <title>Enrichment 01 - Calculator CLI</title>
+      <link>/cp1/notes/unit-02/x1-calculator-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/x1-calculator-cli/</guid>
+      <description>Overview  Create a command line interface (CLI) for the calculator program. Use a number-based menu system, for example   1. Tips 2. CtoF 3. FtoC 4. Interest 5. Distance 6. Change ...  Starter code  The while-loop and if-conditional will be covered in a later unit.  # Hint: use your code from project 1 def CLI(): while(1): # show menu x = input( &amp;#34;Select your calculator, or use Q to quit:&amp;#34;) # if the input value is &amp;#39;q&amp;#39; or &amp;#39;Q&amp;#39;, quit if( x.</description>
+    </item>
+    
+    <item>
+      <title>Enrichment 01 - FakeBook</title>
+      <link>/cp1/notes/unit-08/x1-fakebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-08/x1-fakebook/</guid>
+      <description>Overview  Create a layout that mimics facebook (or another highly structured page)  Tips  Check out this template to get started:  Fakebook template  Notes on template  Define an absolute width for the page - the page should not shrink or grow when you resize the browser window Remember - you can nest divs and other content inside of other container divs.  For search input, use:</description>
+    </item>
+    
+    <item>
+      <title>Enrichment 01 - Interactive Turtle</title>
+      <link>/cp1/notes/unit-03/x1-interactive-turtle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/x1-interactive-turtle/</guid>
+      <description> Overview  Use turtle event handling to create a program that allows the user to draw using the keyboard and/or mouse There is some starter code here  Think CS Ch. 10: Event-driven programming  On the turtle graphics reference, see sections on  Using events Using screen events   Features  Basic (in the start code already)  use the arrow keys to move the turtle use the U and D keys to do a penup or pendown  Mouse movement  click-and-drag the move the turtle click anywhere on the screen to move the turtle to that location  Turtle attributes  use the RGB keys to set the color to red, green, blue respectively use the +/- keys to increase or decrease the pen width (use the num pad for testing)   </description>
+    </item>
+    
+    <item>
+      <title>Enrichment 01 - JS Game</title>
+      <link>/cp1/notes/unit-10/x1-jsgame/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/x1-jsgame/</guid>
+      <description>Directions  Create a simple pong-like game, where you can use a paddle at the bottom of the screen to bounce the ball look back on previous demo code for a good starting point  Hints  Start with sample code Add a paddle object Define the appropriate event listeners in the initialize function Detect collisions between the paddles and the walls, and between the paddle and the ball, and respond accordingly  Extensions (choose 1)  Make a 2-player pong game with scoring Turn you game into a breakout clone.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Conditions and Logic</title>
+      <link>/cp1/notes/unit-04/01-conditions-and-logic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-04/01-conditions-and-logic/</guid>
+      <description>References  Tutorialspoint: Python Decision Making  Booleans and boolean operations  Boolean is a data type with two possible values: True or False The comparison operators are used to produce expressions that evaluate to a boolean type  a &amp;gt; b  True if a is greater than b  a &amp;gt;=b  True if a is greater than or equal to b  a &amp;lt; b  True if a is less than b  a &amp;lt;= b  True if a is less than or equals to b  a == b  True if a is equal to b  a !</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Drawing and Animation</title>
+      <link>/cp1/notes/unit-10/01-drawing-and-animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/01-drawing-and-animation/</guid>
+      <description>References  Canvas  W3Schools Canvas Tutorial W3Schools Canvas Reference HTML5 Canvas Tutorials  Timing  JS Timing Tutorial   Canvas  See the tutorials for information on the &amp;lt;canvas&amp;gt; element and context object Notes:  Use the HTML width and height attributes to set the dimensions of a canvas. Do not use CSS, it will just stretch and/or compress the canvas and distort the true dimensions   HTML &amp;lt;h1&amp;gt; Canvas!</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - File I/O</title>
+      <link>/cp2/notes/unit-09/01-file-io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/01-file-io/</guid>
+      <description>References  Tutorialspoint Files and I/O Java Doc - Basic I/O  Input from Console / Files  You can use an InputStreamReader to read from standard (console) input.
+InputStreamReader isr = new InputStreamReader(System.in); You can use a FileReader to read from file input
+FileReader fr = new FileReader(&amp;#34;input.txt&amp;#34;);  Demo import java.io.BufferedReader; import java.io.FileReader; import java.io.IOException; import java.io.InputStreamReader; public class FileReadDemo { public static void main(String[] args){ try { BufferedReader fileIn; String line; // reading from standard input 	fileIn = new BufferedReader(new InputStreamReader(System.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - HTML Basics</title>
+      <link>/cp1/notes/unit-08/01-html-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-08/01-html-basics/</guid>
+      <description>References  Primary: W3Schools HTML Tutorial - Instructions with interactive examples Secondary: Codecademy HTML &amp;amp; CSS - Interactive Tutorials (requires login)  great for practicing   Inspecting HTML  Use Chrome DevTools You can inspect HTML for any web page by  Right Mouse Click -&amp;gt; Inspect element   HTML template  Please review the primary reference You can use the HTML template below to start a new document  &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Internet and Web</title>
+      <link>/cp1/notes/unit-07/01-internet-and-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-07/01-internet-and-web/</guid>
+      <description>Computer Networks A computer network is a collection of computers that can transfer data between one another.
+In a basic client-server network
+ Computers are connected via a central server. Each computer connected to the server is a client.  The Internet  Networks are linked together to create internetworks, or internets. One of the first internetworks was ARPANET, which went online in 1969 The globally connected internetworks is called the Internet (with a capital &amp;lsquo;I&amp;rsquo;)  Client-server network diagram The Internet connections visualization ISP and home networks  Consumers connect to the Internet through an Internet Service Provider (ISP)  For example: Comcast or Verizon An ISP forms a wide-area network (WAN)  Many homes now have a local-area network (LAN)  A modem connects the LAN to an ISP A router directs Internet traffic to and from devices on the LAN   The WWW  &amp;lsquo;The web&amp;rsquo; refers to the World Wide Web (WWW) The WWW went online in 1991 Components of the WWW  Web Server Hypertext Transfer Protocol (HTTP) Hypertext Markup Language (HTML) Web Browsers   Web Servers and HTTP  When you attempt to access content on the WWW  your computer (client) sends a request over the Internet to a server for the website The server then sends back a response with the date you requested   HTML and Web Browsers  Hypertext markup language (HTML) is the language that specifies the content of a web page The web browser processes the HTML and other files and displays web page</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Intro Software Engineering</title>
+      <link>/cp2/notes/unit-06/01-software-engineering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/01-software-engineering/</guid>
+      <description>The Software Development Life Cycle  The systems development life cycle (SDLC) is a conceptual model used in project management that describes the stages involved in an information system development project, from an initial feasibility study through maintenance of the completed application.  Analysis and Design  Requirements analysis, also called requirements engineering, is the process of determining user expectations for a new or modified product. These features, called requirements, must be quantifiable, relevant and detailed.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Introduction</title>
+      <link>/cp2/notes/unit-01/01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/01-intro/</guid>
+      <description>Resources  About Java Technology Java Wikipedia UNIX Philosophy  About Computer Programming 2  Programming 2 is a more advanced course and is designed for students who intend to major in computer science or a related discipline. The course is composed of two unique semesters:  Semester 1: Data Structures and Algorithms Semester 2: Object-oriented Design and Development   Abstraction  &amp;ldquo;In computer science, abstraction is a technique for managing complexity of computer systems.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Introduction to Computer Science</title>
+      <link>/cp1/notes/unit-01/01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-01/01-intro/</guid>
+      <description>What is Computer Science? 
+
+Computer Science is &amp;hellip;
+ art : &amp;ldquo;An expression or application of human creative skill and imagination&amp;rdquo; science : &amp;ldquo;The intellectual and practical activity encompassing the systematic study of the structure and behavior of the physical and natural world through observation and experiment.&amp;rdquo; and also, &amp;ldquo;a systematically organized body of knowledge on a particular subject&amp;rdquo; engineering : &amp;ldquo;Application of knowledge in order to invent, design, build, maintain, and improve structures, machines, devices, systems, materials and processes.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Java Basics</title>
+      <link>/cp2/notes/unit-02/01-java-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/01-java-basics/</guid>
+      <description>Readings  Basic Java Syntax Basic Data Types Basic Operators Characters Strings File I/O  Primitive Datatypes  Primitive types are the basic, built-in types All variables nut be declared with their type
+int a_number; float pi = 3.14; Initialize variables by giving then a value or rely on their default Uninitialized Value
+     Data Type Default Value Size     byte 0 1 Byte   short 0 2 Bytes   int 0 4 Bytes   long 0L 8 Bytes   float 0.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Java Inheritance</title>
+      <link>/cp2/notes/unit-08/01-java-inheritance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/01-java-inheritance/</guid>
+      <description>Readings  Tutorialspoint Java Inheritance Java Doc Inheritance  Inheritance  inheritance is the process of deriving one class from another  The derived class (subclass) gets all of the field and methods of the other base class (superclass) &amp;ldquo;The idea of inheritance is simple but powerful: When you want to create a new class and there is already a class that includes some of the code that you want, you can derive your new class from the existing class.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - JavaScript</title>
+      <link>/cp1/notes/unit-09/01-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/01-javascript/</guid>
+      <description>References  JavaScript Tutorial JavaScript Reference  Getting Started  JavaScript allows a website to be interactive and dynamic JavaScript is included in a &amp;lt;script&amp;gt; element.  Using the src attribute allows you to load JavaScript from an external file   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Template Page&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body onload=&amp;#39;main()&amp;#39;&amp;gt; &amp;lt;h1&amp;gt; JavaScript Template &amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt; Hello JavaScript! &amp;lt;/h2&amp;gt; &amp;lt;p&amp;gt; Go to the JS Console (F12) &amp;lt;/p&amp;gt; &amp;lt;!-- optional external JS file will show error if file doesn&amp;#39;t exist --&amp;gt; &amp;lt;script src=&amp;#39;myscript.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Linked Lists</title>
+      <link>/cp2/notes/unit-04/01-linked-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/01-linked-lists/</guid>
+      <description>A linked list, LL for short, is a type of data structure that can be built from a class - A linked list is used to store a collection of data - Advantages over Arrays - LL&amp;rsquo;s are dynamically resizable - you can add and remove items at runtime - LL&amp;rsquo;s can be reorganized without moving around a lot of data - you just need to change references
+An object in a linked list is called a node - Each node is an instance of a user-defined class, and holds some data - A root reference points to the first node in the list, called the root node - Each node had a next reference that points to the next node in the LL - The next field of the last element is null</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - OOP</title>
+      <link>/cp1/notes/unit-06/01-object-oriented-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-06/01-object-oriented-programming/</guid>
+      <description>References  Tutorialspoint: Python object-oriented  Review: classes &amp;amp; objects  A class is a template for creating objects.  attributes are variables local to the class methods are functions - they are things the class can do.  An object is a specific instance of a class For example, Turtle is a class  attributes of turtle include: color, width, position, heading methods of turtle include: forward, left, penup, pendown  Joe and Moe are objects (instances of Turtle), and each have their own attribute values  # create objects joe = Turtle() moe = Turtle() # pencolor METHOD sets the color ATTRIBUTE joe.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Print Statements</title>
+      <link>/cp1/notes/unit-02/01-print-statements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/01-print-statements/</guid>
+      <description>Python has a function (more on those later) print that produces output in the interpreter window.
+Think of print as a way to provide feedback to the user of your program
+Official documentation
+We will primarily use one of the following three &amp;ldquo;flavors&amp;rdquo;
+ print  &amp;ldquo;displays&amp;rdquo; a line break. AKA a newline  print(data)  &amp;ldquo;displays&amp;rdquo; whatever value (literal or variable) data is  print(data1, data2, &amp;hellip;)  prints multiple values on a single line   Examples # print a new line print()#print the number 1 print(1)#print the text &amp;#39;Hello World&amp;#39; print(&amp;#39;Hello World&amp;#39; ) # or print(&amp;#34;Hello World&amp;#34;)#print multiple values per line print(1, &amp;#39;Hi&amp;#39;, 3.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Procedures</title>
+      <link>/cp1/notes/unit-03/01-procedures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/01-procedures/</guid>
+      <description>A function/procedure is a named set of instructions that can be executed on command
+To define a function/procedure, the programmer needs to write the header and body
+Header The header line begins with the keyword def and the programmer defined name of the function, followed by parentheses.
+The header may or may not take parameter(s) in the parentheses, separated by commas.
+Parameters are a mechanism of giving information to the function/procedure</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Requirement Analysis</title>
+      <link>/cp2/notes/unit-07/01-requirement-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/01-requirement-analysis/</guid>
+      <description>Software Development Life Cycle (SDLC) Requirement Analysis Questions  Who are the users of this product? What should the software do?  Class identification  Describe the software in as much detail as possible  For the sake of your own sanity, avoid using the word &amp;ldquo;class&amp;rdquo; in your description!  For example: &amp;ldquo;A Student Information System (SIS) allows students to register for a section of a course.  DESIGN TIP: It&amp;rsquo;s important to recognize that a student does not register for a course itself, but in a specific section of the course.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Strings</title>
+      <link>/cp1/notes/unit-05/01-strings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-05/01-strings/</guid>
+      <description>References  Tutorialspoint: Python Strings Wikibooks: Python Programming / Strings  String Basics  Strings work just like lists of characters  # make reference to string s = &amp;#34;Kulik&amp;#34; # basics: printing, length, indexing print(s) print(len(s)) print(s[0], s[-1]) # iterating for letter in s: print(letter, end=&amp;#39;.&amp;#39;) print() # iterating with index for i in range(len(s)): print(s[i], end=&amp;#39;-&amp;#39;) print() Output Kulik 5 K k K.u.l.i.k. K-u-l-i-k-  String slicing  Use slicing to get a part of string works just like list slicing (see notes)  # make reference to string s = &amp;#34;Kulik&amp;#34; # getting slices print(s[2:4]) # start:end print(s[:3]) # :end print(s[4:]) # start: Output li Kul k  String searching  find(searchstring) returns the first index of a character/substring or -1 if it does not exist in the searched string.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Trees and Graphs</title>
+      <link>/cp2/notes/unit-05/01-trees-and-graphs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-05/01-trees-and-graphs/</guid>
+      <description>Readings and References  Primary Reference BST  Note: These tutorials are in C++ but the main concepts and graphics apply to Java as well
+Recursion  Recursion is when a function calls itself! In the follow example, we will implement a recursive factorial function  factorial(n) is defined (for a positive integer) as the product of all integers between 1 and n  Consider the following:  public static int factorial(int n) { if( n &amp;lt;= 0 ) { return 0; } if( n == 1 ) { return 1; } return n * factorial(n-1); }  Let&amp;rsquo;s trace the code for factorial(3)  factorial(3) -&amp;gt; 3 * factorial(2)  factorial(2) -&amp;gt; 2 * factorial(1)  factorial(1) -&amp;gt; 1    Notice the returns cascade back from factorial(1) to factorial(3) Now trace it back:  factorial(3) -&amp;gt; 3 * 2 * 1  In our example, the recursion depth is 3 because there are 3 calls to factorial on the call stack before the returns start cascading back  Trees  Reference  Tree Data Structure  A tree is a data structure that simulates a hierarchical tree structure Terminology  A node is an item in the tree The root of a tree is the top level item An edge is a link connecting two nodes    Types of Trees  Reference  Binary Search Tree Trie  The diagram above depicts a Binary Search Tree.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 Arrays and ArrayLists</title>
+      <link>/cp2/notes/unit-03/01-arrays-and-arraylists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/01-arrays-and-arraylists/</guid>
+      <description>Java Array Specification  Spec  Java Array v.s. Python List    Java Array Python List     Single Type Multiple Types   Fixed length Variable length   continuous storage in memory Highly abstract type    Declaring and Initializing Arrays  You must declare the type and length You can initialize all element using a list with braces, but only when you declare the array  int[] foo = new int[5]; // 5 uninitialized integers  int[] bar = new int[]{ 16, 2, 77, 40, 12071 }; //foo = { 1, 2, 3, 4, 5 }; // can&amp;#39;t do it.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - CSS Basics</title>
+      <link>/cp1/notes/unit-08/02-css-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-08/02-css-basics/</guid>
+      <description>References  W3Schools CSS Tutorial W3Schools CSS Reference  Essentials  Cascading Style Sheets (CSS) are used to style your webpage  They can also add some additional functionality to your page  CSS can be inserted 3 ways  external CSS in a separate .css file internal CSS in a &amp;lt;style&amp;gt; tag in the &amp;lt;head&amp;gt; inline CSS using a &amp;lsquo;style&amp;rsquo; attribute  Cascading refers to the fact that styles can override others  internal style will override external styles inline styles will override internal and external styles Example:   &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - CSV Files</title>
+      <link>/cp2/notes/unit-09/02-csv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/02-csv/</guid>
+      <description> What is a CSV file?  CSV stands for &amp;ldquo;comma-separated values,&amp;rdquo; and refers simply to a text file in which data entries are separated by commas!  similarly, you might hear TSV (tab)   Importing / Exporting CSV with Java  Use String methods and File I/O Importing  Use a BufferedReader split the string and pass parameters to a Command  Exporting  Use a BufferedWriter join an array   </description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Command Line Interface</title>
+      <link>/cp1/notes/unit-06/02-command-line-interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-06/02-command-line-interface/</guid>
+      <description>Intro  A CLI is a Command-line interface  this is a way to operate a program using only text commands contrast with a GUI graphical user interface  Zork uses a CLI Below is a typical interaction in Zork (from from Zork @ textadventures.co.uk)  &amp;gt;look West of House This is an open field west of a white house, with a boarded front door. There is a small mailbox here.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Control Flow</title>
+      <link>/cp2/notes/unit-02/02-control-flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/02-control-flow/</guid>
+      <description>Readings  Java Decision Making Java Loop Control  Conditional Statements  Conditional statements in Java have the following syntax differences from Python  The condition must be enclosed in parentheses If the condition is true, then the subsequent statement or block will execute   Demo // BASIC condition  Scanner in = new Scanner(System.in); int x; x = in.nextInt(); if( x &amp;gt; 0 ){ System.out.println(&amp;#34;x is positive&amp;#34;); } else { System.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Data Representation</title>
+      <link>/cp2/notes/unit-01/02-data-representation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/02-data-representation/</guid>
+      <description>Review  Please review the Computers and Code notes from Programming 1  References  Number Systems, Base Conversions, and Computer Data Representation  Number Systems Decimal (base-10)  We use a base-10 number system  base 10 has 10 digits with the values 0-9 each position represents a power of 10  Moving left from the decimal point  &amp;ldquo;Ones place&amp;rdquo;  $$10^0 = 1$$  &amp;ldquo;Tens place&amp;rdquo;  $$10^1 = 10$$  &amp;ldquo;Hundreds place&amp;rdquo;  $$10^2 = 100$$  etc&amp;hellip;  A number&amp;rsquo;s value is given by the sum of (digit value * place value)  1,234 $$1 \cdot 10^3 + 2 \cdot 10^2 + 3 \cdot 10^1 + 4 \cdot 10^0$$   Binary (base-2)  Binary is a base-2 number system  base-2 has 2 bits with the values 0 or 1 each position represents a power of 2  Moving left from the radix point  $$2^0 = 1$$ $$2^1 = 2$$ $$2^2 = 4$$ $$2^3 = 8$$ etc&amp;hellip;  A number&amp;rsquo;s value is given by the sum of (bit value * place value)  1101 $$1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$$ $$ 8 + 4 + 1 = 13$$   Octal (base-8)  Octal is a base-8 system  Hexadecimal (base-16)  Hexadecimal is a base-16 number system  there are 16 hex codes with decimal values 0-15 The values 10-15 are represented by using the letters A-F each position represents a power of 16  Hexadecimal is useful as a shorthand representation of binary, since each hex symbol can represent 4 bits (one nibble).</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Development Roles</title>
+      <link>/cp2/notes/unit-06/02-development-roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/02-development-roles/</guid>
+      <description>References  Bureau of Labor Statistics IT job roles and responsibilities explained MSDN: A Model for Enterprise Teams  Stakeholders  A stakeholder is someone who has a vested interest in the development of a project. There are typically three primary stakeholders in a software development project:  The client is an individual or business who contracts with a software development company to implement a product. The user is the person or people who will actually use the product.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Dictionaries</title>
+      <link>/cp1/notes/unit-05/02-dictionaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-05/02-dictionaries/</guid>
+      <description>References  Tutorialspoint: Python Dictionaries  Dictionaries  In a nutshell, dictionaries are lists in which the elements are access by string rather than index number  Dictionaries are also called associative arrays, maps, or hashes  A dictionary entry is composed of a key/value pair  The string is used to access the element is called the key The element is called the value   # make an empty dictionary # use curly braces to distinguish from standard list words = {} # add a key / value pair to words words[ &amp;#39;python&amp;#39; ] = &amp;#34;A scary snake&amp;#34; # print the whole thing print( words ) # print one value by key print( words[ &amp;#39;python&amp;#39; ] ) Safe access  The in operator can be used to check if a key exists in a dictionary Alternatively, you could attempt the access in a try statement and catch the error if one occurs  key = &amp;#39;python&amp;#39; # ask for permission if key in words: print( words[ key ] ) else: print( &amp;#39;key&amp;#39;, key, &amp;#39;not found&amp;#39; )# ask for forgiveness try: print( words[ key ] ) except KeyError: print( &amp;#39;key&amp;#39;,key,&amp;#39;not found&amp;#39; ) Iterating  You can iterate using keys, values, or both  # iterate with keys, 2 ways #for key in words.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Functions</title>
+      <link>/cp1/notes/unit-03/02-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/02-functions/</guid>
+      <description>Reference  Python Functions  Overview  You can think of functions as different parts of your program. Just like in math, a function can take one or more inputs and produce output.  Function parameters are the inputs to the function Function return values are the output from the function    Function scope and local variables  Each function has its own set of variables. This is called the function&amp;rsquo;s scope Variables defined in functions are local variables - they cannot be accessed outside of the function.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Game Physics</title>
+      <link>/cp1/notes/unit-10/02-game-physics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/02-game-physics/</guid>
+      <description>Scalar and Vectors  speed is a scalar  scalar data only has magnitude for example, 30 mph in forward or reverse is the same speed  velocity is a vector  vector data has magnitude and direction the velocity depends on a reference axis the negative and positive directions are arbitrary - they are just that way because we said so, it could just as well be t he opposite something traveling to the right at a speed of 30mph, has a velocity of +30mph something traveling to the left at a speed of 30mph, has a velocity of -30mph</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - HTML DOM</title>
+      <link>/cp1/notes/unit-09/02-html-dom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/02-html-dom/</guid>
+      <description>Reference  W3Schools HTML DOM Tutorial W3Schools HTML DOM Reference  The DOM  DOM stands for Document Object Model The DOM is used to access and modify HTML elements using JavaScript The DOM is a tree representation of an HTML document  DOM Methods  See previous motes for examples The document object is at the top of the hierarchy Getting elements  document.getElementById document.getElementsByTagName document.getElementsByClassName document.getElementsByName  Getting elements using CSS selectors  document.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Java Interfaces</title>
+      <link>/cp2/notes/unit-08/02-java-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/02-java-interfaces/</guid>
+      <description>Interfaces &amp;amp; Abstract classes References  TutorialsPoint  &amp;ldquo;Java Object Oriented&amp;rdquo; Section  Oracle java Doc  OOP abstraction &amp;amp; encapsulation  In programming, abstraction is the practice of hiding the implementation details of a class behind public methods. This allows a programmer to use a class without knowing how it works, they only need to know what it does. Abstraction is closely related to encapsulation. We have used this before - by implementing getter and setter methods rather than accessing a class field directly.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Lists</title>
+      <link>/cp1/notes/unit-04/02-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-04/02-lists/</guid>
+      <description>Reference  Tutorialspoint: Python Lists  Lists  A list is very similar to a tuple, but more flexible Define lists using square brackets [] Use the built-in len function to get the length of a list  # create and print list stuff = [ &amp;#34;bread&amp;#34;, &amp;#34;eggs&amp;#34;, &amp;#34;milk&amp;#34; ] print( stuff ) # get length of list n = len( stuff ) print( &amp;#34;n =&amp;#34;,n ) Output [&#39;bread&#39;, &#39;eggs&#39;, &#39;milk&#39;] n = 3  Indexing  Access the list elements using the index operator []  THE FIRST ELEMENT IS AT INDEX 0 Elements can be accessed backwards from the end by using negative indexes   # access elements first = stuff[0] second = stuff[1] third = stuff[2] print(first, second, third) # access elements from the back last = stuff[-1] print(last) # get a random element import random print( random.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Operators and Expressions</title>
+      <link>/cp1/notes/unit-02/02-operators-and-expressions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/02-operators-and-expressions/</guid>
+      <description>Comments Every program should contain comments or notes in the code.
+A comment begins with a # (number sign, pound symbol, hashtag), and anything from the # to the end of line the is not executed.
+A Multiline comment begins and ends with triple quotes &amp;rdquo;&amp;rsquo;
+Examples # This is a single line comment&amp;#39;&amp;#39;&amp;#39; This is a multiline comment&amp;#39;&amp;#39;&amp;#39; Operators Basic mathematical operators
+ addition + subtraction - multiplication * division /  Other math operators</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Stacks and Queues</title>
+      <link>/cp2/notes/unit-04/02-stacks-and-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/02-stacks-and-queues/</guid>
+      <description> Stacks  Reference  Wikipedia  A stack is a LIFO abstract data type: &amp;ldquo;Last in, first out&amp;rdquo; Stack Operations  push(item) adds an item to the top of the stack pop() removes an item from the top of the stack    Queues  Reference  Wikipedia Priority Queue  A queue is a FIFO abstract data type: &amp;ldquo;First in, first out&amp;rdquo; Queue operations  enqueue(item) adds an item to the end of the queue dequeue() removes an item from the front of the queue    Priority Queue  A priority queue adds additional priority information  enqueue(priority, item) adds an item with a priority dequeueTop() removes the item with the highest priority   </description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Unified Modeling Language</title>
+      <link>/cp2/notes/unit-07/02-uml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/02-uml/</guid>
+      <description>References  Agilemodeling UML Class Diagrams IBM UML basics: The class diagram  UML Tools  Use lucidchart or draw.io for your design diagrams Lucidchart Setup  Sign in with your Pinkerton account and select free account In Account settings, go to Google Drive Integration and select &amp;ldquo;Automatically sync documents I create in Lucidchart to my Drive account&amp;rdquo; to create a Lucidchart folder in your Google Drive When you create a new document, choose UML under Categories  Draw.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Vectors</title>
+      <link>/cp2/notes/unit-03/02-vectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/02-vectors/</guid>
+      <description>References Vector API
+Introduction  The Vector class is an abstract container type like Python lists or Java ArrayLists. You can add, remove and insert elements. To use vectors, you must include the vector library  import java.util.Vector; Declaring Vectors  When you declare vectors, you must indicate the type you are storing. The syntax is  Vector&amp;lt;type&amp;gt; name = new Vector&amp;lt;&amp;gt;();  The Vector class has other constructors  // create a vector with an initial capacity Vector&amp;lt;Integer&amp;gt; vecA = new Vector&amp;lt;&amp;gt;(5); // copy the contents of vecA into vecB Vector&amp;lt;Integer&amp;gt; vecB = new Vector&amp;lt;&amp;gt;(vecA); Accessing and Modifying members  You can use the size() method to determine how many elements are in the vector.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 Computers and Code</title>
+      <link>/cp1/notes/unit-01/02-computers-and-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-01/02-computers-and-code/</guid>
+      <description>Digital Logic  Logic gates are the most fundamental logical units of computing are.  Logic gates are created using switches (transistors) and other basic electrical components.  Logic circuits are created using multiple logic gates.  Logic circuits map a set of inputs to a set of outputs.      Logic gates Logic circuits          
+Hardware components  Computer hardware is all of the physical components of a computer.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Brief History of Computing</title>
+      <link>/cp1/notes/unit-01/03-computer-history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-01/03-computer-history/</guid>
+      <description>Early History People  Before machines took over the job, people who did counting and arithmetic were known as computers.  Simple Calculating tools  Early tools used basic principles of counting and number representation (base 10 numbers). They were more of a &amp;ldquo;memory-aid&amp;rdquo; for human computers than a computer in any modern sense of the word.  Abacus Slide Rule Pascaline 
+Difference Engine  Charles Babbage (1791 - 1871)  Conceived and designed the first computer in anything like the modern sense.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Data Types</title>
+      <link>/cp1/notes/unit-02/03-data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/03-data-types/</guid>
+      <description>  An int is an integer value
+ positive and negative whole numbers, and zero  A float is a floating point value (decimal number)
+ A character is a single letter, digit, or other symbol
+ A string is a sequence of characters
+  In Python, literals are single data values, e.g. a single value of type int, float, string, etc.
+Examples 1 # int 5.672 # float &amp;#39;a&amp;#39; # character &amp;#34;asdf&amp;#34; # string</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - File Input and Output</title>
+      <link>/cp1/notes/unit-05/03-file-io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-05/03-file-io/</guid>
+      <description>References  Tutorialspoint: Python Files I/O wikibooks: Python Programming Input/Output  File input  Use open(&amp;lsquo;filename&amp;rsquo;, &amp;lsquo;r&amp;rsquo;) to open a file in &amp;lsquo;read&amp;rsquo; mode The input file should be located in the same directory as the program (in this example)  infile = open(&amp;#39;infile.txt&amp;#39;, &amp;#39;r&amp;#39;) for line in infile: #line.strip() will remove extra whitespace &amp;amp; line breaks line = line.strip() print( line) infile.close() File output  Use open(&amp;lsquo;filename&amp;rsquo;, &amp;lsquo;w&amp;rsquo;) to open a file in &amp;lsquo;write&amp;rsquo; mode  if the outfile does not exist, it will be created in the same directory as the program if the file exists, its contents will be cleared / overwritten  The example below, writes one line to a file  Note that you must use \n to write a line break   outfile = open(&amp;#34;outfile.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Forms and Input</title>
+      <link>/cp1/notes/unit-09/03-forms-and-input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/03-forms-and-input/</guid>
+      <description>References  W3Schools Forms  Form Elements Input Types  W3Schools Document Object Model (DOM)  HTML DOM Tutorial HTML DOM Reference   HTML Inputs  Allow you to get input from the user  You can enclose inputs in a &amp;lt;form&amp;gt; element, but it is not required If you use a &amp;lt;form&amp;gt; element, you should place the submit button outside of the form to prevent the page from reloading   Simple text input example  In the HTML  Use the onclick attribute of the &amp;lt;button&amp;gt; to specify the function to execute when the button is clicked (the event handler)  In the event handler  Use document.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Java CLI</title>
+      <link>/cp2/notes/unit-08/03-java-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/03-java-cli/</guid>
+      <description>Command-line Interface (CLI) Object-oriented CLI  Our Java OO CLI subsystem will contain the following  The Command interface, which specifies the method that all Commands must implement void run(String[] params) Each Command object is an instance of a unique class, which implements the Command interface The CommandSet contains a Hashmap of Command objects The CLI class has a CommandSet   Java Code The Command Interface  Specifies the contract that all &amp;ldquo;Commands&amp;rdquo; must adhere to  public interface Command { void run(String[] params); } The CommandSet class  The Command classes are defined inside the CommandSet The Command objects are instantiated and added to the HashMap in the constructor The constructor is places before the Command definitions for our convenience, so we are able to see the commands in the HashMap neat the top of the file  import java.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - JavaScript  OOP</title>
+      <link>/cp1/notes/unit-10/03-js-oop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/03-js-oop/</guid>
+      <description>References  JavaScript Objects JavaScript Prototypes  Overview  In object-oriented programming (OOP), objects methods are used to program behavior or &amp;ldquo;intelligence&amp;rdquo; into objects.  For example, instead of defining functions that update and draw a ball, we can program that functionality directly into the ball object itself. This allows for greater code organization and expressiveness. OO programming is now the de-facto standard for non-trivial programs.  The demos show two different ways of doing object-oriented programming in JavaScript.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Loops and Iteration</title>
+      <link>/cp1/notes/unit-04/03-loops-and-iteration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-04/03-loops-and-iteration/</guid>
+      <description>References  Tutorialspoint Python Loops  Print with end  When you use the print function, you can specify the end character using the named parameter end  by default, the last character is a line break \n for more info about special characters, revisit the I/O Notes from Unit 2  If you want to print just a line break, you can call print with no parameters  print( &amp;#34;joe&amp;#34; ) print( &amp;#34;bob&amp;#34;, end=&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - MySQL and JDBC</title>
+      <link>/cp2/notes/unit-09/03-mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/03-mysql/</guid>
+      <description>References  Tutorialspoint JDBC setup MySQL Doc Setup  MySQL Install and Setup  Install MySQL
+sudo apt install mysql Start MySQL
+mysql -h localhost -u root -p  -Note: If you want to change root password later, you can use these commands
+mysql -h localhost -u root -pUPDATE mysql.user SET Password=PASSWORD(&amp;#39;newpassword&amp;#39;) WHERE User=&amp;#39;root&amp;#39;; FLUSH PRIVILEGES; Setting up an example Database  Creare and use EMP database
+create database EMP; use EMP; Create a table</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Searching and Sorting</title>
+      <link>/cp2/notes/unit-03/03-searching-and-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/03-searching-and-sorting/</guid>
+      <description> Linear Search  Start with first element Compare each element with search value Stop when value is found or end of array is reached     Advantage Disadvantage     Simplicity Inefficiency    Binary Search  Require sorted list Start in the middle if search value &amp;lt; middle element, start over with 1st half if search value &amp;gt; middle element, start over with 2nd half continue until item is found, or you run out of elements     Advantage Disadvantage     Efficient Requires sorted list    Sorting Algorithms  Sorting Animations  Bubble Sort  While swap flag is true  Set swap flag to false Iterate from first element to next-to-last element  if element is greater than subsequent element  swap them set swap flag to true        Advantage Disadvantage     Relatively simple algorithm Inefficient for large arrays    Selection Sort  Iterate from i=0 to the next-to-last element  set least_index to i set least to value at i Iterate from j=(i + 1) to the last element  if element is less than least  update least_index update least   swap the least remaining value to index i      Advantage     less swapping    For Insertion and Merge sort, analyze the animations at the link above </description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Strings and Files</title>
+      <link>/cp2/notes/unit-02/03-strings-and-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/03-strings-and-files/</guid>
+      <description>String Methods  String is a Java built-in type Strings are immutable (meaning they cannot be changed) Java 8 String API  Demo public static void string_methods() { String s = &amp;#34;Hello, world!&amp;#34;; int len = s.length(); int i; // print first and last characters  System.out.println(s.charAt(0) + &amp;#34; &amp;#34; + s.charAt(len-1)); //get index of &amp;#39;,&amp;#39;  i = s.indexOf(&amp;#39;,&amp;#39;); // print substring using delimiter &amp;#39;,&amp;#39;  System.out.println(s.substring(0,i)); //find the first occurrence of &amp;#34;world&amp;#34;  i = s.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Tuples</title>
+      <link>/cp1/notes/unit-03/03-tuples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/03-tuples/</guid>
+      <description> Reference  Python Tuples  Tuples  A tuple is a collection of data enclosed in parentheses  Tuple packing is the assignment of data to a tuple variable Tuple unpacking is the extraction of data from a tuple.  Tuple indexes are determined by their order in the tuple, and begin with zero  Access and individual element from a tuple using the index operator []   # tuple basics p1 = (1, 3) # packing x1, y1 = p1 # unpacking print(x1, y1) # prints &amp;#39;1 3&amp;#39; print(p1[0], p1[1]) # indexing - prints &amp;#39;1 3 Tuples in Functions  Tuples can allow you to return multiple data values from a function  # tuples and functions def scale(pt, factor): x, y = pt x *= factor # same as x = x * factor y *= factor return (x, y) def main(): p1 = (1, 3) p2 = scale(p1, 2) print(p2) # (2, 6) main() </description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 - Event Handling</title>
+      <link>/cp1/notes/unit-09/04-event-handling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/04-event-handling/</guid>
+      <description>References  W3Schools HTML DOM Events Tutorial W3Schools HTML DOM Event Object Reference  Overview  You&amp;rsquo;ve already used event handling! When you specify a function for a button&amp;rsquo;s onclick attribute,  the event is onclick when the button is clicked, the event if fired (a.k.a. raised, triggered) the event handler is the function you specify  Review your button click handling code from previous notes/worksheets/etc.  Assigning Event Handlers  Three ways to do this  Set attribute in HTML Set attribute in JS Use addEventListener function   HTML &amp;lt;button onclick=&amp;#39;foo()&amp;#39;&amp;gt; Method 1 &amp;lt;/button&amp;gt; &amp;lt;button id=b2&amp;gt; Method 2 &amp;lt;/button&amp;gt; &amp;lt;button id=b3&amp;gt; Method 3 &amp;lt;/button&amp;gt; JS function foo(){ console.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 - Graphing Data</title>
+      <link>/cp1/notes/unit-05/04-graphing-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-05/04-graphing-data/</guid>
+      <description>Reference  Python Tutorials Matplotlib Matplotlib Documentation  Background Matplotlib is the most popular python library for creating graphs and plots. It is provided to programmers as a module.
+import matplotlib.pyplot as plt Pie Chart  A pie chart is a circular graph which is divided into slices to illustrate proportions.  import matplotlib matplotlib.use(&amp;#39;Agg&amp;#39;) import matplotlib.pyplot as plt # graph labels labels = [&amp;#39;Chicken&amp;#39;, &amp;#39;Fish&amp;#39;, &amp;#39;Steak&amp;#39;, &amp;#39;Vegetarian&amp;#39;] # data num_dishes = [34, 11, 47, 3] # colors for slices colors = [&amp;#39;yellow&amp;#39;, &amp;#39;blue&amp;#39;, &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;] # create the pie chart plt.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 - Simple Classes</title>
+      <link>/cp2/notes/unit-02/04-simple-classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/04-simple-classes/</guid>
+      <description>Reading  Object Classes  Introduction  A class is a user-defined data type A class is a template used to create objects, which are specific instances of the class When you define a class, you specify attributes (data members) and methods (functions) that each instance has For example  A Rectangle has two attributes: width and height The Rectangle class has methods to set and get the values of those attributes   Defining and implementing a Class  Define and implement a java class in it&amp;rsquo;s own .</description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 - Strings</title>
+      <link>/cp1/notes/unit-02/04-strings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/04-strings/</guid>
+      <description>As we have previously learned, a string is a sequence of characters. String can be short or long (as seen below)
+&amp;#34;hi&amp;#34; &amp;#34;Hello World&amp;#34; &amp;#34;This is a very long string!&amp;#34; Just like numbers, there are operations that can be performed on strings.
+ concatenation a + b  joins the strings a and b into one string  repetition a * x  repeats the string a, x times   Examples ```python &amp;lsquo;Hello&amp;rsquo; + &amp;ldquo;World&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 Turtle Graphics (Modules)</title>
+      <link>/cp1/notes/unit-03/04-turtle-graphics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/04-turtle-graphics/</guid>
+      <description>Modules  A module is a collection of code  every file you create is a module of your own you can import modules to use in your code   import random # random float 0 &amp;lt;= x &amp;lt; 1 print(random.random()) # random integer 0 &amp;lt;= x &amp;lt; 100 print(random.randrange(0, 100)) Turtle Graphics References  Turtle  Turtle  turtle is a module that allows you to create drawings with Python A class is a template for creating objects.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 05 - Variables</title>
+      <link>/cp1/notes/unit-02/05-variables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/05-variables/</guid>
+      <description>In the most basic terms, variables are programmer defined named memory locations that hold data.
+Terminology  Statements are composed of expressions and produce results is a python program. Most lines of code are statements
+ A variable assignment statement assigns the value of the right-hand side (RHS) to the variable on the left-hand side (LHS)
+ If a variable is new, this is called defining or initializing the variable.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 06 - Input</title>
+      <link>/cp1/notes/unit-02/06-input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/06-input/</guid>
+      <description>The input function is used to get input (data) from the user
+We will use one of the following &amp;ldquo;flavors&amp;rdquo;
+ input() with no parameter simply takes user input input(string) displays the prompt message (string)  In both cases input returns (gives back) a string containing what the user typed.
+Example name = input(&amp;#34;What&amp;#39;s your name?</description>
+    </item>
+    
+    <item>
+      <title>Lesson 07 - Type Checking</title>
+      <link>/cp1/notes/unit-02/07-type-checking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/07-type-checking/</guid>
+      <description> The type(data) function returns to the programmer the data type of the specified parameter.
+Examples type(123456) # returns &amp;lt;class &amp;#39;int&amp;#39;&amp;gt; ... an inttype(5.678) # returns &amp;lt;class &amp;#39;float&amp;#39;&amp;gt; ... a float</description>
+    </item>
+    
+    <item>
+      <title>Lesson 08 -  Type Casting</title>
+      <link>/cp1/notes/unit-02/08-type-casting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/08-type-casting/</guid>
+      <description>Python has built-in functions that enable the programmer to convert or type cast data from one format to another.
+Type conversion function: - int(param) - attempt to convert param to an int - float(param) - attempt to convert param to float - str(param) - attempt to convert param to string
+Important The input function returns all data as strings, so for example if you ask the user to enter a number for age, it will need to be type cast into a int before the programmer can use it as a number</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Binary Search Trees</title>
+      <link>/cp2/notes/unit-05/p1-binary-search-trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-05/p1-binary-search-trees/</guid>
+      <description>Description  In this project you will implement a simple Binary Search Tree (BST) that stores integers  Resource  Binary Search Tree  BST.java  insert(int)
+ inserts the parameter into the correct position in the tree BST Insertion  get(int)
+ returns the number if it is in the tree or -1 otherwise BST Search  remove(int)
+ remove the int from the tree BST Removal  toString()</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Calculators</title>
+      <link>/cp1/notes/unit-02/p1-calculators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-02/p1-calculators/</guid>
+      <description>Overview  Use Python to solve a variety of generalized mathematical problems. Your solutions should work for any valid input.  Problems 1. Elapsed Time In the provided template file time.py, write a python program that will ask for the starting time in 24 four format and duration and output (print) the end time.
+ Input
+ Starting time (24 hour format) time duration in hours  Output
+ The end time   2.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Data Conversion</title>
+      <link>/cp2/notes/unit-02/p1-data-conversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/p1-data-conversion/</guid>
+      <description>Objectives  Use Java Classes Use Java int, char, and String data types Understand how information is represented in Binary and Hexadecimal formats  Getting Started  Your task is to implement the methods of the Data class The Data class  stores an integer between 0 and 15 internally (private data member) has methods to get and set values in integer, binary and hexadecimal formats Constructors  Data()  creates a new Data object without initializing the number  Data(int i)  creates anew Data and initialize using the parameter i   Setter methods  setInt(int i)  set value using integer i  setBin(string b)  set value using the binary code in string b  setHex(char c)  set value using hex character in char c   Getter methods  int getInt()  get value as integer  String getBin()  get values as binary string  char getHex()  get value as hex character    Starter files  Data.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Internet and Web</title>
+      <link>/cp1/notes/unit-07/p1-internet-and-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-07/p1-internet-and-web/</guid>
+      <description>Objectives  Examine computer networks and the Internet Discuss the technologies that form the WWW Analyze the evolution of the web from static to dynamic and emergent technologies  Directions  Answer the following questions in a Google Doc and submit your completed work via Google Classroom.  Part 1: Concepts  What is a computer network? What is the Internet? When did the WWW first become publicly available? How do each of the following components contribute to the operation of the WWW?</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Intro to CS</title>
+      <link>/cp1/notes/unit-01/p1-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-01/p1-intro/</guid>
+      <description>Objectives  Explore the topics and relevance of computer science. (Lesson 01) Trace developments in computing and computer hardware. (Lesson 02) Discuss algorithms, abstraction, and digitization in the context of computer science. (Lesson 03)  Directions  Answer the following questions in a Google Doc and submit your completed work via Google Classroom.  Questions  What are the steps of the scientific method? Compare and contrast theoretical and applied science.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Letter Frequency Analysis</title>
+      <link>/cp1/notes/unit-05/p1-letter-frequency-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-05/p1-letter-frequency-analysis/</guid>
+      <description>Directions  use the provided template code as your starting point implement the functions where you see pass  Tips read_file(filename)  opens a file and passes each line to the parse_sentence function  parse_sentence(line)  passes each word of line to the analyze_word function.  analyze_word(word)  reads each character of &amp;lsquo;word&amp;rsquo;, if it is a letter update the letter_freq dictionary accordingly Should case matter? How do you know if a character is a letter?</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Linked Lists</title>
+      <link>/cp2/notes/unit-04/p1-linked-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/p1-linked-lists/</guid>
+      <description>Description  This project consists of two(2) classes. The first class, Person is used to model, or store information, about a person. The second class, List, is an implementation of a linked list that stores Person objects. These classes might be used in a personnel management system.  Person  Constructors  Person() - default constructor Person(string, string) - two(2) argument constructor, sets first and last name  Methods  setName(first, last) - sets object&amp;rsquo;s first and last name toString() - returns a string representation of a Person compareTo(Person) compares this Person against the Person parameter  returns -1 if this comes before param returns 0 if this and param are equal return 1 if this comes after param  Note: first compare by last name, then first name, finally by id (ids are guaranteed to be unique)  Testing  (For the full tests see Main.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Loops</title>
+      <link>/cp1/notes/unit-04/p1-loops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-04/p1-loops/</guid>
+      <description>Directions  Use the provided template code as your starting point implement the functions where you see pass  Problems print_mult_table(n)  print an n x n multiplication table, starting at 1 and ending at n parameter  n : dimensions of the multiplication table  example, where n == 5
+ Hint: review notes on Nested Loops
+  print_chess(rows, columns)  print a chess board using the dash &amp;ldquo;-&amp;rdquo; and pipe &amp;ldquo;|&amp;rdquo; characters parameters  rows : number of rows columns: number of columns  example, where rows == 3 and columns == 3</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - NetTech Webpage</title>
+      <link>/cp1/notes/unit-08/p1-nettech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-08/p1-nettech/</guid>
+      <description>Directions  Do not use inline CSS!  Keep your styles separate from your structure (use internal or external CSS)  You will create one or two files for this assignment  NetTech.html NetTech.css (optional - you could use internal CSS)   Page Structure  Use the information that you have learned in unit 07 to create a webpage about Computer Networks and the Web  Review your unit 07 notes and first assignment  Topics  Computer Networks The Internet The WWW Web2.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Occupations Analysis</title>
+      <link>/cp2/notes/unit-06/p1-occupations-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/p1-occupations-analysis/</guid>
+      <description>Objectives  Discuss the software development life cycle (SDLC) Discuss software engineering process models including waterfall and agile. Discuss stakeholders in software development projects, and members of software development teams. Discuss various careers in Computer Science (CS) and Information Technology (IT).  References Review the following references, they will be your guide:
+ BLS IT job roles and responsibilities explained  Analysis Briefly describe the following disciplines. What do these people do?</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Polygons</title>
+      <link>/cp1/notes/unit-03/p1-polygons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-03/p1-polygons/</guid>
+      <description>Getting Started  implement the specified functions in the provided started code  Areas  rect_area(b, h)
+ parameters  b : base width of rectangle h : base height of rectangle  return  area of rectangle    circle_area(r)
+ formula parameters  r : radius of circle  return  area of circle    triangle_area(b, h)
+ formula parameters  b : base width of triangle h : height of triangle (perpendicular to base)  return  area of triangle    house_area(b, h)</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Pyzork</title>
+      <link>/cp1/notes/unit-06/p1-pyzork/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-06/p1-pyzork/</guid>
+      <description>Project Intro Zork is a text-based adventure game in which you, the player, navigate through different locations. Along the way, you can look around, inspect and collect items, interact with friends and foes, and perhaps more &amp;hellip;
+You will be using Python to make an object-oriented, text-based adventure game.
+Codename: PyZork
+Project Overview  Research  Play around with Zork Online a bit. Do not get too sucked in &amp;ndash; play it just long enough to get an idea of how things work.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS CLI</title>
+      <link>/cp2/notes/unit-08/p1-sis-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/p1-sis-cli/</guid>
+      <description>System overview  The SISMain class will serve a few purposes  This main will be used to execute our full program SISMain will have instances of CLI and Database CLI commands will use methods of SISMain, SISMain&amp;rsquo;s database, and SISMain&amp;rsquo;s cli   SISMain  The SISMain class will contain static instances of Database and CLI  In this case, static means we do not need to instantiate the SISMain class to access the Database and CLI.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS Design</title>
+      <link>/cp2/notes/unit-07/p1-sis-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/p1-sis-design/</guid>
+      <description>Introduction  Consider the following description of a SIS, taken from Wikipedia  &amp;ldquo;A student information system (SIS), student management system, school administration software or student administration system is a management information system for education establishments to manage student data. Student Information Systems (often abbreviated as SIS systems) provide capabilities for registering students on courses, documenting grading transcripts and results of student test and other assessment scores, build student schedules, track student attendance, and manage many other student-related data needs in a school.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS Persistent Data</title>
+      <link>/cp2/notes/unit-09/p1-sis-persistent-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/p1-sis-persistent-data/</guid>
+      <description>Overview  Create Data management class that allows you to read and write program data using CSV files.  Features  Admins should be able to :  Batch create new users by loading data from CSV (userdata.csv) Batch create new courses by loading data from CSV (coursedata.csv) Load a course roster from CSV.  Teachers should be able to:  Export gradebook to CSV   Specifications  When you&amp;rsquo;re implementing this, you&amp;rsquo;ll have to think carefully about the order of operations for saving and restoring the system.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Searching and Sorting</title>
+      <link>/cp2/notes/unit-03/p1-searching-and-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/p1-searching-and-sorting/</guid>
+      <description>Notes  Arrays &amp;amp; ArrayLists Searching &amp;amp; Sorting  Directions  Implement the ArrayUtils class  provides methods for double arrays, including searching &amp;amp; sorting algorithms  Implement the Main class  provides testing for ArrayUtils and benchmarks against the built-in Array functions Using the performance benchmark code as a reference, display how long each sort takes to complete   Files  ArrayUtils.java
+ you can add functions, but do not change any of the template functions  Main.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Sketchpad</title>
+      <link>/cp1/notes/unit-10/p1-sketchpad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/p1-sketchpad/</guid>
+      <description>Directions  Create a drawing app where you move a &amp;lsquo;pen&amp;rsquo; using the arrow keys
+ Refer back to the Event handling notes and your activities in the DOM worksheet  Assign other keys to these tasks
+ clear the canvas change the ball/pen color change the ball/pen width  Extensions (required)
+ Use a color input to select background and pen colors Use a range input to select pen size implement drawing with the mouse  Tips:</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Word Games</title>
+      <link>/cp1/notes/unit-09/p1-word-games/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/p1-word-games/</guid>
+      <description>Objectives  Use the DOM to access the value of input fields Use the DOM to modify the innerHTML of a div Use string methods Use array methods  Madlib  To get started, add these elements to your page  text input button paragraph  Implement the following behavior  When you click the button, the text in the input is echoed in the paragraph  Create more inputs with labels and a single submit button When the button is clicked, call a function that generates a story using the information entered and displays it in the paragraph  Piglatin  Create a div with a text input, a button, and a paragraph When the button is clicked, the text in the input is translated to Pig Latin Rules of Pig Latin  Words beginning with vowels (a, e, i, o, u) should have way appended to them Words beginning with consonants should have the consonant moved to the end and have ay appended All letters should be lower case   Example &amp;quot;Hi how are you doing&amp;quot; -&amp;gt; &amp;quot;ihay, owhay, areway ouyay oingday&amp;quot;  Extensions (optional)  Make the translator work with punctuation Make the translator work with words that have multiple letters that make a single sound at the beginning.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 Intro to Data</title>
+      <link>/cp2/notes/unit-01/p1-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/p1-data/</guid>
+      <description>Direction  Answer the following questions in a Google Doc and submit your completed work via Google Classroom.  Questions  What is UNIX? What are the components of the UNIX operating system? What other operating systems are build on UNIX? Compare and contrast CLI and GUI based operating systems. What are the advantages and disadvantages of each? What is the difference between an absolute and relative directory path? Give an example of each.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - Notepad</title>
+      <link>/cp1/notes/unit-09/p2-notepad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/p2-notepad/</guid>
+      <description> Objectives  Use the DOM to create and append new HTML content US a JS Date Object to get date / time information  Requirements  &amp;lsquo;Notepad&amp;rsquo; in a header element (h1) div to create a new notes  title label and text input content label and textarea button to submit  clicking submit button creates a new note div with  Header (h2) with the note title paragraph with data / time info paragraph with note content delete button (not shown in screenshots below)  submitting a note should clear the title input and content area new notes should be inserted at the top Extension:  allow users to submit a note by pressing the &amp;lsquo;enter&amp;rsquo; key   Screenshot - on page load Screenshot - first note </description>
+    </item>
+    
+    <item>
+      <title>Project 02 - Occupation Presentation</title>
+      <link>/cp2/notes/unit-06/p2-occupation-presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/p2-occupation-presentation/</guid>
+      <description>Objectives  Conduct and research into a particular computing occupation. Present research to supervisor and peers.  Rubric  Research Rubric  Presentation Choose one of the occupations from the previous assignment. Create a 10-slide presentation using Google Slides. This outline is given as a suggestion and may be adapted as necessary:
+ Title Intro / Outline Body (6+ slides)  Job description Education / training required Stats  pay / compensation number of jobs &amp;amp; outlook (% growth)  &amp;ldquo;Tools of the trade&amp;rdquo;  hardware, software, programming languages, frameworks, IDE&amp;rsquo;s, modeling tools, etc.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - SIS Data Models</title>
+      <link>/cp2/notes/unit-07/p2-sis-data-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/p2-sis-data-models/</guid>
+      <description>The data subsystem of the SIS consists of the following  Database: container for Users and Courses Course: container for Section User and Section have a many-to-many relationship (ENROLLED) and a 1-to-1 relationship (TEACHES)  Note that the fields / methods lists in this diagram are examples and should not be considered complete.  Testing / Requirements  You should have some unit testing for each of these classes.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - SIS User Hierarchies</title>
+      <link>/cp2/notes/unit-08/p2-user-hierarchy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/p2-user-hierarchy/</guid>
+      <description>Command hierarchy Administrator commands  create user usertype username password create course coursename create section coursename teacher view user | course | section  Teacher commands  create assignment coursename section# assignmentname view section | student | assignment  Student commands  view section | assignment  User data hierarchy  Consider implementing an inheritance hierarchy for User data. For example:  Admin has a title *Teacher*s have a department (A full system might include a Department class, but we will not worry about that).</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - Stacks and Queues</title>
+      <link>/cp2/notes/unit-04/p2-stacks-and-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/p2-stacks-and-queues/</guid>
+      <description>Stack  implement the Stack Abstract Data Type using the built-in Java ArrayList class.
+ Use your stack to implement a postfix expression evaluator
+   Postfix algorithm  Starting at the beginning of the expression, get one term (operator or operand) at a time  If the term is an operand, push it onto the stack If the term is an operator, pop two operands off the stack, perform the operation, and push the result back onto the stack  hen you get to the end of the expression, there should be exactly one operand left on the stack.</description>
+    </item>
+    
+    <item>
+      <title>Project 03 - Object Builder</title>
+      <link>/cp1/notes/unit-09/p3-object-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/p3-object-builder/</guid>
+      <description> Builder function  Create an HTML form that allows you to choose options for a vehicle (or something of your choosing)  (see example below)  The form should have  text input(s) select menu radio buttons checkboxes button  In your JS function &amp;lsquo;build&amp;rsquo; should  read the data from the form construct a JavaScript object (obj) that represents the car (or other object) Log the object to the console for debugging call view(obj)   Viewer function  In the view function  create a new &amp;lt;tr&amp;gt; using DOM method(s) use the properties of the parameter obj passe from the build function to set the innerHTML of the new row you created in step 1 append the new row to the view table   Screenshot - on page load Screenshot - after building a few cars </description>
+    </item>
+    
+    <item>
+      <title>Project 04 - Profile Page</title>
+      <link>/cp1/notes/unit-09/p4-profile-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/p4-profile-page/</guid>
+      <description> Objectives  Use the DOM to change HTML CSS styles Use DOM and CSS to hide / show HTML elements Use HTML5 multimedia  References  JS &amp;amp; CSS CSS Display &amp;amp; Visibility HTML5 multimedia  Overview  Create a profile page that the user can edit Features  Account Info Preferences Personal Info   More details  You can implement this in a single page When you click Save in the account info section  disable the username and password inputs hide the save button and show the edit button  When you click Save in the preferences section  Change the page styles (CSS)   Tips  For color and range input types, see HTML Input Types For profile picture loading, see previous notes on file upload Extension  Allow the use to change CSS Image Filters with scrollbars   Example Screenshot - before Screenshot - after </description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 -  Object Oriented</title>
+      <link>/cp2/notes/unit-08/ws1-object-oriented/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/ws1-object-oriented/</guid>
+      <description>Reading / References  Unit notes TutorialsPoint Java Object Oriented Sections  Directions  Answer the following questions in a text document (Google Doc works too!)  Inheritance  What is Inheritance?  What is a superclass / subclass? What does it mean to derive one class from another? What is the IS-A relationship? What is a class hierarchy? What is polymorphism?  Show using code how to  derive a subclass from a base class call a superclass constructor from a subclass constructor Determine if a superclass object is an instance of a particular subclass  What is reflection?</description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 - Data Management</title>
+      <link>/cp2/notes/unit-09/ws1-data-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/ws1-data-management/</guid>
+      <description>Input &amp;amp; Output  What is an input stream? What is the standard input stream / standard output stream? What class is used to read from standard input… to read from file input? Why do these classes need to be passed into a BufferedReader? What is an Exception&amp;hellip; &amp;lsquo;try-catch&amp;rsquo; statement&amp;hellip; &amp;lsquo;throw&amp;rsquo; statement? What classes are used to write out to a file? What does the argument &amp;ldquo;utf-8&amp;rdquo; mean / do?</description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 - Dynamic HTML</title>
+      <link>/cp1/notes/unit-09/ws1-dom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-09/ws1-dom/</guid>
+      <description>Direction  create a web page to demonstrate dynamic page components write your answers in the provided template (dom.html)  HTML DOM &amp;amp; Forms  Answer in the HTML Section   What is the DOM? Answer using the diagram above (include the diagram on your web page)  What is the parent node of the &amp;lt;body&amp;gt; element? What are the child nodes of the &amp;lt;body&amp;gt; element? What is the sibling of the &amp;lt;body&amp;gt; element?</description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 - Web Graphics</title>
+      <link>/cp1/notes/unit-10/ws1-web-graphics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp1/notes/unit-10/ws1-web-graphics/</guid>
+      <description>Objectives  Use HTML5 Canvas to draw elements on a web page. Use JS timing to animate canvas elements. Use JS object-oriented programming to organize complex applications.  Directions  Create a web page to complete the exercises below.  Canvas  What is the purpose of the &amp;lt;canvas&amp;gt; element? Why should you use HTML height and width attributes instead of CSS to set the dimensions of a canvas? What is the canvas context?</description>
+    </item>
+    
+  </channel>
+</rss>

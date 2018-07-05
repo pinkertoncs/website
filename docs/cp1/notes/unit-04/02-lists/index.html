@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - Lists</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li>Tutorialspoint: <a href="http://tutorialspoint.com/python/python_lists.htm">Python Lists</a></li>
+</ul>
+
+<h2 id="lists">Lists</h2>
+
+<ul>
+<li>A <strong>list</strong> is very similar to a <strong>tuple</strong>, but more flexible</li>
+<li>Define lists using square brackets <strong>[]</strong></li>
+<li>Use the built-in <strong>len</strong> function to get the length of a list</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># create and print list</span>
+stuff = [ <span style="color:#0ff;font-weight:bold">&#34;bread&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;eggs&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;milk&#34;</span> ]
+<span style="color:#fff;font-weight:bold">print</span>( stuff )
+
+<span style="color:#007f7f"># get length of list</span>
+n = <span style="color:#fff;font-weight:bold">len</span>( stuff )
+<span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;n =&#34;</span>,n )</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>['bread', 'eggs', 'milk']
+n = 3
+</code></pre>
+
+<h2 id="indexing">Indexing</h2>
+
+<ul>
+<li>Access the list elements using the <strong>index operator []</strong>
+
+<ul>
+<li>THE FIRST ELEMENT IS AT INDEX 0</li>
+<li>Elements can be accessed backwards from the end by using negative indexes</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># access elements</span>
+first = stuff[<span style="color:#ff0;font-weight:bold">0</span>]
+second = stuff[<span style="color:#ff0;font-weight:bold">1</span>]
+third = stuff[<span style="color:#ff0;font-weight:bold">2</span>]
+<span style="color:#fff;font-weight:bold">print</span>(first, second, third)
+
+<span style="color:#007f7f"># access elements from the back</span>
+last = stuff[-<span style="color:#ff0;font-weight:bold">1</span>]
+<span style="color:#fff;font-weight:bold">print</span>(last)
+
+<span style="color:#007f7f"># get a random element</span>
+<span style="color:#fff;font-weight:bold">import</span> random
+<span style="color:#fff;font-weight:bold">print</span>( random.choice(a_list))</code></pre></div>
+<h3 id="output-1">Output</h3>
+
+<pre><code>bread eggs milk
+milk
+eggs
+</code></pre>
+
+<h2 id="list-reference">List Reference</h2>
+
+<ul>
+<li>The previous types we have used (<strong>int</strong>, <strong>float</strong>, <strong>string</strong>, <strong>tuple</strong>) are <strong>immutable</strong> types
+
+<ul>
+<li>Immutable types cannot be changed</li>
+<li>when you assign a new variable to an immutable type, the value is copied</li>
+</ul></li>
+<li>Lists are <strong>mutable</strong>
+
+<ul>
+<li>When you assign a new variable to a mutable type, you have a new <strong>reference</strong> to the same object!</li>
+</ul></li>
+<li>In practice, it looks like this
+
+<ul>
+<li>notice that appending to L2 also changed L1</li>
+<li>L1 and L2 refer to the same object</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp1/unit-04/list_reference.png" alt="" /></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># tuples</span>
+p1 = (<span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>)
+p2 = p1
+<span style="color:#fff;font-weight:bold">print</span>( p2 )
+
+<span style="color:#007f7f"># lists</span>
+L1 = [<span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>,<span style="color:#0ff;font-weight:bold">&#39;b&#39;</span>,<span style="color:#0ff;font-weight:bold">&#39;c&#39;</span>]
+L2 = L1
+L2.append(<span style="color:#0ff;font-weight:bold">&#39;d&#39;</span>)
+<span style="color:#fff;font-weight:bold">print</span>(L1)</code></pre></div>
+<h3 id="output-2">Output</h3>
+
+<pre><code>(2, 3)
+['a', 'b', 'c', 'd']
+</code></pre>
+
+<h2 id="adding-and-removing-elements">Adding and Removing Elements</h2>
+
+<ul>
+<li>List is a class (more on this later), and as such has <strong>methods</strong> (or actions that can be performed on a list)</li>
+<li><strong>Adding</strong> elements
+
+<ul>
+<li>a_list.append(x)
+
+<ul>
+<li>add an item to the end of list &lsquo;a_list&rsquo;</li>
+</ul></li>
+<li>a_list.extend(L)
+
+<ul>
+<li>add multiple items to the end of list &lsquo;a_list&rsquo;</li>
+</ul></li>
+<li>a_list.insert(i, x)
+
+<ul>
+<li>add an item into list &lsquo;a_list&rsquo; at the given index &lsquo;i&rsquo;</li>
+</ul></li>
+</ul></li>
+<li><strong>Removing</strong> elements
+
+<ul>
+<li>a_list.pop()
+
+<ul>
+<li>removes and returns last element</li>
+</ul></li>
+<li>a_list.pop(i)
+
+<ul>
+<li>remove and returns element at index &lsquo;i&rsquo;</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#39;# setup&#39;</span>)
+ls = [ <span style="color:#0ff;font-weight:bold">&#34;joe&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;jane&#34;</span> ]
+<span style="color:#fff;font-weight:bold">print</span>( ls )
+
+<span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold"># adding elements&#39;</span>)
+ls.append( <span style="color:#0ff;font-weight:bold">&#34;rob&#34;</span> )
+ls.extend([ <span style="color:#0ff;font-weight:bold">&#34;bill&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;phoebe&#34;</span> ])
+ls.insert( <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#0ff;font-weight:bold">&#34;marcus&#34;</span> )
+<span style="color:#fff;font-weight:bold">print</span>( ls )
+
+<span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold"># removing elements&#39;</span>)
+name = ls.pop(<span style="color:#ff0;font-weight:bold">2</span>)
+<span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;removed: &#34;</span>,name)
+
+<span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold"># sorting elements&#39;</span>)
+ls.sort()
+<span style="color:#fff;font-weight:bold">print</span>(ls)</code></pre></div>
+<h3 id="output-3">Output</h3>
+
+<pre><code># setup
+['joe', 'jane']
+
+# adding elements
+['joe', 'jane', 'marcus', 'rob', 'bill', 'phoebe']
+
+# removing elements
+removed:  marcus
+
+# sorting elements
+['bill', 'jane', 'joe', 'phoebe', 'rob']
+</code></pre>
+
+<h2 id="counting-and-searching">Counting and Searching</h2>
+
+<ul>
+<li>Inclusion testing
+
+<ul>
+<li>Use the <strong>in</strong> operator to check if and item is in a list</li>
+</ul></li>
+<li>Counting and finding elements
+
+<ul>
+<li>a_list.count(x)
+
+<ul>
+<li>returns the number occurrences of &lsquo;x&rsquo; in list &lsquo;a_list&rsquo;</li>
+</ul></li>
+<li>a_list.index(x)
+
+<ul>
+<li>returns the first index of element &lsquo;x&rsquo; in list &lsquo;a_list&rsquo;</li>
+</ul></li>
+<li>a_list.remove(x)
+
+<ul>
+<li>removes the first element &lsquo;x&rsquo; from list &lsquo;a_list&rsquo;</li>
+</ul></li>
+<li>Notes
+
+<ul>
+<li><strong>x in list</strong> has the same truth value as <strong>a_list.count(x) &gt; 0</strong></li>
+<li><strong>index</strong> and <strong>remove</strong> will produce an error if element x does not exist in the list</li>
+<li><strong>list.remove(x)</strong> is the same as <strong>list.pop(list.index(x))</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ls = [<span style="color:#0ff;font-weight:bold">&#39;joe&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;jane&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;marcus&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;rob&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;bill&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;phoebe&#39;</span>]
+
+<span style="color:#007f7f"># remove a found element</span>
+x=<span style="color:#0ff;font-weight:bold">&#39;marcus&#39;</span>
+<span style="color:#fff;font-weight:bold">if</span>( x in ls ):
+    i = ls.index(x)
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;removing element [&#34;</span>,x,
+        <span style="color:#0ff;font-weight:bold">&#34;] at index&#34;</span>, i  )
+    ls.remove( x )
+
+<span style="color:#fff;font-weight:bold">print</span>( ls )</code></pre></div>
+<h3 id="output-4">Output</h3>
+
+<pre><code>removing element [ marcus ] at index 2
+['joe', 'jane', 'rob', 'bill', 'phoebe']
+</code></pre>
+
+<h2 id="sorting-and-random-ness">Sorting and Random(ness)</h2>
+
+<ul>
+<li><strong>Sorting</strong> lists
+
+<ul>
+<li>a_list.sort()
+
+<ul>
+<li>sort a list in place</li>
+</ul></li>
+<li>sorted(a_list)
+
+<ul>
+<li>returns a new sorted copy of list</li>
+</ul></li>
+</ul></li>
+<li><strong>Random</strong>(ness) and shuffling
+
+<ul>
+<li>random.shuffle(a_list)
+
+<ul>
+<li>shuffles list in place</li>
+</ul></li>
+<li>random.choice(a_list)
+
+<ul>
+<li>returns a random item from the list</li>
+</ul></li>
+<li>random.sample(a_list, n)
+
+<ul>
+<li>returns a list of n random items from list</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> random
+
+x = <span style="color:#fff;font-weight:bold">list</span>(<span style="color:#0ff;font-weight:bold">&#39;qwertpoiuyasdfglkjhzxcvbnm&#39;</span>)
+x.sort()
+<span style="color:#fff;font-weight:bold">print</span>(x)
+random.shuffle(x)
+<span style="color:#fff;font-weight:bold">print</span>(x)
+<span style="color:#fff;font-weight:bold">print</span>( random.choice(x) )
+<span style="color:#fff;font-weight:bold">print</span>( random.sample(x, <span style="color:#ff0;font-weight:bold">5</span>) )</code></pre></div>
+<h2 id="slicing">Slicing</h2>
+
+<ul>
+<li><strong>List slicing</strong> can be used to a copy of a part of a list
+
+<ul>
+<li>a[start:end]
+
+<ul>
+<li>items from start through end - 1</li>
+</ul></li>
+<li>a[start:]
+
+<ul>
+<li>items from start through the rest of the list</li>
+</ul></li>
+<li>a[:end]
+
+<ul>
+<li>items from the beginning through end -1</li>
+</ul></li>
+<li>a[:]
+
+<ul>
+<li>a copy of the whole list</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">vowels = <span style="color:#fff;font-weight:bold">list</span>(<span style="color:#0ff;font-weight:bold">&#39;aeiou&#39;</span>)
+
+<span style="color:#fff;font-weight:bold">print</span>(vowels[<span style="color:#ff0;font-weight:bold">2</span>:<span style="color:#ff0;font-weight:bold">4</span>])
+<span style="color:#fff;font-weight:bold">print</span>(vowels[<span style="color:#ff0;font-weight:bold">2</span>:])
+<span style="color:#fff;font-weight:bold">print</span>(vowels[:<span style="color:#ff0;font-weight:bold">4</span>])
+<span style="color:#fff;font-weight:bold">print</span>(vowels[:])</code></pre></div>
+<h3 id="output-5">Output</h3>
+
+<pre><code>['i', 'o']
+['i', 'o', 'u']
+['a', 'e', 'i', 'o']
+['a','e','i','o','u']
+</code></pre>
+
+<h2 id="nested-lists">Nested Lists</h2>
+
+<ul>
+<li>Lists can contain an object type - even lists!</li>
+<li>Lists inside of lists are called <strong>nested lists</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">L1 = [<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>]
+L2 = [<span style="color:#ff0;font-weight:bold">4</span>, <span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">6</span>]
+L3 = [<span style="color:#ff0;font-weight:bold">7</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">9</span>]
+lists = [L1, L2, L3]
+
+<span style="color:#fff;font-weight:bold">print</span>(lists)
+<span style="color:#fff;font-weight:bold">print</span>(lists[<span style="color:#ff0;font-weight:bold">0</span>])
+<span style="color:#fff;font-weight:bold">print</span>(lists[<span style="color:#ff0;font-weight:bold">0</span>][<span style="color:#ff0;font-weight:bold">0</span>])</code></pre></div>
+<h3 id="output-6">Output</h3>
+
+<pre><code>[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+[1, 2, 3]
+1
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

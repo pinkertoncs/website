@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 01 - Pyzork</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="project-intro">Project Intro</h2>
+
+<p><em>Zork is a text-based adventure game in which you, the player, navigate through different locations.  Along the way, you can look around, inspect and collect items, interact with friends and foes, and perhaps more &hellip;</em></p>
+
+<p>You will be using Python to make an object-oriented, text-based adventure game.</p>
+
+<p>Codename: <strong>PyZork</strong></p>
+
+<h2 id="project-overview">Project Overview</h2>
+
+<ol>
+<li>Research
+
+<ul>
+<li>Play around with <a href="http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork">Zork Online</a> a bit. Do not get too sucked in &ndash; play it just long enough to get an idea of how things work.</li>
+</ul></li>
+<li>Team up (optional)
+
+<ul>
+<li>Form teams of <strong>at most</strong> 3, If you have a 4-person collaboration, you will be expected to produce to different version of PyZork</li>
+</ul></li>
+<li>Design
+
+<ul>
+<li>You must design your program thoroughly</li>
+<li><strong>Required</strong> design documents include
+
+<ol>
+<li>Synopsis of a story line</li>
+<li>Map of game</li>
+<li>List of rooms with descriptions</li>
+<li>List of items, by room, with descriptions</li>
+<li>List of commands and arguments</li>
+</ol></li>
+<li>As you implement your game, things will change - you must keep these design documents up-to-date!!!</li>
+</ul></li>
+<li>Implement &amp; Document
+
+<ul>
+<li>Your implementation must be object-oriented. There are many ways to solve a problem using Python. You will be shown a recommended pathway towards a solution in this document.</li>
+</ul></li>
+</ol>
+
+<h2 id="template-code">Template Code</h2>
+
+<p>See folder for starter code</p>
+
+<h2 id="development-tips">Development Tips</h2>
+
+<h3 id="creating-and-connecting-rooms"><strong>Creating and connecting rooms</strong></h3>
+
+<ul>
+<li>Implement room.connect_to()</li>
+<li>In the room unit tests, create some rooms and connect them</li>
+<li>Make sure that you create complementary connection if the door is 2-way</li>
+</ul>
+
+<h4 id="room-class"><strong>Room class</strong></h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">if</span> __name__==<span style="color:#0ff;font-weight:bold">&#39;__main__&#39;</span>:
+
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#39;# ROOM UNIT TESTS&#39;</span> )
+
+    <span style="color:#0ff;font-weight:bold">&#39;&#39;&#39;
+</span><span style="color:#0ff;font-weight:bold">    -------------
+</span><span style="color:#0ff;font-weight:bold">    | Grand Hall |
+</span><span style="color:#0ff;font-weight:bold">    --------------
+</span><span style="color:#0ff;font-weight:bold">    | Foyer      |
+</span><span style="color:#0ff;font-weight:bold">    --------------
+</span><span style="color:#0ff;font-weight:bold">    &#39;&#39;&#39;</span>
+
+    <span style="color:#007f7f"># setup rooms</span>
+    rm1 = Room( <span style="color:#0ff;font-weight:bold">&#34;Foyer&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;a small entrance area&#34;</span> )
+    rm2 = Room( <span style="color:#0ff;font-weight:bold">&#34;Grand Hall&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;a grand old hall&#34;</span> )
+    rm1.connect_to( rm2, <span style="color:#0ff;font-weight:bold">&#39;N&#39;</span> )
+
+    <span style="color:#007f7f"># test doors</span>
+    <span style="color:#fff;font-weight:bold">print</span>( rm1.doors[<span style="color:#0ff;font-weight:bold">&#39;N&#39;</span>] )    <span style="color:#007f7f"># Grand Hall</span>
+    <span style="color:#fff;font-weight:bold">print</span>( rm2.doors[<span style="color:#0ff;font-weight:bold">&#39;S&#39;</span>] )    <span style="color:#007f7f"># Foyer</span></code></pre></div>
+<h4 id="output">Output</h4>
+
+<pre><code># ROOM UNIT TESTS
+Grand Hall
+Foyer
+</code></pre>
+
+<h3 id="initializing-and-testing-player"><strong>Initializing and testing Player</strong></h3>
+
+<ul>
+<li>implement player.goto()</li>
+<li>In Player&rsquo;s unit tests, create a player object and set the player&rsquo;s initial location</li>
+<li>Implement player.look() and test</li>
+<li>Implement player.go() and test</li>
+</ul>
+
+<p><strong>Player class</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">if</span> __name__==<span style="color:#0ff;font-weight:bold">&#39;__main__&#39;</span>:
+
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#39;# PLAYER UNIT TESTS&#39;</span> )
+
+    <span style="color:#007f7f"># setup rooms</span>
+    rm1 = room.Room( <span style="color:#0ff;font-weight:bold">&#34;Foyer&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;a small entrance area&#34;</span> )
+    rm2 = room.Room( <span style="color:#0ff;font-weight:bold">&#34;Grand Hall&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;a grand old hall&#34;</span> )
+    rm1.connect_to( rm2, <span style="color:#0ff;font-weight:bold">&#39;N&#39;</span> )
+
+    <span style="color:#007f7f"># test Player functions</span>
+    p = Player()
+    p.goto( rm1 )
+    p.look()
+    p.go( <span style="color:#0ff;font-weight:bold">&#39;N&#39;</span> )
+    p.look()</code></pre></div>
+<h4 id="output-1">Output</h4>
+
+<h4 id="player-unit-tests">Player Unit Tests</h4>
+
+<pre><code>You are in Foyer
+a small entrance area
+You have entered Grand Hall
+a grand old hall
+</code></pre>
+
+<h3 id="initializing-the-game"><strong>Initializing the game</strong></h3>
+
+<ul>
+<li>In game.__init__()
+
+<ul>
+<li>create rooms and connect them</li>
+<li>initialize self.player and set starting location</li>
+</ul></li>
+<li>In game.start()
+
+<ul>
+<li>print a welcome message</li>
+<li>print the player&rsquo;s location name and description</li>
+</ul></li>
+</ul>
+
+<p><strong>Game class</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">if</span> __name__==<span style="color:#0ff;font-weight:bold">&#39;__main__&#39;</span>:
+
+    g=Game()
+    g.start()</code></pre></div>
+<h4 id="output-2">Output</h4>
+
+<pre><code>Welcome to PyZork!
+You are in Foyer
+a small entrance area
+</code></pre>
+
+<p><strong>The command-line interface</strong>
+- Please see notes on Implementing a CLI
+- Start the command loop in game.start()
+- Process the command in game.process_cmd()
+- All (or at least most) commands will be linked to methods of the player (self.player)
+- Implement these commands
+    - help
+    - look
+    - go
+- Your game should now be interactive, so you can debug by playing it!</p>
+
+<p><strong>END BUILD 1</strong></p>
+
+<p><strong>items</strong>
+- Implement room.add_items() to add items to a room
+- Update player.look() so that, if an item is given as an argument, the description of the item is printed
+- Implement player.take(), which removes an items from the Room;s items and adds it to the player&rsquo;s items.
+- Update / add these commands to the CLI
+    - look [item]
+    - take [item]</p>
+
+<p><strong>???</strong>
+- What you do from here is up to you
+- Game play extensions include
+    - Container items (open mailbox and take leaflet)
+    - Friends? Enemies? etc &hellip;</p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

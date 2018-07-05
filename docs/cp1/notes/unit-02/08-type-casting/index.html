@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 08 -  Type Casting</span></h1>
+
+
+</div>
+
+<main>
+
+
+<p>Python has built-in functions that enable the programmer to convert or <strong>type cast</strong> data from one format to another.</p>
+
+<p>Type conversion function:
+- <strong>int(param)</strong>
+    - attempt to convert param to an int
+- <strong>float(param)</strong>
+    - attempt to convert param to float
+- <strong>str(param)</strong>
+    - attempt to convert param to string</p>
+
+<h2 id="important">Important</h2>
+
+<p>The <strong>input</strong> function returns all data as strings, so for example if you ask the user to enter a number for age, it will need to be <strong>type cast</strong> into a <strong>int</strong> before the programmer can use it as a number</p>
+
+<h2 id="example">Example</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x = <span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">&#39;first number&#39;</span>)
+y = <span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">&#39;second number&#39;</span>)
+
+<span style="color:#007f7f"># the next statement will produce an error - you can&#39;t divide strings!</span>
+
+<span style="color:#fff;font-weight:bold">print</span>(x / y)
+
+<span style="color:#007f7f"># below is one solution</span>
+
+x = <span style="color:#fff;font-weight:bold">float</span>(x)
+y = <span style="color:#fff;font-weight:bold">float</span>(y)
+
+<span style="color:#fff;font-weight:bold">print</span>(x / y)</code></pre></div>
+<h2 id="error-handling">Error Handling</h2>
+
+<p>To handle the error in case the user enters a string when expecting a number, you can use a <strong>try-catch statement</strong></p>
+
+<ul>
+<li>if an error occurs in the &lsquo;try&rsquo; block, control will immediately go the the &lsquo;except&rsquo; block</li>
+<li>if no errors occur in the &lsquo;try&rsquo; block, the &lsquo;except&rsquo; block will not execute</li>
+</ul>
+
+<h2 id="example-1">Example</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x = <span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">&#39;Enter a number: &#39;</span>)
+
+<span style="color:#fff;font-weight:bold">try</span>:
+    x = <span style="color:#fff;font-weight:bold">int</span>(x)
+    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;you entered:&#34;</span>, x)
+<span style="color:#fff;font-weight:bold">except</span>:
+    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;I said enter a number!&#34;</span>)</code></pre></div>
+<h2 id="errors">Errors</h2>
+
+<ul>
+<li><strong>Syntax errors</strong> are the result of spelling errors or malformed expressions
+
+<ul>
+<li>CaPitaliZation mismatches</li>
+<li>not closing quotes or parentheses</li>
+</ul></li>
+<li><strong>Runtime errors</strong> are the result of illegal operations
+
+<ul>
+<li>dividing by zero</li>
+<li>trying to divide strings</li>
+</ul></li>
+<li><strong>Semantic errors</strong> are errors that the computer will not catch
+
+<ul>
+<li>&ldquo;programmer logic errors&rdquo;</li>
+<li>misunderstanding of operator precedence</li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

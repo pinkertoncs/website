@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - OOP</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>Tutorialspoint: <a href="http://www.tutorialspoint.com/python/python_classes_objects.htm">Python object-oriented</a></li>
+</ul>
+
+<h2 id="review-classes-objects">Review: classes &amp; objects</h2>
+
+<ul>
+<li>A <strong>class</strong> is a template for creating objects.
+
+<ul>
+<li><strong>attributes</strong> are variables local to the class</li>
+<li><strong>methods</strong> are functions - they are things the class can do.</li>
+</ul></li>
+<li>An <strong>object</strong> is a specific instance of a class</li>
+<li>For example, Turtle is a class
+
+<ul>
+<li>attributes of turtle include: color, width, position, heading</li>
+<li>methods of turtle include: forward, left, penup, pendown</li>
+</ul></li>
+<li>Joe and Moe are objects (instances of Turtle), and each have their own attribute values</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># create objects</span>
+joe = Turtle()
+moe = Turtle()
+
+<span style="color:#007f7f"># pencolor METHOD sets the color ATTRIBUTE</span>
+joe.pencolor( <span style="color:#0ff;font-weight:bold">&#39;blue&#39;</span> )
+moe.pencolor(<span style="color:#0ff;font-weight:bold">&#39;green&#39;</span>)
+
+<span style="color:#007f7f"># these METHODS change the position ATTRIBUTE of joe</span>
+joe.goto(<span style="color:#ff0;font-weight:bold">0</span>,<span style="color:#ff0;font-weight:bold">0</span>)
+joe.forward(<span style="color:#ff0;font-weight:bold">100</span>)</code></pre></div>
+<h2 id="defining-classes">Defining classes</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">class</span> Person:               <span style="color:#007f7f"># empty class definition</span>
+    <span style="color:#fff;font-weight:bold">pass</span>
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    joe = Person()          <span style="color:#007f7f"># define a Person object</span>
+    joe.name = <span style="color:#0ff;font-weight:bold">&#34;Joe&#34;</span>        <span style="color:#007f7f"># give joe a name attribute</span>
+    <span style="color:#fff;font-weight:bold">print</span>( joe.name )       <span style="color:#007f7f"># access joe&#39;s name</span></code></pre></div>
+<h2 id="special-methods">Special methods</h2>
+
+<ul>
+<li>the keyword <strong>self</strong> is the first parameter for all methods
+
+<ul>
+<li>self is used to refer to the object that will call the method</li>
+</ul></li>
+<li>the <strong>__init__</strong> method is the <strong>object constructor</strong>
+
+<ul>
+<li>the constructor is automatically called when you create a new object</li>
+<li>the parameter <em>n</em> is used to assign the name of a new Person</li>
+<li>the default value of &ldquo;Anonymous&rdquo; is applied when no name is given</li>
+</ul></li>
+<li>the <strong>__str__</strong> method is called automatically when you print and object
+
+<ul>
+<li>This method should always return a string</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">class</span> Person:
+    <span style="color:#007f7f"># constructor</span>
+    <span style="color:#fff;font-weight:bold">def</span> __init__(self, n=<span style="color:#0ff;font-weight:bold">&#34;Anonymous&#34;</span> ):
+        self.name = n
+
+    <span style="color:#007f7f"># string casting method</span>
+    <span style="color:#fff;font-weight:bold">def</span> __str__(self):
+        <span style="color:#fff;font-weight:bold">return</span> self.name
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    <span style="color:#007f7f"># create some Person objects</span>
+    p1 = Person()
+    p2 = Person(<span style="color:#0ff;font-weight:bold">&#34;Joe&#34;</span>)
+
+    <span style="color:#007f7f"># print some Person objects</span>
+    <span style="color:#fff;font-weight:bold">print</span>( p1 )
+    <span style="color:#fff;font-weight:bold">print</span>( p2 )</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>Anonymous
+Joe
+</code></pre>
+
+<h2 id="regular-methods">Regular methods</h2>
+
+<ul>
+<li>Regular methods are called using the <strong>dot operator</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">class</span> Person:
+    <span style="color:#007f7f"># constructor</span>
+    <span style="color:#fff;font-weight:bold">def</span> __init__(self, n=<span style="color:#0ff;font-weight:bold">&#34;Anonymous&#34;</span> ):
+        self.name = n
+
+    <span style="color:#007f7f"># string casting method</span>
+    <span style="color:#fff;font-weight:bold">def</span> __str__(self):
+        <span style="color:#fff;font-weight:bold">return</span> self.name
+
+    <span style="color:#fff;font-weight:bold">def</span> sayHi( self ):
+        <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;Hi, my name is&#34;</span>, self.name )
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    joe = Person(<span style="color:#0ff;font-weight:bold">&#34;Joe&#34;</span>)     <span style="color:#007f7f"># define a Person object</span>
+    joe.sayHi()             <span style="color:#007f7f"># call say_hello method</span>
+
+main()</code></pre></div>
+<h3 id="output-1">Output</h3>
+
+<pre><code>Hi, my name is Joe
+</code></pre>
+
+<h2 id="object-composition">Object composition</h2>
+
+<ul>
+<li>Object composition is when one object contains others</li>
+<li>In this example, the Person object contains a list of hobbies
+
+<ul>
+<li>Hobbies are just strings here, but an object can contain instances of other objects!</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">class</span> Person:
+    <span style="color:#007f7f"># constructor</span>
+    <span style="color:#fff;font-weight:bold">def</span> __init__(self, n=<span style="color:#0ff;font-weight:bold">&#34;Anonymous&#34;</span> ):
+        self.name = n
+        self.hobbies = []
+
+    <span style="color:#007f7f"># string casting method</span>
+    <span style="color:#fff;font-weight:bold">def</span> __str__(self):
+        <span style="color:#fff;font-weight:bold">return</span> self.name
+
+    <span style="color:#fff;font-weight:bold">def</span> say_hello( self ):
+        <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;Hi, my name is&#34;</span>, self.name )
+
+        <span style="color:#fff;font-weight:bold">if</span> self.hobbies:
+            <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;I like&#34;</span>, end=<span style="color:#0ff;font-weight:bold">&#39; &#39;</span> )
+            <span style="color:#fff;font-weight:bold">for</span> hobby in self.hobbies:
+                <span style="color:#fff;font-weight:bold">print</span>( hobby, end=<span style="color:#0ff;font-weight:bold">&#39;, &#39;</span>)
+            <span style="color:#fff;font-weight:bold">print</span>()
+
+    <span style="color:#fff;font-weight:bold">def</span> add_hobby( self, h ):
+        self.hobbies.append( h )
+
+
+<span style="color:#fff;font-weight:bold">def</span> main():
+    joe = Person(<span style="color:#0ff;font-weight:bold">&#34;Joe&#34;</span>)
+    joe.add_hobby(<span style="color:#0ff;font-weight:bold">&#34;skiing&#34;</span>)
+    joe.add_hobby(<span style="color:#0ff;font-weight:bold">&#34;trains&#34;</span>)
+    joe.add_hobby(<span style="color:#0ff;font-weight:bold">&#34;turtles&#34;</span>)
+    joe.say_hello()
+    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#39;---&#39;</span>)
+    sam = Person(<span style="color:#0ff;font-weight:bold">&#39;Sam&#39;</span>)
+    sam.say_hello()
+
+main()</code></pre></div>
+<h3 id="output-2">Output</h3>
+
+<pre><code>Hi, my name is Joe
+I like skiing, trains, turtles,
+---
+Hi, my name is Sam
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "PinkertonCS"
+theme = "hugo-xmin"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+PygmentsCodeFences = true
+PygmentsStyle = "default"
+publishDir = "docs"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Intro to Computer Science"
+    url = "/intro/"
+    weight = 2
+[[menu.main]]
+    name = "Programming 1"
+    url = "/cp1/"
+    weight = 3
+[[menu.main]]
+    name = "Programming 2"
+    url = "/cp2/"
+    weight = 4
+[[menu.main]]
+    name = "AP Computer Science"
+    url = "/apcs/"
+    weight = 5
+
+[params]
+    description = "Pinkerton Academy Computer Science"
+    footer = "&copy; Michael B. Kulik 2018 | [Github](https://github.com/pinkertoncs)"

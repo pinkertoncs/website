@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 02 - SIS User Hierarchies</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="command-hierarchy">Command hierarchy</h2>
+
+<p><img src="/images/cp2/unit-08/cmd.png" alt="" /></p>
+
+<h3 id="administrator-commands">Administrator commands</h3>
+
+<ul>
+<li><strong>create user</strong> <em>usertype username password</em></li>
+<li><strong>create course</strong> <em>coursename</em></li>
+<li><strong>create section</strong> <em>coursename teacher</em></li>
+<li><strong>view</strong> <em>user</em> | <em>course</em> | <em>section</em></li>
+</ul>
+
+<h3 id="teacher-commands">Teacher commands</h3>
+
+<ul>
+<li><strong>create assignment</strong> <em>coursename section# assignmentname</em></li>
+<li><strong>view</strong> <em>section</em> | <em>student</em> | <em>assignment</em></li>
+</ul>
+
+<h3 id="student-commands">Student commands</h3>
+
+<ul>
+<li><strong>view</strong> <em>section</em> | <em>assignment</em></li>
+</ul>
+
+<h2 id="user-data-hierarchy">User data hierarchy</h2>
+
+<ul>
+<li>Consider implementing an inheritance hierarchy for User data. For example:
+
+<ul>
+<li><em>Admin</em> has a title</li>
+<li>*Teacher*s have a department (A full system might include a Department class, but we will not worry about that).</li>
+<li>*Student*s have a year of graduation</li>
+</ul></li>
+<li>Do not consider the methods listed here to be comprehensive. Add any methods you need</li>
+</ul>
+
+<p><img src="/images/cp2/unit-08/user.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

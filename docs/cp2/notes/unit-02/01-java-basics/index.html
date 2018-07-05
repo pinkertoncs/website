@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Java Basics</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="readings">Readings</h2>
+
+<ul>
+<li><a href="https://www.tutorialspoint.com/java/java_basic_syntax.htm">Basic Java Syntax</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_basic_datatypes.htm">Basic Data Types</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_basic_operators.htm">Basic Operators</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_characters.htm">Characters</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_strings.htm">Strings</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_files_io.htm">File I/O</a></li>
+</ul>
+
+<h2 id="primitive-datatypes">Primitive Datatypes</h2>
+
+<ul>
+<li><strong>Primitive types</strong> are the basic, built-in types</li>
+
+<li><p>All variables nut be <strong>declared</strong> with their type</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">int</span> a_number;
+<span style="color:#fff;font-weight:bold">float</span> pi = 3.<span style="color:#007f7f">14</span>;</code></pre></div></li>
+
+<li><p><strong>Initialize variables</strong> by giving then a value or rely on their default <strong>Uninitialized Value</strong></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Data Type</th>
+<th align="center">Default Value</th>
+<th align="center">Size</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">byte</td>
+<td align="center">0</td>
+<td align="center">1 Byte</td>
+</tr>
+
+<tr>
+<td align="center">short</td>
+<td align="center">0</td>
+<td align="center">2 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">int</td>
+<td align="center">0</td>
+<td align="center">4 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">long</td>
+<td align="center">0L</td>
+<td align="center">8 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">float</td>
+<td align="center">0.0f</td>
+<td align="center">4 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">double</td>
+<td align="center">0.0d</td>
+<td align="center">8 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">char</td>
+<td align="center">&lsquo;\u0000&rsquo;</td>
+<td align="center">2 Bytes</td>
+</tr>
+
+<tr>
+<td align="center">String (or any object)</td>
+<td align="center">null</td>
+<td align="center">Depends on object</td>
+</tr>
+
+<tr>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">Undefined (1 bit)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="demo">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// declare integer a
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> a;
+
+<span style="color:#007f7f">// initialize a
+</span><span style="color:#007f7f"></span>a = 5;
+
+<span style="color:#007f7f">// print a
+</span><span style="color:#007f7f"></span>System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(a);
+
+<span style="color:#007f7f">// declare and initialize float b
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">float</span> b = 3.<span style="color:#007f7f">14</span>;
+
+<span style="color:#007f7f">// declare and initialize char c
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">char</span> c = <span style="color:#0ff;font-weight:bold">&#39;A&#39;</span>;
+
+<span style="color:#007f7f">// assign char value to int
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> d = <span style="color:#0ff;font-weight:bold">&#39;A&#39;</span>;
+
+<span style="color:#007f7f">//print d
+</span><span style="color:#007f7f"></span>System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(d);</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>5 // initialized value
+
+65 // ASCII value of character 'A'
+</code></pre>
+
+<h2 id="operators">Operators</h2>
+
+<ul>
+<li>Virtually identical in use to Python operators. The following are some distinctions</li>
+<li>Increment / decrement (many ways)</li>
+<li>Exponentiation: in the <em>Math</em> class</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Operators{
+
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+
+        <span style="color:#fff;font-weight:bold">int</span> x = 2;
+
+        <span style="color:#007f7f">// increment 3 times
+</span><span style="color:#007f7f"></span>        x++;
+        x += 1;
+        x = x + 1;
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(x);
+
+        <span style="color:#007f7f">// decrement 3 times
+</span><span style="color:#007f7f"></span>        x--;
+        x -= 1;
+        x = x - 1;
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(x);
+
+        <span style="color:#007f7f">//pow function part of System.Math
+</span><span style="color:#007f7f"></span>        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(Math.<span style="color:#007f7f">pow</span>(x,3));
+    }
+}</code></pre></div>
+<h2 id="char-string">char &amp; String</h2>
+
+<ul>
+<li><strong>char</strong>(s) are initialized using single quotes <em>&lsquo;</em> and <strong>String</strong>(s) are initialized using double quotes <em>&ldquo;</em></li>
+<li>String elements are chars, and are accessible via functions</li>
+<li>String in immutable (just like Python)</li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">Java String API</a></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Strings {
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+        <span style="color:#007f7f">// chars use single quotes
+</span><span style="color:#007f7f"></span>        <span style="color:#fff;font-weight:bold">char</span> c = <span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>;
+
+        <span style="color:#007f7f">//strings use double quotes
+</span><span style="color:#007f7f"></span>        String s = <span style="color:#0ff;font-weight:bold">&#34;Hello&#34;</span>;
+
+        <span style="color:#007f7f">// accessing a char by string index
+</span><span style="color:#007f7f"></span>        <span style="color:#fff;font-weight:bold">char</span> c2 = s.<span style="color:#007f7f">charAt</span>(0);
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(c + <span style="color:#0ff;font-weight:bold">&#34; &#34;</span> + s + <span style="color:#0ff;font-weight:bold">&#34; &#34;</span> + c2);
+    }
+}</code></pre></div>
+<h3 id="output-1">Output</h3>
+
+<pre><code>a Hello H
+</code></pre>
+
+<h2 id="input-output">Input &amp; Output</h2>
+
+<p><strong>Notes</strong>
+- Input and Output via <a href="http://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">PrintStream class</a>
+- Standard input, output, and error PrintStreams are exposed via the <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/System.html">System class</a></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">PrintStream</th>
+<th align="center">System name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">input</td>
+<td align="center"><code>System.in</code></td>
+</tr>
+
+<tr>
+<td align="center">output</td>
+<td align="center"><code>System.out</code></td>
+</tr>
+
+<tr>
+<td align="center">error</td>
+<td align="center"><code>System.err</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Whitespace, Printing</strong></p>
+
+<ul>
+<li>printing characters are letters, number, symbols, and whitespace</li>
+<li><strong>whitespace</strong> includes spaces, tabs, etc</li>
+<li>non-printing characters includes:
+
+<ul>
+<li><strong>newline (&rsquo;\n&rsquo;)</strong> which a programmer can send to the output stream,
+indicting that the console should insert a line break</li>
+<li><strong>carriage return (&rsquo;\r&rsquo;)</strong> which is inserted into the input stream when
+the user presses the &lsquo;enter&rsquo; key</li>
+</ul></li>
+</ul>
+
+<p><strong>Printstream</strong></p>
+
+<ul>
+<li>An <strong>output stream</strong> is as it sounds, a stream of symbols that are sent to output
+
+<ul>
+<li><strong>System.out</strong> is the standard output stream, which is printed to the console window</li>
+<li><strong>println</strong>, is used to insert data into an output stream</li>
+</ul></li>
+<li>An <strong>input stream</strong> is a stream of symbols that are collected from input
+
+<ul>
+<li><strong>System.in</strong> is the standard input stream, which is read from the user input in the console.</li>
+<li>Creating a <a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Scanner.html">Scanner</a> enables a programmer to read user input from the console</li>
+</ul></li>
+</ul>
+
+<h3 id="demo-1">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">import</span> java.util.Scanner;
+
+<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> InputOutput {
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+
+        <span style="color:#fff;font-weight:bold">int</span> i;
+        <span style="color:#fff;font-weight:bold">char</span> c;
+        String s;
+        String junk;
+
+        Scanner in = <span style="color:#fff;font-weight:bold">new</span> Scanner(System.<span style="color:#007f7f">in</span>);
+
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">print</span>( <span style="color:#0ff;font-weight:bold">&#34;Hello from stdout!\n&#34;</span> + <span style="color:#0ff;font-weight:bold">&#34;Give me an int: &#34;</span>);
+
+        <span style="color:#fff;font-weight:bold">try</span>{
+            i = in.<span style="color:#007f7f">nextInt</span>();
+            System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Got &#34;</span> + i );
+        } <span style="color:#fff;font-weight:bold">catch</span>(Exception e) {
+            <span style="color:#007f7f">// if error, print message and ignore bad number by calling in.next() again
+</span><span style="color:#007f7f"></span>            System.<span style="color:#007f7f">err</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Could not convert input to integer!&#34;</span>);
+            in.<span style="color:#007f7f">next</span>();
+        }
+
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Give me a char: &#34;</span>);
+        c = in.<span style="color:#007f7f">next</span>().<span style="color:#007f7f">charAt</span>(0);
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Got &#39;&#34;</span> + c + <span style="color:#0ff;font-weight:bold">&#34;&#39;&#34;</span>);
+
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Give me a string: &#34;</span>);
+        s = in.<span style="color:#007f7f">next</span>();
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Got \&#34;&#34;</span> + s + <span style="color:#0ff;font-weight:bold">&#34;\&#34;&#34;</span>);
+
+    }
+}</code></pre></div>
+<h2 id="functions">Functions</h2>
+
+<p><strong>Review</strong></p>
+
+<ul>
+<li>A <strong>function</strong> is a block of code that can be executed on command
+
+<ul>
+<li>The function is executed when it is <strong>called / invoked</strong></li>
+</ul></li>
+<li>A <strong>function</strong> may have zero, one, or more <strong>parameters</strong>
+
+<ul>
+<li>A value passed to a function is called an <strong>argument</strong></li>
+</ul></li>
+<li>The <strong>function signature (header)</strong> is the first line with the  visibility, return type,
+function name, and list of parameters in parentheses <em>()</em>
+
+<ul>
+<li>Functions that do not return any data should have the return type <strong>void</strong></li>
+</ul></li>
+<li>The <strong>function body</strong> is the block of code after the header, enclosed in curly brackets <em>{ }</em></li>
+</ul>
+
+<h3 id="demo-2">Demo</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Function{
+
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">int</span> addition(<span style="color:#fff;font-weight:bold">int</span> a , <span style="color:#fff;font-weight:bold">int</span> b) {
+        <span style="color:#fff;font-weight:bold">int</span> r;
+        r = a + b;
+        <span style="color:#fff;font-weight:bold">return</span> r;
+    }
+
+
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+        <span style="color:#fff;font-weight:bold">int</span> z;
+        z = addition (5,3);
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;The result is &#34;</span> + z);
+    }
+}</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

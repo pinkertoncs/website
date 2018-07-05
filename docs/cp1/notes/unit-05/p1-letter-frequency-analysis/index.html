@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 01 - Letter Frequency Analysis</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="directions">Directions</h2>
+
+<ul>
+<li>use the provided template code as your starting point</li>
+<li>implement the functions where you see <strong>pass</strong></li>
+</ul>
+
+<h2 id="tips">Tips</h2>
+
+<h3 id="read-file-filename"><strong>read_file(filename)</strong></h3>
+
+<ul>
+<li>opens a file and passes each line to the <strong>parse_sentence</strong> function</li>
+</ul>
+
+<h3 id="parse-sentence-line"><strong>parse_sentence(line)</strong></h3>
+
+<ul>
+<li>passes each word of <em>line</em> to the <strong>analyze_word</strong> function.</li>
+</ul>
+
+<h3 id="analyze-word-word"><strong>analyze_word(word)</strong></h3>
+
+<ul>
+<li>reads each character of &lsquo;word&rsquo;, if it is a letter update the <em>letter_freq</em> dictionary accordingly</li>
+<li>Should case matter?</li>
+<li>How do you know if a character is a letter?</li>
+</ul>
+
+<h3 id="make-graph"><strong>make_graph()</strong></h3>
+
+<ul>
+<li>what type of graph do you think best helps visualize the letter frequency of a piece of text (pie, line, bar, other)?</li>
+<li>Using your gathered letter frequency metrics, plot your data</li>
+</ul>
+
+<h3 id="preprocess-data"><strong>preprocess_data()</strong></h3>
+
+<ul>
+<li><p>this helper function converts the the dictionary of letters and frequency to a tuple containing the letters (keys) and frequencies (values)</p></li>
+
+<li><p>This may help you in preparing your data for plotting.</p></li>
+</ul>
+
+<h2 id="sample-output">Sample Output</h2>
+
+<p>This sample shows the letter frequency of the provided <em>test-input.txt</em> to help with debugging purposes.</p>
+
+<pre><code> {'D': 28, 'C': 45, 'G': 19, 'I': 89, 'F': 11,
+  'U': 100, 'H': 3, 'L': 55, 'N': 61, 'T': 68,
+  'X': 2, 'Q': 16, 'P': 28, 'M': 37, 'E': 103,
+  'A': 85, 'V': 16, 'B': 10, 'O': 40, 'S': 82,
+  'J': 2, 'R': 54}
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

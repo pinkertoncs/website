@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AP Computer Science A on PinkertonCS</title>
+    <link>/apcs/</link>
+    <description>Recent content in AP Computer Science A on PinkertonCS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Jun 2018 11:56:29 -0400</lastBuildDate>
+    
+	<atom:link href="/apcs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

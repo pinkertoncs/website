@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - Unified Modeling Language</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.agilemodeling.com/artifacts/classDiagram.htm">Agilemodeling UML Class Diagrams</a></li>
+<li><a href="http://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/bell/">IBM UML basics: The class diagram</a></li>
+</ul>
+
+<h2 id="uml-tools">UML Tools</h2>
+
+<ul>
+<li>Use <a href="https://www.lucidchart.com/">lucidchart</a> or <a href="https://www.draw.io/">draw.io</a> for your design diagrams</li>
+<li><strong>Lucidchart Setup</strong>
+
+<ul>
+<li>Sign in with your Pinkerton account and select free account</li>
+<li>In Account settings, go to <a href="https://www.lucidchart.com/users/googleDrive">Google Drive Integration</a> and select &ldquo;<em>Automatically sync documents I create in Lucidchart to my Drive account</em>&rdquo; to create a Lucidchart folder in your Google Drive</li>
+<li>When you create a new document, choose <strong>UML</strong> under <strong>Categories</strong></li>
+</ul></li>
+<li><strong>Draw.io Setup</strong>
+
+<ul>
+<li>Login with your Pinkerton account</li>
+</ul></li>
+</ul>
+
+<h2 id="modeling-classes">Modeling classes</h2>
+
+<ul>
+<li>Create your classes in Lucidchart (or draw.io)</li>
+<li>Each class has 3 sections: ClassName, fields (attributes), and Methods.
+
+<ul>
+<li>Fields should have a +/- for public/private, name, type, and default value (if any)</li>
+<li>Methods should have +/-, name, parameters (if any), and return</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-07/uml-class.png" alt="" /></p>
+
+<h2 id="object-associations">Object associations</h2>
+
+<ul>
+<li><strong>Association (USES)</strong>
+
+<ul>
+<li>Objects interact in some way</li>
+<li>&ldquo;A user drives a car&rdquo;</li>
+<li><strong>Directionality</strong>: Associations are typically bidirectional (each object knows about the other object), but are sometimes unidirectional (you can use an arrow to indicate directionality)</li>
+<li><strong>Multiplicity</strong>: Associations often indicate multiplicity (how many).  In the example below, a user can drive zero or more (0..*) cars, and a car can be driven by zero or more users.</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-07/uml-association.png" alt="" /></p>
+
+<h2 id="aggregation-composition">Aggregation &amp; Composition</h2>
+
+<ul>
+<li><strong>Aggregation (HAS-A)</strong>
+
+<ul>
+<li>One Object is a part of another, but the part can exists independently</li>
+<li>&ldquo;A car has an engine - but the engine can exist without the car&rdquo;</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-07/uml-aggregation.png" alt="" /></p>
+
+<ul>
+<li><strong>Composition (OWNS)</strong>
+
+<ul>
+<li>One object is part of another, and its existence is dependent</li>
+<li>&ldquo;A house has a room - the room cannot exist without the house.&rdquo;</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-07/uml-composition.png" alt="" /></p>
+
+<h1 id="inheritance">Inheritance</h1>
+
+<ul>
+<li><strong>Inheritance (IS-A)</strong>
+
+<ul>
+<li>child is a type of parent</li>
+<li>&ldquo;A car is a type of vehicle&rdquo;</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-07/uml-inheritance.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

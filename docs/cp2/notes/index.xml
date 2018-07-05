@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Programming 2 Notes on PinkertonCS</title>
+    <link>/cp2/notes/</link>
+    <description>Recent content in Computer Programming 2 Notes on PinkertonCS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/cp2/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Capstone</title>
+      <link>/cp2/notes/unit-10/capstone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-10/capstone/</guid>
+      <description>Part 1 : Proposal You will create a document (Google Doc) that will outline what you want to accomplish for your capstone. At the minimum it should include the following information
+ Paragraph describing what you will be working on Paragraph(s) detailing the different components/aspects of your project A time line for completion Paragraph(s) outlining your expected outcome for this project Paragraph describing future work for this project.  Use this sample for reference.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - File I/O</title>
+      <link>/cp2/notes/unit-09/01-file-io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/01-file-io/</guid>
+      <description>References  Tutorialspoint Files and I/O Java Doc - Basic I/O  Input from Console / Files  You can use an InputStreamReader to read from standard (console) input.
+InputStreamReader isr = new InputStreamReader(System.in); You can use a FileReader to read from file input
+FileReader fr = new FileReader(&amp;#34;input.txt&amp;#34;);  Demo import java.io.BufferedReader; import java.io.FileReader; import java.io.IOException; import java.io.InputStreamReader; public class FileReadDemo { public static void main(String[] args){ try { BufferedReader fileIn; String line; // reading from standard input 	fileIn = new BufferedReader(new InputStreamReader(System.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Intro Software Engineering</title>
+      <link>/cp2/notes/unit-06/01-software-engineering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/01-software-engineering/</guid>
+      <description>The Software Development Life Cycle  The systems development life cycle (SDLC) is a conceptual model used in project management that describes the stages involved in an information system development project, from an initial feasibility study through maintenance of the completed application.  Analysis and Design  Requirements analysis, also called requirements engineering, is the process of determining user expectations for a new or modified product. These features, called requirements, must be quantifiable, relevant and detailed.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Introduction</title>
+      <link>/cp2/notes/unit-01/01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/01-intro/</guid>
+      <description>Resources  About Java Technology Java Wikipedia UNIX Philosophy  About Computer Programming 2  Programming 2 is a more advanced course and is designed for students who intend to major in computer science or a related discipline. The course is composed of two unique semesters:  Semester 1: Data Structures and Algorithms Semester 2: Object-oriented Design and Development   Abstraction  &amp;ldquo;In computer science, abstraction is a technique for managing complexity of computer systems.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Java Basics</title>
+      <link>/cp2/notes/unit-02/01-java-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/01-java-basics/</guid>
+      <description>Readings  Basic Java Syntax Basic Data Types Basic Operators Characters Strings File I/O  Primitive Datatypes  Primitive types are the basic, built-in types All variables nut be declared with their type
+int a_number; float pi = 3.14; Initialize variables by giving then a value or rely on their default Uninitialized Value
+     Data Type Default Value Size     byte 0 1 Byte   short 0 2 Bytes   int 0 4 Bytes   long 0L 8 Bytes   float 0.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Java Inheritance</title>
+      <link>/cp2/notes/unit-08/01-java-inheritance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/01-java-inheritance/</guid>
+      <description>Readings  Tutorialspoint Java Inheritance Java Doc Inheritance  Inheritance  inheritance is the process of deriving one class from another  The derived class (subclass) gets all of the field and methods of the other base class (superclass) &amp;ldquo;The idea of inheritance is simple but powerful: When you want to create a new class and there is already a class that includes some of the code that you want, you can derive your new class from the existing class.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Linked Lists</title>
+      <link>/cp2/notes/unit-04/01-linked-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/01-linked-lists/</guid>
+      <description>A linked list, LL for short, is a type of data structure that can be built from a class - A linked list is used to store a collection of data - Advantages over Arrays - LL&amp;rsquo;s are dynamically resizable - you can add and remove items at runtime - LL&amp;rsquo;s can be reorganized without moving around a lot of data - you just need to change references
+An object in a linked list is called a node - Each node is an instance of a user-defined class, and holds some data - A root reference points to the first node in the list, called the root node - Each node had a next reference that points to the next node in the LL - The next field of the last element is null</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Requirement Analysis</title>
+      <link>/cp2/notes/unit-07/01-requirement-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/01-requirement-analysis/</guid>
+      <description>Software Development Life Cycle (SDLC) Requirement Analysis Questions  Who are the users of this product? What should the software do?  Class identification  Describe the software in as much detail as possible  For the sake of your own sanity, avoid using the word &amp;ldquo;class&amp;rdquo; in your description!  For example: &amp;ldquo;A Student Information System (SIS) allows students to register for a section of a course.  DESIGN TIP: It&amp;rsquo;s important to recognize that a student does not register for a course itself, but in a specific section of the course.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 - Trees and Graphs</title>
+      <link>/cp2/notes/unit-05/01-trees-and-graphs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-05/01-trees-and-graphs/</guid>
+      <description>Readings and References  Primary Reference BST  Note: These tutorials are in C++ but the main concepts and graphics apply to Java as well
+Recursion  Recursion is when a function calls itself! In the follow example, we will implement a recursive factorial function  factorial(n) is defined (for a positive integer) as the product of all integers between 1 and n  Consider the following:  public static int factorial(int n) { if( n &amp;lt;= 0 ) { return 0; } if( n == 1 ) { return 1; } return n * factorial(n-1); }  Let&amp;rsquo;s trace the code for factorial(3)  factorial(3) -&amp;gt; 3 * factorial(2)  factorial(2) -&amp;gt; 2 * factorial(1)  factorial(1) -&amp;gt; 1    Notice the returns cascade back from factorial(1) to factorial(3) Now trace it back:  factorial(3) -&amp;gt; 3 * 2 * 1  In our example, the recursion depth is 3 because there are 3 calls to factorial on the call stack before the returns start cascading back  Trees  Reference  Tree Data Structure  A tree is a data structure that simulates a hierarchical tree structure Terminology  A node is an item in the tree The root of a tree is the top level item An edge is a link connecting two nodes    Types of Trees  Reference  Binary Search Tree Trie  The diagram above depicts a Binary Search Tree.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 01 Arrays and ArrayLists</title>
+      <link>/cp2/notes/unit-03/01-arrays-and-arraylists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/01-arrays-and-arraylists/</guid>
+      <description>Java Array Specification  Spec  Java Array v.s. Python List    Java Array Python List     Single Type Multiple Types   Fixed length Variable length   continuous storage in memory Highly abstract type    Declaring and Initializing Arrays  You must declare the type and length You can initialize all element using a list with braces, but only when you declare the array  int[] foo = new int[5]; // 5 uninitialized integers  int[] bar = new int[]{ 16, 2, 77, 40, 12071 }; //foo = { 1, 2, 3, 4, 5 }; // can&amp;#39;t do it.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - CSV Files</title>
+      <link>/cp2/notes/unit-09/02-csv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/02-csv/</guid>
+      <description> What is a CSV file?  CSV stands for &amp;ldquo;comma-separated values,&amp;rdquo; and refers simply to a text file in which data entries are separated by commas!  similarly, you might hear TSV (tab)   Importing / Exporting CSV with Java  Use String methods and File I/O Importing  Use a BufferedReader split the string and pass parameters to a Command  Exporting  Use a BufferedWriter join an array   </description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Control Flow</title>
+      <link>/cp2/notes/unit-02/02-control-flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/02-control-flow/</guid>
+      <description>Readings  Java Decision Making Java Loop Control  Conditional Statements  Conditional statements in Java have the following syntax differences from Python  The condition must be enclosed in parentheses If the condition is true, then the subsequent statement or block will execute   Demo // BASIC condition  Scanner in = new Scanner(System.in); int x; x = in.nextInt(); if( x &amp;gt; 0 ){ System.out.println(&amp;#34;x is positive&amp;#34;); } else { System.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Data Representation</title>
+      <link>/cp2/notes/unit-01/02-data-representation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/02-data-representation/</guid>
+      <description>Review  Please review the Computers and Code notes from Programming 1  References  Number Systems, Base Conversions, and Computer Data Representation  Number Systems Decimal (base-10)  We use a base-10 number system  base 10 has 10 digits with the values 0-9 each position represents a power of 10  Moving left from the decimal point  &amp;ldquo;Ones place&amp;rdquo;  $$10^0 = 1$$  &amp;ldquo;Tens place&amp;rdquo;  $$10^1 = 10$$  &amp;ldquo;Hundreds place&amp;rdquo;  $$10^2 = 100$$  etc&amp;hellip;  A number&amp;rsquo;s value is given by the sum of (digit value * place value)  1,234 $$1 \cdot 10^3 + 2 \cdot 10^2 + 3 \cdot 10^1 + 4 \cdot 10^0$$   Binary (base-2)  Binary is a base-2 number system  base-2 has 2 bits with the values 0 or 1 each position represents a power of 2  Moving left from the radix point  $$2^0 = 1$$ $$2^1 = 2$$ $$2^2 = 4$$ $$2^3 = 8$$ etc&amp;hellip;  A number&amp;rsquo;s value is given by the sum of (bit value * place value)  1101 $$1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$$ $$ 8 + 4 + 1 = 13$$   Octal (base-8)  Octal is a base-8 system  Hexadecimal (base-16)  Hexadecimal is a base-16 number system  there are 16 hex codes with decimal values 0-15 The values 10-15 are represented by using the letters A-F each position represents a power of 16  Hexadecimal is useful as a shorthand representation of binary, since each hex symbol can represent 4 bits (one nibble).</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Development Roles</title>
+      <link>/cp2/notes/unit-06/02-development-roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/02-development-roles/</guid>
+      <description>References  Bureau of Labor Statistics IT job roles and responsibilities explained MSDN: A Model for Enterprise Teams  Stakeholders  A stakeholder is someone who has a vested interest in the development of a project. There are typically three primary stakeholders in a software development project:  The client is an individual or business who contracts with a software development company to implement a product. The user is the person or people who will actually use the product.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Java Interfaces</title>
+      <link>/cp2/notes/unit-08/02-java-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/02-java-interfaces/</guid>
+      <description>Interfaces &amp;amp; Abstract classes References  TutorialsPoint  &amp;ldquo;Java Object Oriented&amp;rdquo; Section  Oracle java Doc  OOP abstraction &amp;amp; encapsulation  In programming, abstraction is the practice of hiding the implementation details of a class behind public methods. This allows a programmer to use a class without knowing how it works, they only need to know what it does. Abstraction is closely related to encapsulation. We have used this before - by implementing getter and setter methods rather than accessing a class field directly.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Stacks and Queues</title>
+      <link>/cp2/notes/unit-04/02-stacks-and-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/02-stacks-and-queues/</guid>
+      <description> Stacks  Reference  Wikipedia  A stack is a LIFO abstract data type: &amp;ldquo;Last in, first out&amp;rdquo; Stack Operations  push(item) adds an item to the top of the stack pop() removes an item from the top of the stack    Queues  Reference  Wikipedia Priority Queue  A queue is a FIFO abstract data type: &amp;ldquo;First in, first out&amp;rdquo; Queue operations  enqueue(item) adds an item to the end of the queue dequeue() removes an item from the front of the queue    Priority Queue  A priority queue adds additional priority information  enqueue(priority, item) adds an item with a priority dequeueTop() removes the item with the highest priority   </description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Unified Modeling Language</title>
+      <link>/cp2/notes/unit-07/02-uml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/02-uml/</guid>
+      <description>References  Agilemodeling UML Class Diagrams IBM UML basics: The class diagram  UML Tools  Use lucidchart or draw.io for your design diagrams Lucidchart Setup  Sign in with your Pinkerton account and select free account In Account settings, go to Google Drive Integration and select &amp;ldquo;Automatically sync documents I create in Lucidchart to my Drive account&amp;rdquo; to create a Lucidchart folder in your Google Drive When you create a new document, choose UML under Categories  Draw.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 02 - Vectors</title>
+      <link>/cp2/notes/unit-03/02-vectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/02-vectors/</guid>
+      <description>References Vector API
+Introduction  The Vector class is an abstract container type like Python lists or Java ArrayLists. You can add, remove and insert elements. To use vectors, you must include the vector library  import java.util.Vector; Declaring Vectors  When you declare vectors, you must indicate the type you are storing. The syntax is  Vector&amp;lt;type&amp;gt; name = new Vector&amp;lt;&amp;gt;();  The Vector class has other constructors  // create a vector with an initial capacity Vector&amp;lt;Integer&amp;gt; vecA = new Vector&amp;lt;&amp;gt;(5); // copy the contents of vecA into vecB Vector&amp;lt;Integer&amp;gt; vecB = new Vector&amp;lt;&amp;gt;(vecA); Accessing and Modifying members  You can use the size() method to determine how many elements are in the vector.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Java CLI</title>
+      <link>/cp2/notes/unit-08/03-java-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/03-java-cli/</guid>
+      <description>Command-line Interface (CLI) Object-oriented CLI  Our Java OO CLI subsystem will contain the following  The Command interface, which specifies the method that all Commands must implement void run(String[] params) Each Command object is an instance of a unique class, which implements the Command interface The CommandSet contains a Hashmap of Command objects The CLI class has a CommandSet   Java Code The Command Interface  Specifies the contract that all &amp;ldquo;Commands&amp;rdquo; must adhere to  public interface Command { void run(String[] params); } The CommandSet class  The Command classes are defined inside the CommandSet The Command objects are instantiated and added to the HashMap in the constructor The constructor is places before the Command definitions for our convenience, so we are able to see the commands in the HashMap neat the top of the file  import java.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - MySQL and JDBC</title>
+      <link>/cp2/notes/unit-09/03-mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/03-mysql/</guid>
+      <description>References  Tutorialspoint JDBC setup MySQL Doc Setup  MySQL Install and Setup  Install MySQL
+sudo apt install mysql Start MySQL
+mysql -h localhost -u root -p  -Note: If you want to change root password later, you can use these commands
+mysql -h localhost -u root -pUPDATE mysql.user SET Password=PASSWORD(&amp;#39;newpassword&amp;#39;) WHERE User=&amp;#39;root&amp;#39;; FLUSH PRIVILEGES; Setting up an example Database  Creare and use EMP database
+create database EMP; use EMP; Create a table</description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Searching and Sorting</title>
+      <link>/cp2/notes/unit-03/03-searching-and-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/03-searching-and-sorting/</guid>
+      <description> Linear Search  Start with first element Compare each element with search value Stop when value is found or end of array is reached     Advantage Disadvantage     Simplicity Inefficiency    Binary Search  Require sorted list Start in the middle if search value &amp;lt; middle element, start over with 1st half if search value &amp;gt; middle element, start over with 2nd half continue until item is found, or you run out of elements     Advantage Disadvantage     Efficient Requires sorted list    Sorting Algorithms  Sorting Animations  Bubble Sort  While swap flag is true  Set swap flag to false Iterate from first element to next-to-last element  if element is greater than subsequent element  swap them set swap flag to true        Advantage Disadvantage     Relatively simple algorithm Inefficient for large arrays    Selection Sort  Iterate from i=0 to the next-to-last element  set least_index to i set least to value at i Iterate from j=(i + 1) to the last element  if element is less than least  update least_index update least   swap the least remaining value to index i      Advantage     less swapping    For Insertion and Merge sort, analyze the animations at the link above </description>
+    </item>
+    
+    <item>
+      <title>Lesson 03 - Strings and Files</title>
+      <link>/cp2/notes/unit-02/03-strings-and-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/03-strings-and-files/</guid>
+      <description>String Methods  String is a Java built-in type Strings are immutable (meaning they cannot be changed) Java 8 String API  Demo public static void string_methods() { String s = &amp;#34;Hello, world!&amp;#34;; int len = s.length(); int i; // print first and last characters  System.out.println(s.charAt(0) + &amp;#34; &amp;#34; + s.charAt(len-1)); //get index of &amp;#39;,&amp;#39;  i = s.indexOf(&amp;#39;,&amp;#39;); // print substring using delimiter &amp;#39;,&amp;#39;  System.out.println(s.substring(0,i)); //find the first occurrence of &amp;#34;world&amp;#34;  i = s.</description>
+    </item>
+    
+    <item>
+      <title>Lesson 04 - Simple Classes</title>
+      <link>/cp2/notes/unit-02/04-simple-classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/04-simple-classes/</guid>
+      <description>Reading  Object Classes  Introduction  A class is a user-defined data type A class is a template used to create objects, which are specific instances of the class When you define a class, you specify attributes (data members) and methods (functions) that each instance has For example  A Rectangle has two attributes: width and height The Rectangle class has methods to set and get the values of those attributes   Defining and implementing a Class  Define and implement a java class in it&amp;rsquo;s own .</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Binary Search Trees</title>
+      <link>/cp2/notes/unit-05/p1-binary-search-trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-05/p1-binary-search-trees/</guid>
+      <description>Description  In this project you will implement a simple Binary Search Tree (BST) that stores integers  Resource  Binary Search Tree  BST.java  insert(int)
+ inserts the parameter into the correct position in the tree BST Insertion  get(int)
+ returns the number if it is in the tree or -1 otherwise BST Search  remove(int)
+ remove the int from the tree BST Removal  toString()</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Data Conversion</title>
+      <link>/cp2/notes/unit-02/p1-data-conversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-02/p1-data-conversion/</guid>
+      <description>Objectives  Use Java Classes Use Java int, char, and String data types Understand how information is represented in Binary and Hexadecimal formats  Getting Started  Your task is to implement the methods of the Data class The Data class  stores an integer between 0 and 15 internally (private data member) has methods to get and set values in integer, binary and hexadecimal formats Constructors  Data()  creates a new Data object without initializing the number  Data(int i)  creates anew Data and initialize using the parameter i   Setter methods  setInt(int i)  set value using integer i  setBin(string b)  set value using the binary code in string b  setHex(char c)  set value using hex character in char c   Getter methods  int getInt()  get value as integer  String getBin()  get values as binary string  char getHex()  get value as hex character    Starter files  Data.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Linked Lists</title>
+      <link>/cp2/notes/unit-04/p1-linked-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/p1-linked-lists/</guid>
+      <description>Description  This project consists of two(2) classes. The first class, Person is used to model, or store information, about a person. The second class, List, is an implementation of a linked list that stores Person objects. These classes might be used in a personnel management system.  Person  Constructors  Person() - default constructor Person(string, string) - two(2) argument constructor, sets first and last name  Methods  setName(first, last) - sets object&amp;rsquo;s first and last name toString() - returns a string representation of a Person compareTo(Person) compares this Person against the Person parameter  returns -1 if this comes before param returns 0 if this and param are equal return 1 if this comes after param  Note: first compare by last name, then first name, finally by id (ids are guaranteed to be unique)  Testing  (For the full tests see Main.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Occupations Analysis</title>
+      <link>/cp2/notes/unit-06/p1-occupations-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/p1-occupations-analysis/</guid>
+      <description>Objectives  Discuss the software development life cycle (SDLC) Discuss software engineering process models including waterfall and agile. Discuss stakeholders in software development projects, and members of software development teams. Discuss various careers in Computer Science (CS) and Information Technology (IT).  References Review the following references, they will be your guide:
+ BLS IT job roles and responsibilities explained  Analysis Briefly describe the following disciplines. What do these people do?</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS CLI</title>
+      <link>/cp2/notes/unit-08/p1-sis-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/p1-sis-cli/</guid>
+      <description>System overview  The SISMain class will serve a few purposes  This main will be used to execute our full program SISMain will have instances of CLI and Database CLI commands will use methods of SISMain, SISMain&amp;rsquo;s database, and SISMain&amp;rsquo;s cli   SISMain  The SISMain class will contain static instances of Database and CLI  In this case, static means we do not need to instantiate the SISMain class to access the Database and CLI.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS Design</title>
+      <link>/cp2/notes/unit-07/p1-sis-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/p1-sis-design/</guid>
+      <description>Introduction  Consider the following description of a SIS, taken from Wikipedia  &amp;ldquo;A student information system (SIS), student management system, school administration software or student administration system is a management information system for education establishments to manage student data. Student Information Systems (often abbreviated as SIS systems) provide capabilities for registering students on courses, documenting grading transcripts and results of student test and other assessment scores, build student schedules, track student attendance, and manage many other student-related data needs in a school.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - SIS Persistent Data</title>
+      <link>/cp2/notes/unit-09/p1-sis-persistent-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/p1-sis-persistent-data/</guid>
+      <description>Overview  Create Data management class that allows you to read and write program data using CSV files.  Features  Admins should be able to :  Batch create new users by loading data from CSV (userdata.csv) Batch create new courses by loading data from CSV (coursedata.csv) Load a course roster from CSV.  Teachers should be able to:  Export gradebook to CSV   Specifications  When you&amp;rsquo;re implementing this, you&amp;rsquo;ll have to think carefully about the order of operations for saving and restoring the system.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 - Searching and Sorting</title>
+      <link>/cp2/notes/unit-03/p1-searching-and-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-03/p1-searching-and-sorting/</guid>
+      <description>Notes  Arrays &amp;amp; ArrayLists Searching &amp;amp; Sorting  Directions  Implement the ArrayUtils class  provides methods for double arrays, including searching &amp;amp; sorting algorithms  Implement the Main class  provides testing for ArrayUtils and benchmarks against the built-in Array functions Using the performance benchmark code as a reference, display how long each sort takes to complete   Files  ArrayUtils.java
+ you can add functions, but do not change any of the template functions  Main.</description>
+    </item>
+    
+    <item>
+      <title>Project 01 Intro to Data</title>
+      <link>/cp2/notes/unit-01/p1-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-01/p1-data/</guid>
+      <description>Direction  Answer the following questions in a Google Doc and submit your completed work via Google Classroom.  Questions  What is UNIX? What are the components of the UNIX operating system? What other operating systems are build on UNIX? Compare and contrast CLI and GUI based operating systems. What are the advantages and disadvantages of each? What is the difference between an absolute and relative directory path? Give an example of each.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - Occupation Presentation</title>
+      <link>/cp2/notes/unit-06/p2-occupation-presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-06/p2-occupation-presentation/</guid>
+      <description>Objectives  Conduct and research into a particular computing occupation. Present research to supervisor and peers.  Rubric  Research Rubric  Presentation Choose one of the occupations from the previous assignment. Create a 10-slide presentation using Google Slides. This outline is given as a suggestion and may be adapted as necessary:
+ Title Intro / Outline Body (6+ slides)  Job description Education / training required Stats  pay / compensation number of jobs &amp;amp; outlook (% growth)  &amp;ldquo;Tools of the trade&amp;rdquo;  hardware, software, programming languages, frameworks, IDE&amp;rsquo;s, modeling tools, etc.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - SIS Data Models</title>
+      <link>/cp2/notes/unit-07/p2-sis-data-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-07/p2-sis-data-models/</guid>
+      <description>The data subsystem of the SIS consists of the following  Database: container for Users and Courses Course: container for Section User and Section have a many-to-many relationship (ENROLLED) and a 1-to-1 relationship (TEACHES)  Note that the fields / methods lists in this diagram are examples and should not be considered complete.  Testing / Requirements  You should have some unit testing for each of these classes.</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - SIS User Hierarchies</title>
+      <link>/cp2/notes/unit-08/p2-user-hierarchy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/p2-user-hierarchy/</guid>
+      <description>Command hierarchy Administrator commands  create user usertype username password create course coursename create section coursename teacher view user | course | section  Teacher commands  create assignment coursename section# assignmentname view section | student | assignment  Student commands  view section | assignment  User data hierarchy  Consider implementing an inheritance hierarchy for User data. For example:  Admin has a title *Teacher*s have a department (A full system might include a Department class, but we will not worry about that).</description>
+    </item>
+    
+    <item>
+      <title>Project 02 - Stacks and Queues</title>
+      <link>/cp2/notes/unit-04/p2-stacks-and-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-04/p2-stacks-and-queues/</guid>
+      <description>Stack  implement the Stack Abstract Data Type using the built-in Java ArrayList class.
+ Use your stack to implement a postfix expression evaluator
+   Postfix algorithm  Starting at the beginning of the expression, get one term (operator or operand) at a time  If the term is an operand, push it onto the stack If the term is an operator, pop two operands off the stack, perform the operation, and push the result back onto the stack  hen you get to the end of the expression, there should be exactly one operand left on the stack.</description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 -  Object Oriented</title>
+      <link>/cp2/notes/unit-08/ws1-object-oriented/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-08/ws1-object-oriented/</guid>
+      <description>Reading / References  Unit notes TutorialsPoint Java Object Oriented Sections  Directions  Answer the following questions in a text document (Google Doc works too!)  Inheritance  What is Inheritance?  What is a superclass / subclass? What does it mean to derive one class from another? What is the IS-A relationship? What is a class hierarchy? What is polymorphism?  Show using code how to  derive a subclass from a base class call a superclass constructor from a subclass constructor Determine if a superclass object is an instance of a particular subclass  What is reflection?</description>
+    </item>
+    
+    <item>
+      <title>Worksheet 01 - Data Management</title>
+      <link>/cp2/notes/unit-09/ws1-data-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cp2/notes/unit-09/ws1-data-management/</guid>
+      <description>Input &amp;amp; Output  What is an input stream? What is the standard input stream / standard output stream? What class is used to read from standard input… to read from file input? Why do these classes need to be passed into a BufferedReader? What is an Exception&amp;hellip; &amp;lsquo;try-catch&amp;rsquo; statement&amp;hellip; &amp;lsquo;throw&amp;rsquo; statement? What classes are used to write out to a file? What does the argument &amp;ldquo;utf-8&amp;rdquo; mean / do?</description>
+    </item>
+    
+  </channel>
+</rss>

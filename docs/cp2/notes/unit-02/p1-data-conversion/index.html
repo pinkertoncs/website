@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 01 - Data Conversion</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="objectives">Objectives</h2>
+
+<ul>
+<li>Use Java Classes</li>
+<li>Use Java int, char, and String data types</li>
+<li>Understand how information is represented in Binary and Hexadecimal formats</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ul>
+<li>Your task is to implement the methods of the <strong>Data</strong> class</li>
+<li>The <strong>Data</strong> class
+
+<ul>
+<li>stores an integer between <strong>0</strong> and <strong>15</strong> internally (private data member)</li>
+<li>has methods to get and set values in integer, binary and hexadecimal formats</li>
+<li><strong>Constructors</strong>
+
+<ul>
+<li><em>Data()</em>
+
+<ul>
+<li>creates a new <strong>Data</strong> object without initializing the number</li>
+</ul></li>
+<li><em>Data(int i)</em>
+
+<ul>
+<li>creates anew <strong>Data</strong> and initialize using the parameter <em>i</em></li>
+</ul></li>
+</ul></li>
+<li><strong>Setter</strong> methods
+
+<ul>
+<li><em>setInt(int i)</em>
+
+<ul>
+<li>set value using integer <em>i</em></li>
+</ul></li>
+<li><em>setBin(string b)</em>
+
+<ul>
+<li>set value using the binary code in string <em>b</em></li>
+</ul></li>
+<li><em>setHex(char c)</em>
+
+<ul>
+<li>set value using hex character in char <em>c</em></li>
+</ul></li>
+</ul></li>
+<li><strong>Getter</strong> methods
+
+<ul>
+<li><em>int getInt()</em>
+
+<ul>
+<li>get value as integer</li>
+</ul></li>
+<li><em>String getBin()</em>
+
+<ul>
+<li>get values as binary string</li>
+</ul></li>
+<li><em>char getHex()</em>
+
+<ul>
+<li>get value as hex character</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Starter files
+
+<ul>
+<li><strong>Data.java</strong></li>
+<li><strong>Main.java</strong>
+
+<ul>
+<li>program driver &amp; testing</li>
+</ul></li>
+</ul></li>
+<li>Note:
+
+<ul>
+<li><strong>Do not</strong> use &ldquo;brute force&rdquo; to implement this (i.e. you should <strong>not</strong> have 16 &ldquo;if&rdquo; statements in any of the functions)</li>
+</ul></li>
+</ul>
+
+<h2 id="main-testing">Main &amp; Testing</h2>
+
+<ul>
+<li>Your main should have various tests
+
+<ol>
+<li>Simple tests that create instances of <strong>Data</strong> and tests each of the methods</li>
+<li>Produce an output table (like the one below), all values should come from the class&rsquo;s methods.</li>
+</ol></li>
+</ul>
+
+<h3 id="main-output">Main Output</h3>
+
+<pre><code>Simple tests:
+1010
+10
+B
+
+
+DEC     HEX     BIN
+--      --      --
+0       0       0000
+1       1       0001
+2       2       0010
+3       3       0011
+4       4       0100
+5       5       0101
+6       6       0110
+7       7       0111
+8       8       1000
+9       9       1001
+10      A       1010
+11      B       1011
+12      C       1100
+13      D       1101
+14      E       1110
+15      F       1111
+</code></pre>
+
+<h2 id="running-the-tests">Running the tests</h2>
+
+<ul>
+<li>Before submitting your work, please make sure all the supplied test succeed.</li>
+</ul>
+
+<ol>
+<li><p>Open a Terminal</p>
+
+<ul>
+<li>Window -&gt; New Terminal</li>
+</ul></li>
+
+<li><p>Navigate to the project directory</p>
+
+<pre><code>cd ~/workspace/cp2-workspace/semester-1/unit-02/p1-data-conversion
+</code></pre></li>
+
+<li><p>Run test</p>
+
+<pre><code>make test
+</code></pre></li>
+
+<li><p>Read through TestReport.txt</p></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

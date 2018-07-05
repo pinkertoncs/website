@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - CSS Basics</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.w3schools.com/css/default.asp">W3Schools CSS Tutorial</a></li>
+<li><a href="https://www.w3schools.com/cssref/default.asp">W3Schools CSS Reference</a></li>
+</ul>
+
+<h2 id="essentials">Essentials</h2>
+
+<ul>
+<li><strong>Cascading Style Sheets (CSS)</strong> are used to style your webpage
+
+<ul>
+<li>They can also add some additional functionality to your page</li>
+</ul></li>
+<li>CSS can be inserted 3 ways
+
+<ul>
+<li><strong>external</strong> CSS in a separate <code>.css</code> file</li>
+<li><strong>internal</strong> CSS in a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code></li>
+<li><strong>inline</strong> CSS using a &lsquo;style&rsquo; attribute</li>
+</ul></li>
+<li>Cascading refers to the fact that styles can override others
+
+<ul>
+<li>internal style will override external styles</li>
+<li>inline styles will override internal and external styles</li>
+<li>Example:</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="font-weight:bold">html</span>&gt;
+	&lt;<span style="font-weight:bold">head</span>&gt;
+		&lt;<span style="font-weight:bold">title</span>&gt;Template Page&lt;/<span style="font-weight:bold">title</span>&gt;
+		<span style="color:#007f7f">&lt;!-- optional: external stylesheet
+</span><span style="color:#007f7f">			will show error if file doesn&#39;t exist --&gt;</span>
+		&lt;<span style="font-weight:bold">link</span> <span style="color:#007f7f">rel</span>=<span style="color:#0ff;font-weight:bold">&#34;stylesheet&#34;</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;text/css&#34;</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#34;mystyle.css&#34;</span>&gt;
+		&lt;<span style="font-weight:bold">style</span>&gt;
+			<span style="color:#007f7f">/* comment: internal CSS goes here */</span>
+			<span style="font-weight:bold">body</span> {
+				<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#fff;font-weight:bold">lightblue</span>;
+			}
+		&lt;/<span style="font-weight:bold">style</span>&gt;
+	&lt;/<span style="font-weight:bold">head</span>&gt;
+	&lt;<span style="font-weight:bold">body</span>&gt;
+		<span style="color:#007f7f">&lt;!-- inline CSS uses the &#39;style&#39; attribute --&gt;</span>
+		&lt;<span style="font-weight:bold">h1</span> <span style="color:#007f7f">style</span>=<span style="color:#0ff;font-weight:bold">&#39;text-align:center;&#39;</span>&gt; CSS Template &lt;/<span style="font-weight:bold">h1</span>&gt;
+		&lt;<span style="font-weight:bold">p</span>&gt; Hello CSS! &lt;/<span style="font-weight:bold">p</span>&gt;
+	&lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
+<h2 id="selectors-and-pseudos">Selectors and Pseudos</h2>
+
+<ul>
+<li>You can select elements by id, className, or tagName
+
+<ul>
+<li>use tagName to apply the style to all elements of that type</li>
+<li>use id to style a single element uniquely</li>
+<li>use className to style a group of elements the same way</li>
+</ul></li>
+<li>Selectors
+
+<ul>
+<li>The pound (#) is the id selector</li>
+<li>The dot (.) is the className selector</li>
+<li>You can combine selectors</li>
+</ul></li>
+<li>Pseudo-classes
+
+<ul>
+<li>Special conditions are identified using pseudo-classes</li>
+<li>The colon (:) is the pseudo-class selector</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">html</span>&gt;
+	&lt;<span style="font-weight:bold">head</span>&gt;
+	&lt;<span style="font-weight:bold">style</span>&gt;
+
+		<span style="font-weight:bold">p</span> {
+			<span style="color:#007f7f">/* apply these styles to all p elements */</span>
+		}
+
+		<span style="font-weight:bold">p</span>, <span style="font-weight:bold">h1</span>{
+			<span style="color:#007f7f">/* apply these styles to all p AND h1 elements
+</span><span style="color:#007f7f">		}
+</span><span style="color:#007f7f">
+</span><span style="color:#007f7f">		#no1 {
+</span><span style="color:#007f7f">			/* apply these styles to THE element with id=no1 */</span>
+		}
+
+		<span style="font-weight:bold">p</span>.type1 {
+			<span style="color:#007f7f">/* apply these styles to ALL p elements with class=type1 */</span>
+			<span style="color:#007f7f">/* omit the p to apply a class to different element types */</span>
+		}
+
+		#div2 <span style="font-weight:bold">p</span> {
+			<span style="color:#007f7f">/* apply these styles to all p elements INSIDE of element with id=div2 */</span>
+		}
+
+		<span style="font-weight:bold">p</span>:hover {
+			<span style="color:#007f7f">/* apply these styles to the p with the mouse pointer over it */</span>
+		}
+	&lt;/<span style="font-weight:bold">style</span>&gt;
+
+	&lt;<span style="font-weight:bold">body</span>&gt;
+
+		&lt;<span style="font-weight:bold">h1</span>&gt; Heading &lt;/<span style="font-weight:bold">h1</span>&gt;
+
+		&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;div1&#39;</span>&gt;
+			&lt;<span style="font-weight:bold">p</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;no1&#39;</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#39;type1&#39;</span>&gt; paragraph 1 &lt;/<span style="font-weight:bold">p</span>&gt;
+			&lt;<span style="font-weight:bold">p</span>&gt; paragraph 2 &lt;/<span style="font-weight:bold">p</span>&gt;
+			&lt;<span style="font-weight:bold">p</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#39;type1&#39;</span>&gt; paragraph 3 &lt;/<span style="font-weight:bold">p</span>&gt;
+			&lt;<span style="font-weight:bold">p</span>&gt; paragraph 4 &lt;/<span style="font-weight:bold">p</span>&gt;
+			&lt;<span style="font-weight:bold">p</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#39;type1&#39;</span>&gt; paragraph 5 &lt;/<span style="font-weight:bold">p</span>&gt;
+	&lt;/<span style="font-weight:bold">div</span>&gt;
+
+	&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;div2&#39;</span>&gt;
+		&lt;<span style="font-weight:bold">p</span>&gt; The p in div2 &lt;/<span style="font-weight:bold">p</span>&gt;
+	&lt;/<span style="font-weight:bold">div</span>&gt;
+
+	&lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
+<h2 id="styling-element">Styling Element</h2>
+
+<ul>
+<li>See <a href="http://www.w3schools.com/css/default.asp">CSS Tutorial</a>
+
+<ul>
+<li>&lsquo;Introduction&rsquo; to &lsquo;Tables&rsquo;</li>
+</ul></li>
+<li>CSS can be used to
+
+<ul>
+<li>set background color, img</li>
+<li>set text, fonts, and text-alignment</li>
+<li>style links, lists, and tables</li>
+<li>and more &hellip;</li>
+</ul></li>
+<li>CSS Units
+
+<ul>
+<li>Fonts sizes should be set using the <strong>em</strong> unit</li>
+<li>1em is the default font size (1em = 16px), so 2em would be twice that, etc</li>
+</ul></li>
+</ul>
+
+<h2 id="box-model-and-dimensions">Box model and dimensions</h2>
+
+<p><img src="/images/cp1/unit-08/boxmodel.png" alt="" /></p>
+
+<ul>
+<li><p>The CSS box model allows you to add</p>
+
+<ul>
+<li>padding - space between content and border</li>
+<li>border</li>
+<li>margin space between border and other elements</li>
+</ul></li>
+
+<li><p>Box model components are typically set using the <strong>px</strong> unit (pixels), but can be set using the <strong>em</strong> also.</p></li>
+
+<li><p>CSS dimensions</p>
+
+<ul>
+<li>height / width</li>
+<li>min-height / min-width</li>
+<li>max-height / max-width</li>
+</ul></li>
+
+<li><p>Dimensions can be</p>
+
+<ul>
+<li>automatically applied = block elements are 100% and inline elements wrap to content</li>
+<li>fixed width - set using <strong>px</strong></li>
+<li>relative width - set using % (percentage of container size)</li>
+</ul></li>
+</ul>
+
+<h2 id="display-positioning-alignment">Display, positioning, alignment</h2>
+
+<ul>
+<li>CSS displays
+
+<ul>
+<li><strong>none</strong> do not show (takes up no space)</li>
+<li><strong>hidden</strong> do not show (still takes up space)</li>
+<li><strong>block</strong> line break before / after (takes up full width)</li>
+<li><strong>inline</strong> no line breaks</li>
+</ul></li>
+<li>CSS positioning
+
+<ul>
+<li><strong>static</strong> default - element is in normal flow of the page</li>
+<li><strong>fixed</strong> fixed position relative to the browser window</li>
+<li><strong>relative</strong> position relative to normal (static) position</li>
+<li><strong>absolute</strong> position relative to page (or non-static containing element)</li>
+</ul></li>
+<li>CSS floating
+
+<ul>
+<li>pushes element to the <strong>left</strong> or <strong>right</strong> to allow other elements to wrap around</li>
+<li>floated elements will go next to each other if there is room, or else they will wrap to the next line</li>
+<li>use <strong>clear</strong> to stop floating</li>
+</ul></li>
+<li>Alignment
+
+<ul>
+<li>to center-align block elements us <code>margin: 0 auto;</code></li>
+</ul></li>
+</ul>
+
+<h2 id="inspection">Inspection</h2>
+
+<ul>
+<li>Recall that you can inspect HTML in Chrome by using the Chrome Dev Tools
+
+<ul>
+<li>Right Mouse click -&gt; Inspect Element</li>
+</ul></li>
+<li>In the panel on the right, you can inspect the CSS</li>
+</ul>
+
+<p><img src="/images/cp1/unit-08/devtools.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

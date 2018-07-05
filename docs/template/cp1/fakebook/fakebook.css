@@ -1,0 +1,30 @@
+    body{
+        margin: 0 0;
+    }
+    div{
+        border:1px dashed;
+
+    }
+    .barwrapper{
+        background-color:#3b5998;
+    }
+    .outer, .bar{
+        width:600px;
+        margin:0 auto;       /* keeps page centered */
+    }
+    .bar{
+        color:white;
+    }
+    .inner{
+        padding:1px;
+        float:left;
+    }
+    #left{
+        width:96px;       /* width doesn't count padding/border/margin */
+    }
+    #center{
+        width:346px;
+    }
+    #right{
+        width:146px;
+    }

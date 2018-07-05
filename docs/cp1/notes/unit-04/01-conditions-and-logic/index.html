@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Conditions and Logic</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>Tutorialspoint: <a href="http://www.tutorialspoint.com/python/python_decision_making.htm">Python Decision Making</a></li>
+</ul>
+
+<h2 id="booleans-and-boolean-operations">Booleans and boolean operations</h2>
+
+<ul>
+<li><strong>Boolean</strong> is a data type with two possible values: True or False</li>
+<li>The <strong>comparison operators</strong> are used to produce expressions that evaluate to a boolean type
+
+<ul>
+<li>a &gt; b
+
+<ul>
+<li>True if a is greater than b</li>
+</ul></li>
+<li>a &gt;=b
+
+<ul>
+<li>True if a is greater than or equal to b</li>
+</ul></li>
+<li>a &lt; b
+
+<ul>
+<li>True if a is less than b</li>
+</ul></li>
+<li>a &lt;= b
+
+<ul>
+<li>True if a is less than or equals to b</li>
+</ul></li>
+<li>a == b
+
+<ul>
+<li>True if a is equal to b</li>
+</ul></li>
+<li>a != b
+
+<ul>
+<li>True if a is not equal to b</li>
+</ul></li>
+</ul></li>
+<li>Boolean operations on <strong>numbers</strong> behave as you would expect</li>
+<li>Boolean operations on <strong>strings</strong> compare lexicographically (by ASCII code)
+
+<ul>
+<li>0 &lt; A &lt; B &lt; a &lt; b
+
+<ul>
+<li>True if a precedes b</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="conditional-statements">Conditional Statements</h2>
+
+<ul>
+<li><strong>Conditional statements</strong> are used to execute some code only if a certain condition (boolean expression) is met
+
+<ul>
+<li>Commonly known as <strong>if-else</strong> statements,but the <strong>else</strong> clause is optional</li>
+</ul></li>
+<li>if you have more than two conditions, you can <strong>chain</strong> or <strong>nest</strong> conditionals
+
+<ul>
+<li>view the <a href="http://www.tutorialspoint.com/python/python_decision_making.htm">reference</a> for flow charts</li>
+</ul></li>
+</ul>
+
+<h3 id="conditional-examples">Conditional Examples</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x = <span style="color:#ff0;font-weight:bold">5</span>
+
+<span style="color:#007f7f"># if without else</span>
+<span style="color:#fff;font-weight:bold">if</span> ( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive&#34;</span> )
+
+
+
+<span style="color:#007f7f"># if-else</span>
+<span style="color:#fff;font-weight:bold">if</span> ( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive&#34;</span> )
+<span style="color:#fff;font-weight:bold">else</span>:
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is not positive&#34;</span> )
+
+<span style="color:#007f7f"># chaining is used when there are more than 2 cases</span>
+<span style="color:#fff;font-weight:bold">if</span> ( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive&#34;</span> )
+<span style="color:#fff;font-weight:bold">elif</span>( x==<span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is zero&#34;</span> )
+<span style="color:#fff;font-weight:bold">else</span>:
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is negative&#34;</span> )
+
+<span style="color:#007f7f"># nesting - the inner conditional is only evaluated if the first is true</span>
+<span style="color:#fff;font-weight:bold">if</span>( x &gt; <span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">if</span> ( x%<span style="color:#ff0;font-weight:bold">2</span> == <span style="color:#ff0;font-weight:bold">0</span>):
+        <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive and even&#34;</span> )
+    <span style="color:#fff;font-weight:bold">else</span>:
+        <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive and not even&#34;</span> )
+<span style="color:#fff;font-weight:bold">else</span>:
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is neither positive nor even&#34;</span> )</code></pre></div>
+<h2 id="logic-boolean-operators">Logic / Boolean operators</h2>
+
+<ul>
+<li><strong>Logical operators</strong>, also known as <strong>boolean operators</strong>, operate on boolean values</li>
+<li>The main logical operators are <strong>and</strong>, <strong>or</strong>, <strong>not</strong>
+
+<ul>
+<li>p and q
+
+<ul>
+<li>True if p and q are both True</li>
+</ul></li>
+<li>p or q
+
+<ul>
+<li>True if either p or q (or both) are True</li>
+</ul></li>
+<li>not p
+
+<ul>
+<li>True if p is False</li>
+</ul></li>
+</ul></li>
+<li>Logical operators can simplify conditionals</li>
+</ul>
+
+<h3 id="boolean-operator-examples">Boolean operator examples</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># conjunction (and)</span>
+<span style="color:#fff;font-weight:bold">if</span>( x&gt;<span style="color:#ff0;font-weight:bold">0</span> and x%<span style="color:#ff0;font-weight:bold">2</span>==<span style="color:#ff0;font-weight:bold">0</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;x is positive and even&#34;</span> )
+
+<span style="color:#007f7f"># disjunction (or)</span>
+<span style="color:#fff;font-weight:bold">if</span>( x&gt;<span style="color:#ff0;font-weight:bold">10</span> or x&lt;-<span style="color:#ff0;font-weight:bold">10</span> ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;the absolute value of x is greater than 10&#34;</span> )
+
+<span style="color:#007f7f"># negation (not)</span>
+<span style="color:#fff;font-weight:bold">if</span>( not (x&gt;<span style="color:#ff0;font-weight:bold">10</span> or x&lt;-<span style="color:#ff0;font-weight:bold">10</span>) ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;the absolute value of x is less than 10&#34;</span> )</code></pre></div>
+<h2 id="demorgan-s-laws">DeMorgan&rsquo;s Laws</h2>
+
+<ul>
+<li>DeMorgan&rsquo;s laws can simplify more complex boolean equations
+
+<ul>
+<li>&ldquo;not(A and B)&rdquo; is the same as &ldquo;(not A) or (not B)&rdquo;</li>
+<li>&ldquo;not(A or B)&rdquo; is the same as &ldquo;(not A) and (not B)&rdquo;</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x = <span style="color:#ff0;font-weight:bold">5</span>
+
+<span style="color:#007f7f"># &#34;not (A or B)&#34;</span>
+<span style="color:#fff;font-weight:bold">if</span>( not (x&gt;<span style="color:#ff0;font-weight:bold">10</span> or x&lt;-<span style="color:#ff0;font-weight:bold">10</span>) ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;the absolute value of x is less than 10&#34;</span> )
+
+<span style="color:#007f7f"># &#34;(not A) and (not B)&#34;</span>
+<span style="color:#fff;font-weight:bold">if</span>( not(x&gt;<span style="color:#ff0;font-weight:bold">10</span>) and not(x&lt;-<span style="color:#ff0;font-weight:bold">10</span>) ):
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#34;the absolute value of x is less than 10&#34;</span> )</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 04 - Graphing Data</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li>Python Tutorials <a href="https://pythonspot.com/en/matplotlib/">Matplotlib</a></li>
+<li><a href="https://matplotlib.org/api/pyplot_summary.html">Matplotlib Documentation</a></li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<p>Matplotlib is the most popular python library for creating graphs and plots.
+It is provided to programmers as a module.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fff;font-weight:bold">as</span> plt</code></pre></div>
+<h2 id="pie-chart">Pie Chart</h2>
+
+<ul>
+<li>A pie chart is a circular graph which is divided into slices to illustrate proportions.</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> matplotlib
+matplotlib.use(<span style="color:#0ff;font-weight:bold">&#39;Agg&#39;</span>)
+<span style="color:#fff;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fff;font-weight:bold">as</span> plt
+
+<span style="color:#007f7f"># graph labels</span>
+labels = [<span style="color:#0ff;font-weight:bold">&#39;Chicken&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Fish&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Steak&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Vegetarian&#39;</span>]
+
+<span style="color:#007f7f"># data</span>
+num_dishes = [<span style="color:#ff0;font-weight:bold">34</span>, <span style="color:#ff0;font-weight:bold">11</span>, <span style="color:#ff0;font-weight:bold">47</span>, <span style="color:#ff0;font-weight:bold">3</span>]
+
+<span style="color:#007f7f"># colors for slices</span>
+colors = [<span style="color:#0ff;font-weight:bold">&#39;yellow&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;blue&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;red&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;green&#39;</span>]
+
+<span style="color:#007f7f"># create the pie chart</span>
+plt.pie(num_dishes, labels=labels, colors=colors)
+
+<span style="color:#007f7f"># equal x and y increments</span>
+plt.axis(<span style="color:#0ff;font-weight:bold">&#39;equal&#39;</span>)
+
+<span style="color:#007f7f"># save the graph</span>
+plt.savefig(<span style="color:#0ff;font-weight:bold">&#39;piechart&#39;</span>)</code></pre></div>
+<p><img src="/images/cp1/unit-05/pie.png" alt="" /></p>
+
+<h2 id="bar-chart">Bar Chart</h2>
+
+<ul>
+<li>A bar chart is a graph that show information using rectangular bars with lengths that represent their values</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> matplotlib
+matplotlib.use(<span style="color:#0ff;font-weight:bold">&#39;Agg&#39;</span>)
+<span style="color:#fff;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fff;font-weight:bold">as</span> plt
+
+<span style="color:#007f7f"># graph labels</span>
+labels = [<span style="color:#0ff;font-weight:bold">&#39;Chicken&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Fish&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Steak&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Vegetarian&#39;</span>]
+
+<span style="color:#007f7f"># data</span>
+num_dishes = [<span style="color:#ff0;font-weight:bold">34</span>, <span style="color:#ff0;font-weight:bold">11</span>, <span style="color:#ff0;font-weight:bold">47</span>, <span style="color:#ff0;font-weight:bold">3</span>]
+
+<span style="color:#007f7f"># get range of elements to plot</span>
+x = <span style="color:#fff;font-weight:bold">range</span>(<span style="color:#fff;font-weight:bold">len</span>(num_dishes))
+
+<span style="color:#007f7f"># plot the data</span>
+plt.bar(x, num_dishes, align=<span style="color:#0ff;font-weight:bold">&#39;center&#39;</span>)
+
+<span style="color:#007f7f"># label the xticks with the dish name</span>
+plt.xticks(x, labels)
+
+<span style="color:#007f7f"># describe the y axis</span>
+plt.ylabel(<span style="color:#0ff;font-weight:bold">&#39;Number of Dishes&#39;</span>)
+
+<span style="color:#007f7f"># save the graph</span>
+plt.savefig(<span style="color:#0ff;font-weight:bold">&#39;barchart&#39;</span>)</code></pre></div>
+<p><img src="/images/cp1/unit-05/bar.png" alt="" /></p>
+
+<h2 id="line-chart">Line Chart</h2>
+
+<ul>
+<li>A line chart is graph that shows information as a grouping on points connected by lines.</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> matplotlib
+matplotlib.use(<span style="color:#0ff;font-weight:bold">&#39;Agg&#39;</span>)
+<span style="color:#fff;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fff;font-weight:bold">as</span> plt
+
+<span style="color:#007f7f"># create a subplot, (1 row , 1 col) aka. 1 plot</span>
+<span style="color:#007f7f"># this enables us to change ticks and labels</span>
+fig, ax = plt.subplots(<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">1</span>)
+
+<span style="color:#007f7f"># graph labels</span>
+labels = [<span style="color:#0ff;font-weight:bold">&#39;Chicken&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Fish&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Steak&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Vegetarian&#39;</span>]
+
+<span style="color:#007f7f"># data</span>
+num_dishes = [<span style="color:#ff0;font-weight:bold">34</span>, <span style="color:#ff0;font-weight:bold">11</span>, <span style="color:#ff0;font-weight:bold">47</span>, <span style="color:#ff0;font-weight:bold">3</span>]
+
+<span style="color:#007f7f"># set the x  range/ tick to length of num_dishes</span>
+x = <span style="color:#fff;font-weight:bold">range</span>(<span style="color:#fff;font-weight:bold">len</span>(num_dishes))
+
+<span style="color:#007f7f"># create the pie chart</span>
+ax.plot(x, num_dishes)
+
+<span style="color:#007f7f"># set the ticks to number of dishes</span>
+ax.set_xticks(x)
+
+<span style="color:#007f7f"># set the labels to the food item</span>
+ax.set_xticklabels(labels)
+
+<span style="color:#007f7f"># save the graph</span>
+plt.savefig(<span style="color:#0ff;font-weight:bold">&#39;linechart&#39;</span>)</code></pre></div>
+<p><img src="/images/cp1/unit-05/line.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

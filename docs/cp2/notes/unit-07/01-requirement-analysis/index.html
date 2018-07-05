@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Requirement Analysis</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</h2>
+
+<p><img src="/images/cp2/unit-07/sdlc.png" alt="" /></p>
+
+<h2 id="requirement-analysis-questions">Requirement Analysis Questions</h2>
+
+<ul>
+<li>Who are the users of this product?</li>
+<li>What should the software do?</li>
+</ul>
+
+<h2 id="class-identification"><strong>Class identification</strong></h2>
+
+<ul>
+<li>Describe the software in as much detail as possible
+
+<ul>
+<li>For the sake of your own sanity, avoid using the word &ldquo;class&rdquo; in your description!</li>
+</ul></li>
+<li>For example: &ldquo;A Student Information System (SIS) allows students to register for a section of a course.
+
+<ul>
+<li><strong>DESIGN TIP</strong>: It&rsquo;s important to recognize that a student does not register for a course itself, but in a specific section of the course.</li>
+</ul></li>
+<li>Format the <strong>nouns</strong> in <strong>bold</strong> and the <strong>verbs</strong> in <strong>underline</strong>
+
+<ul>
+<li>&ldquo;A Student Information System <strong>(SIS)</strong> allows <strong>students</strong> to <strong>register</strong> for a <strong>section</strong> of a <strong>course</strong></li>
+</ul></li>
+<li>Write a list of all nouns with the verbs associated with that noun in a sub-list</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">For Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">SIS</td>
+</tr>
+
+<tr>
+<td align="center">Student: registers</td>
+</tr>
+
+<tr>
+<td align="center">Course</td>
+</tr>
+
+<tr>
+<td align="center">Section</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="use-case-scenarios">Use-case scenarios</h2>
+
+<ul>
+<li>A <strong>use-case scenario</strong> is a specific sequence of events.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Use Case Name</th>
+<th>register for course</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Primary Actor</td>
+<td>Student</td>
+</tr>
+
+<tr>
+<td align="center">Supporting Actor(s)</td>
+<td>Course</td>
+</tr>
+
+<tr>
+<td align="center">Summary</td>
+<td>student registers for a course</td>
+</tr>
+
+<tr>
+<td align="center">Preconditions</td>
+<td>1. Student exists in database (database has student) <br/> 2. Course exists in the database (database has course) <br/> 3. Section of course if currently being offered (course has section)</td>
+</tr>
+
+<tr>
+<td align="center">Normal Flow of Events</td>
+<td>1. Student finds course section in database <br/> 2. Student registers for selected section</td>
+</tr>
+
+<tr>
+<td align="center">Extensions</td>
+<td>1. Alternatives to step 1 <br/> &nbsp;&nbsp; a. Student could register directly with course reference number (CRN) <br/> 2. Alternatives to step 2 <br/> &nbsp;&nbsp; a. Admin could register student</td>
+</tr>
+
+<tr>
+<td align="center">Post conditions</td>
+<td>1. Student has section in their course section list <br/> Course section has student in student list</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="revealing-classes">Revealing classes</h2>
+
+<ul>
+<li>Use-case analysis can reveal additional information about classes</li>
+<li>Note:
+
+<ul>
+<li><strong>has-a</strong> and <strong>ownership</strong> relationships often result in fields rather than methods
+
+<ul>
+<li>&ldquo;database has student&rdquo;</li>
+<li>&ldquo;course list&rdquo;</li>
+</ul></li>
+<li>When we find <strong>collections</strong> we should be consistent about of naming
+
+<ul>
+<li>&ldquo;section list&rdquo;</li>
+<li>&ldquo;student list&rdquo;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

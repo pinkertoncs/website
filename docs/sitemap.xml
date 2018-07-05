@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/cp1/notes/</loc>
+    <lastmod>2018-06-06T07:46:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/intro/</loc>
+    <lastmod>2018-06-05T11:57:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/apcs/</loc>
+    <lastmod>2018-06-05T11:56:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cp2/</loc>
+    <lastmod>2018-06-05T11:56:24-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cp1/</loc>
+    <lastmod>2018-06-05T11:52:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/apcs/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-10/capstone/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-04/x1-sequences-and-series/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/x1-calculator-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-08/x1-fakebook/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/x1-interactive-turtle/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/x1-jsgame/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-04/01-conditions-and-logic/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/01-drawing-and-animation/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-09/01-file-io/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-08/01-html-basics/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-07/01-internet-and-web/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-06/01-software-engineering/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-01/01-intro/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-01/01-intro/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-02/01-java-basics/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/01-java-inheritance/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/01-javascript/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-04/01-linked-lists/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-06/01-object-oriented-programming/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/01-print-statements/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/01-procedures/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-07/01-requirement-analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-05/01-strings/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-05/01-trees-and-graphs/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-03/01-arrays-and-arraylists/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-08/02-css-basics/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-09/02-csv/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-06/02-command-line-interface/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-02/02-control-flow/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-01/02-data-representation/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-06/02-development-roles/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-05/02-dictionaries/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/02-functions/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/02-game-physics/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/02-html-dom/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/02-java-interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-04/02-lists/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/02-operators-and-expressions/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-04/02-stacks-and-queues/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-07/02-uml/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-03/02-vectors/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-01/02-computers-and-code/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-01/03-computer-history/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/03-data-types/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-05/03-file-io/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/03-forms-and-input/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/03-java-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/03-js-oop/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-04/03-loops-and-iteration/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-09/03-mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-03/03-searching-and-sorting/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-02/03-strings-and-files/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/03-tuples/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/04-event-handling/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-05/04-graphing-data/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-02/04-simple-classes/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/04-strings/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/04-turtle-graphics/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/05-variables/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/06-input/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/07-type-checking/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/08-type-casting/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-05/p1-binary-search-trees/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-02/p1-calculators/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-02/p1-data-conversion/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-07/p1-internet-and-web/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-01/p1-intro/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-05/p1-letter-frequency-analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-04/p1-linked-lists/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-04/p1-loops/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-08/p1-nettech/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-06/p1-occupations-analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-03/p1-polygons/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-06/p1-pyzork/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/p1-sis-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-07/p1-sis-design/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-09/p1-sis-persistent-data/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-03/p1-searching-and-sorting/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/p1-sketchpad/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/p1-word-games/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-01/p1-data/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/p2-notepad/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-06/p2-occupation-presentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-07/p2-sis-data-models/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/p2-user-hierarchy/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-04/p2-stacks-and-queues/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/p3-object-builder/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/p4-profile-page/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-08/ws1-object-oriented/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp2/notes/unit-09/ws1-data-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-09/ws1-dom/</loc>
+  </url>
+  
+  <url>
+    <loc>/cp1/notes/unit-10/ws1-web-graphics/</loc>
+  </url>
+  
+</urlset>

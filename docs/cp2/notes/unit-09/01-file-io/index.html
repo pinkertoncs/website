@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - File I/O</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.tutorialspoint.com/java/java_files_io.htm">Tutorialspoint Files and I/O</a></li>
+<li><a href="http://docs.oracle.com/javase/tutorial/essential/io/index.html">Java Doc - Basic I/O</a></li>
+</ul>
+
+<h2 id="input-from-console-files">Input from Console / Files</h2>
+
+<ul>
+<li><p>You can use an InputStreamReader to read from standard (console) input.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">InputStreamReader isr = <span style="color:#fff;font-weight:bold">new</span> InputStreamReader(System.<span style="color:#007f7f">in</span>);</code></pre></div></li>
+
+<li><p>You can use a FileReader to read from file input</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">FileReader fr = <span style="color:#fff;font-weight:bold">new</span> FileReader(<span style="color:#0ff;font-weight:bold">&#34;input.txt&#34;</span>);</code></pre></div></li>
+</ul>
+
+<h4 id="demo">Demo</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">import</span> java.io.BufferedReader;
+<span style="color:#fff;font-weight:bold">import</span> java.io.FileReader;
+<span style="color:#fff;font-weight:bold">import</span> java.io.IOException;
+<span style="color:#fff;font-weight:bold">import</span> java.io.InputStreamReader;
+
+<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> FileReadDemo {
+
+	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args){
+
+		<span style="color:#fff;font-weight:bold">try</span> {
+			BufferedReader fileIn;
+			String line;
+
+			<span style="color:#007f7f">// reading from standard input
+</span><span style="color:#007f7f"></span>			fileIn = <span style="color:#fff;font-weight:bold">new</span> BufferedReader(<span style="color:#fff;font-weight:bold">new</span> InputStreamReader(System.<span style="color:#007f7f">in</span>));
+
+			<span style="color:#007f7f">// reading from a file
+</span><span style="color:#007f7f"></span>			<span style="color:#007f7f">//fileIn = new BufferedReader(new FileReader(&#34;filename.txt&#34;));
+</span><span style="color:#007f7f"></span>
+			<span style="color:#fff;font-weight:bold">while</span>((line = fileIn.<span style="color:#007f7f">readLine</span>()) != <span style="color:#fff;font-weight:bold">null</span>){
+
+				<span style="color:#007f7f">// remove any leading or trailing whitespace
+</span><span style="color:#007f7f"></span>				<span style="color:#007f7f">//	also removes newline (\n) or carriage return (\r)
+</span><span style="color:#007f7f"></span>				line = line.<span style="color:#007f7f">trim</span>();
+				System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>( line );
+			}
+			fileIn.<span style="color:#007f7f">close</span>();
+
+		} <span style="color:#fff;font-weight:bold">catch</span> (IOException e) {
+			e.<span style="color:#007f7f">printStackTrace</span>();
+		}
+	}
+}</code></pre></div>
+<h2 id="file-output">File Output</h2>
+
+<h4 id="demo-1">Demo</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">import</span> java.io.BufferedWriter;
+<span style="color:#fff;font-weight:bold">import</span> java.io.FileOutputStream;
+<span style="color:#fff;font-weight:bold">import</span> java.io.IOException;
+<span style="color:#fff;font-weight:bold">import</span> java.io.OutputStreamWriter;
+<span style="color:#fff;font-weight:bold">import</span> java.io.Writer;
+
+<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> FileWriteDemo {
+
+	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
+
+		<span style="color:#fff;font-weight:bold">try</span>{
+			Writer writer;
+
+			writer = <span style="color:#fff;font-weight:bold">new</span> BufferedWriter(<span style="color:#fff;font-weight:bold">new</span> OutputStreamWriter(
+			          <span style="color:#fff;font-weight:bold">new</span> FileOutputStream(<span style="color:#0ff;font-weight:bold">&#34;filename.txt&#34;</span>), <span style="color:#0ff;font-weight:bold">&#34;utf-8&#34;</span>));
+
+			<span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">int</span> i=0; i&lt;10; i++ ){
+
+				<span style="color:#007f7f">// add a carriage return (\r) at the end of each line
+</span><span style="color:#007f7f"></span>				writer.<span style="color:#007f7f">write</span>( <span style="color:#0ff;font-weight:bold">&#34;Hi &#34;</span> + i + <span style="color:#0ff;font-weight:bold">&#34;!\r&#34;</span>);
+			}
+
+			writer.<span style="color:#007f7f">close</span>();
+		}
+		<span style="color:#fff;font-weight:bold">catch</span>(IOException e){
+			e.<span style="color:#007f7f">printStackTrace</span>();
+		}
+	}
+}</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - HTML Basics</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><strong>Primary</strong>: <a href="http://www.w3schools.com/html/">W3Schools HTML Tutorial</a> - Instructions with interactive examples</li>
+<li><strong>Secondary</strong>: <a href="http://www.codecademy.com/en/tracks/web">Codecademy HTML &amp; CSS</a> - Interactive Tutorials (requires login)
+
+<ul>
+<li>great for practicing</li>
+</ul></li>
+</ul>
+
+<h2 id="inspecting-html">Inspecting HTML</h2>
+
+<ul>
+<li>Use <a href="https://developer.chrome.com/devtools">Chrome DevTools</a></li>
+<li>You can inspect HTML for any web page by
+
+<ul>
+<li>Right Mouse Click -&gt; <strong>Inspect element</strong></li>
+</ul></li>
+</ul>
+
+<h2 id="html-template">HTML template</h2>
+
+<ul>
+<li>Please review the primary reference</li>
+<li>You can use the HTML template below to start a new document</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="font-weight:bold">html</span>&gt;
+    &lt;<span style="font-weight:bold">head</span>&gt;
+        &lt;<span style="font-weight:bold">title</span>&gt;Template Page&lt;/<span style="font-weight:bold">title</span>&gt;
+    &lt;/<span style="font-weight:bold">head</span>&gt;
+    &lt;<span style="font-weight:bold">body</span>&gt;
+        <span style="color:#007f7f">&lt;!-- HTML Comment --&gt;</span>
+        &lt;<span style="font-weight:bold">h1</span>&gt; HTML Template &lt;/<span style="font-weight:bold">h1</span>&gt;
+        &lt;<span style="font-weight:bold">p</span>&gt; Hello, World! &lt;/<span style="font-weight:bold">p</span>&gt;
+    &lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
+<h2 id="basic-elements">Basic Elements</h2>
+
+<ul>
+<li>HTML elements are the components of your web page</li>
+<li>HTML elements (usually) have and <code>&lt;opening&gt;</code> tag and a <code>&lt;/closing&gt;</code> tag</li>
+<li>Non-display elements
+
+<ul>
+<li><code>&lt;html&gt; ... &lt;/html&gt;</code></li>
+<li><code>&lt;head&gt; ... &lt;/head&gt;</code></li>
+<li><code>&lt;body&gt; ... &lt;/body&gt;</code></li>
+</ul></li>
+<li>Elements are nested - you can and will put elements inside of other elements</li>
+<li>Display elements
+
+<ul>
+<li><code>&lt;h1&gt; headings &lt;/h1&gt;</code></li>
+<li><code>&lt;p&gt; paragraphs &lt;/p&gt;</code></li>
+</ul></li>
+<li>Some elements do not have a closing tag - put a slash at the end of tag in these cases, e.g.
+
+<ul>
+<li>Page break  <code>&lt;br/&gt;</code></li>
+<li>Horizontal rule (line): <code>&lt;hr/&gt;</code></li>
+</ul></li>
+</ul>
+
+<h2 id="links-and-images">Links and images</h2>
+
+<ul>
+<li><strong>Attributes</strong> are like variables that specify something about the element</li>
+
+<li><p>Universal attributes (all elements have these)</p>
+
+<ul>
+<li><strong>id</strong> - used to identify a single element</li>
+<li><strong>class</strong> - used to identify a group of related elements (more on that later)</li>
+</ul></li>
+
+<li><p><code>&lt;a&gt; Links &lt;/a&gt;</code></p>
+
+<ul>
+<li><strong>href</strong> hypertext reference. full URL, including http://</li>
+
+<li><p><strong>target</strong> set to <code>_blank</code>, the link will open in a new tab</p></li>
+
+<li><p>You can use <code>&lt;a&gt;</code> to link to</p>
+
+<ul>
+<li>a section within the page</li>
+<li>another <code>.html</code> file</li>
+<li>an external web page</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#007f7f">&lt;!-- use a hash symbol # to link to a section on this page by id   --&gt;</span>
+&lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#39;#header1&#39;</span>&gt; Header 1 &lt;/<span style="font-weight:bold">a</span>&gt;
+
+<span style="color:#007f7f">&lt;!-- use a filename or relative filepath to link to another local page --&gt;</span>
+&lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#39;page2.html&#39;</span>&gt; Page 2 &lt;/<span style="font-weight:bold">a</span>&gt;
+
+<span style="color:#007f7f">&lt;!-- use a full URL to link to an external page --&gt;</span>
+&lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#39;http://pinkertoncs.github.io&#39;</span>&gt; Pinkerton Academy Computer Science &lt;/<span style="font-weight:bold">a</span>&gt;
+
+&lt;<span style="font-weight:bold">h1</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;header1&#39;</span>&gt; This is Header 1 &lt;/<span style="font-weight:bold">h1</span>&gt;</code></pre></div></li>
+
+<li><p>image tag <code>&lt;img&gt;</code></p>
+
+<ul>
+<li><strong>src</strong> filename or relative path; or Full URL of an online image</li>
+<li><strong>alt</strong> sets alternative text to be displayed if image can&rsquo;t be loaded</li>
+<li><strong>height / width</strong> dimensions in pixels of %. if you set up just one the other will scale automatically</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">img</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#39;example.jpg&#39;</span> <span style="color:#007f7f">alt</span>=<span style="color:#0ff;font-weight:bold">&#39;example image&#39;</span> <span style="color:#007f7f">width</span>=<span style="color:#0ff;font-weight:bold">&#39;250&#39;</span>/&gt;
+
+<span style="color:#007f7f">&lt;!-- an image can be nested in a link --&gt;</span>
+&lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#39;https://goo.gl/aBL6vS&#39;</span>&gt; &lt;<span style="font-weight:bold">img</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#39;https://goo.gl/aBL6vS&#39;</span>/&gt; &lt;/<span style="font-weight:bold">a</span>&gt;</code></pre></div></li>
+</ul>
+
+<h2 id="structural-elements">Structural elements</h2>
+
+<ul>
+<li>tables
+
+<ul>
+<li><code>&lt;tr&gt;</code> is table row</li>
+<li><code>&lt;th&gt;</code> is table header</li>
+<li><code>&lt;td&gt;</code> is table data (cell)</li>
+<li>you can use <strong>colspan</strong> or <strong>rowspan</strong> attributes to span multiple columns / rows</li>
+</ul></li>
+
+<li><p>lists</p>
+
+<ul>
+<li><code>&lt;ol&gt;</code> is ordered list (numbers / letters )</li>
+<li><code>&lt;ul&gt;</code> is unordered list (bullet points)</li>
+<li>you can use <strong>type</strong> or <strong>list-style-type</strong> attributes to change the marker. (see W3Schools)</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">table</span>&gt;
+     &lt;<span style="font-weight:bold">tr</span>&gt; &lt;<span style="font-weight:bold">th</span> <span style="color:#007f7f">colspan</span>=<span style="color:#0ff;font-weight:bold">2</span>&gt; This th spans 2 columns &lt;/<span style="font-weight:bold">th</span>&gt; &lt;/<span style="font-weight:bold">tr</span>&gt;
+    &lt;<span style="font-weight:bold">tr</span>&gt; &lt;<span style="font-weight:bold">th</span>&gt; header col 1 &lt;/<span style="font-weight:bold">th</span>&gt; &lt;<span style="font-weight:bold">th</span>&gt; header col 2 &lt;/<span style="font-weight:bold">th</span>&gt; &lt;/<span style="font-weight:bold">tr</span>&gt;
+    &lt;<span style="font-weight:bold">tr</span>&gt; &lt;<span style="font-weight:bold">td</span>&gt; table data 1 &lt;/<span style="font-weight:bold">td</span>&gt; &lt;<span style="font-weight:bold">td</span>&gt; table data 2 &lt;/<span style="font-weight:bold">td</span>&gt; &lt;/<span style="font-weight:bold">tr</span>&gt;
+<span style="color:#007f7f">&lt;!-- etc… --&gt;</span>
+&lt;/<span style="font-weight:bold">table</span>&gt;
+
+<span style="color:#007f7f">&lt;!-- ol is ordered (numbered) list, use ul for unordered (bullets) --&gt;</span>
+&lt;<span style="font-weight:bold">ol</span>&gt;
+    &lt;<span style="font-weight:bold">li</span>&gt; list item 1 &lt;/<span style="font-weight:bold">li</span>&gt;
+    &lt;<span style="font-weight:bold">li</span>&gt; list item 1 &lt;/<span style="font-weight:bold">li</span>&gt;
+    &lt;<span style="font-weight:bold">li</span>&gt; list item 1 &lt;/<span style="font-weight:bold">li</span>&gt;
+&lt;/<span style="font-weight:bold">ol</span>&gt;</code></pre></div></li>
+
+<li><p>divs and spans</p>
+
+<ul>
+<li><code>&lt;div&gt;</code> is a <strong>block-level element</strong> - it takes up the width of the page and the height of the content</li>
+<li><code>&lt;span&gt;</code> is an inline element - it takes up only as much width as the content</li>
+<li>divs and spans are used for creating layouts (more on this later)</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">div</span>&gt; Div 1 &lt;/<span style="font-weight:bold">div</span>&gt;
+&lt;<span style="font-weight:bold">div</span>&gt; Div 2 &lt;/<span style="font-weight:bold">div</span>&gt;
+
+&lt;<span style="font-weight:bold">span</span>&gt; Span 1 &lt;/<span style="font-weight:bold">span</span>&gt;
+&lt;<span style="font-weight:bold">span</span>&gt; Span 2 &lt;/<span style="font-weight:bold">span</span>&gt;</code></pre></div></li>
+</ul>
+
+<h1 id="entities">Entities</h1>
+
+<ul>
+<li>Some special character can be inserted using HTML entities</li>
+<li>For more into visit:
+
+<ul>
+<li><a href="http://www.w3schools.com/html/html_entities.asp">W3Schools HTML Entities</a></li>
+</ul></li>
+<li>Common used entities
+
+<ul>
+<li><code>&amp;nbsp;</code> inserts a space</li>
+<li><code>&amp;lt;</code> &lt; symbol</li>
+<li><code>&amp;gt;</code> &gt; symbol</li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

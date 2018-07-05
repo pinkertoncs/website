@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 Arrays and ArrayLists</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="java-array-specification">Java Array Specification</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-10.html#jls-10.7">Spec</a></li>
+</ul>
+
+<h2 id="java-array-v-s-python-list">Java Array v.s. Python List</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Java Array</th>
+<th align="left">Python List</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Single Type</td>
+<td align="left">Multiple Types</td>
+</tr>
+
+<tr>
+<td align="left">Fixed length</td>
+<td align="left">Variable length</td>
+</tr>
+
+<tr>
+<td align="left">continuous storage in memory</td>
+<td align="left">Highly abstract type</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="declaring-and-initializing-arrays">Declaring and Initializing Arrays</h2>
+
+<ul>
+<li>You must declare the type and length</li>
+<li>You can initialize all element using a list with braces, but only when you declare the array</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">int</span>[] foo = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">int</span>[5];                <span style="color:#007f7f">// 5 uninitialized integers
+</span><span style="color:#007f7f"></span>
+<span style="color:#fff;font-weight:bold">int</span>[] bar = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">int</span>[]{ 16, 2, 77, 40, 12071 };
+
+//foo = { 1, 2, 3, 4, 5 };         // can<span style="color:#f00">&#39;</span>t <span style="color:#fff;font-weight:bold">do</span> it.</code></pre></div>
+<h2 id="arrays-in-memory">Arrays in Memory</h2>
+
+<ul>
+<li>A Java Array is a class. It allocates space for the array and a little overhead for Object information</li>
+
+<li><p><strong>Review: Integers &amp; Memory</strong></p>
+
+<ul>
+<li>Recall, an integer on our development platform is 4 bytes (32 bits)</li>
+<li>When you declare an integer, 4 bytes of memory are reserved and referenced by the variable</li>
+<li>The variable name provides access to the memory location</li>
+</ul></li>
+
+<li><p>Integer Arrays</p>
+
+<ul>
+<li>When you declare an array of integers of size 5, a 20 byte block of memory is reserved (5 ints * 4 bytes)</li>
+<li>The name of the array (variable) is a reference to the beginning of the block of memory.</li>
+</ul></li>
+
+<li><p>What this means to you, the programmer</p>
+
+<ul>
+<li>Since an Java array is a very simple Class (the reference to the array and field containing the size of the array), it doesn&rsquo;t provide the methods of, for example, Python&rsquo;s Lists.  For example, add, remove, etc&hellip;</li>
+</ul></li>
+</ul>
+
+<h2 id="iterating-over-an-array">Iterating over an Array</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">int</span>[] my_arr = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">int</span>[10];
+
+<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = 0; i &lt; my_arr.<span style="color:#007f7f">length</span>; i++) {
+    my_arr[i] = -1;
+}</code></pre></div>
+<h2 id="multidimensional-arrays">Multidimensional Arrays</h2>
+
+<ul>
+<li>Sometimes you want to store a tabular data (e.g. multiplication table).  You can use a two-dimensional array for this:</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">int</span> NUM_ROWS = 3;
+<span style="color:#fff;font-weight:bold">int</span> NUM_COLS = 10;
+
+<span style="color:#fff;font-weight:bold">int</span>[][] matrix = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">int</span>[NUM_ROWS][NUM_COLS];
+
+<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> row = 0; row &lt; NUM_ROWS; row++) {
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> col = 0; col &lt; NUM_COLS; col++) {
+        matrix[row][col] = (row+ 1) * (col + 1);
+    } <span style="color:#007f7f">//end loop for columns
+</span><span style="color:#007f7f"></span>} //end loop <span style="color:#fff;font-weight:bold">for</span> rows</code></pre></div>
+<h2 id="passing-and-returning-arrays">Passing and Returning Arrays</h2>
+
+<ul>
+<li>Passing</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> print_array(<span style="color:#fff;font-weight:bold">int</span>[] arr) {
+
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = 0; i &lt; arr.<span style="color:#007f7f">length</span>; i++) {
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(arr[i]);
+    }
+}</code></pre></div>
+<ul>
+<li>Returning
+
+<ul>
+<li>To &ldquo;return&rdquo; an array, you return a reference to the array
+
+<ul>
+<li>This example has little practical use, since you must already have access to the array in the calling function.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">int</span>[] change_array( <span style="color:#fff;font-weight:bold">int</span>[] a ){
+
+    a[0] = 5;
+    <span style="color:#fff;font-weight:bold">return</span> a;
+}</code></pre></div>
+<h2 id="java-arraylist-api">Java ArrayList API</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">API</a></li>
+</ul>
+
+<h2 id="java-arraylist-v-s-python-list">Java ArrayList v.s. Python List</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Java ArrayList</th>
+<th align="left">Python List</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Single Type</td>
+<td align="left">Multiple Types</td>
+</tr>
+
+<tr>
+<td align="left">Variable length</td>
+<td align="left">Variable length</td>
+</tr>
+
+<tr>
+<td align="left">Abstract type</td>
+<td align="left">Abstract Type</td>
+</tr>
+
+<tr>
+<td align="left">add, remove, &hellip; functions</td>
+<td align="left">add, remove, &hellip; functions</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="declaring-and-initializing-arraylist">Declaring and Initializing ArrayList</h2>
+
+<ul>
+<li>Optionally, declare a type and/or size</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#007f7f">// declare an ArrayList of initial Size 15 that stores Objects
+</span><span style="color:#007f7f"></span>ArrayList aList = <span style="color:#fff;font-weight:bold">new</span> ArrayList(15);
+
+<span style="color:#007f7f">// declare ArrayList with default size that stores
+</span><span style="color:#007f7f">// Integers  (Class wrappers around int)
+</span><span style="color:#007f7f"></span>ArrayList&lt;Integer&gt; iList = <span style="color:#fff;font-weight:bold">new</span> ArrayList&lt;Integer&gt;();</code></pre></div>
+<h2 id="iterating-over-and-arraylist">Iterating over and ArrayList</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ArrayList&lt;Integer&gt; iList = <span style="color:#fff;font-weight:bold">new</span> ArrayList&lt;Integer&gt;();
+
+<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = 0; i &lt; 10; i++) {
+    iList.<span style="color:#007f7f">add</span>(-1);
+}
+
+<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = 0; i &lt; iList.<span style="color:#007f7f">size</span>(); i++) {
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(iList.<span style="color:#007f7f">get</span>(i));
+}</code></pre></div>
+<h2 id="passing-and-returning-arraylists">Passing and Returning ArrayLists</h2>
+
+<ul>
+<li>Passing</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> print_array(ArrayList&lt;Integer&gt; iList) {
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = 0; i &lt; iList.<span style="color:#007f7f">size</span>(); i++) {
+        System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(iList.<span style="color:#007f7f">get</span>(i));
+    }
+}</code></pre></div>
+<ul>
+<li>Returning
+
+<ul>
+<li>To &ldquo;return&rdquo; an ArrayList, you return a reference to the ArrayList
+
+<ul>
+<li>This example has little practical use, since you must already have access to the array in the calling function.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> ArrayList&lt;Integer&gt; change_array( ArrayList&lt;Integer&gt; iList){
+
+    iList.<span style="color:#007f7f">set</span>(0,5);
+    <span style="color:#fff;font-weight:bold">return</span> iList;
+}</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Java Inheritance</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="readings">Readings</h2>
+
+<ul>
+<li><a href="https://www.tutorialspoint.com/java/java_inheritance.htm">Tutorialspoint Java Inheritance</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Java Doc Inheritance</a></li>
+</ul>
+
+<h2 id="inheritance">Inheritance</h2>
+
+<ul>
+<li><strong>inheritance</strong> is the process of <em>deriving</em> one class from another
+
+<ul>
+<li>The <strong>derived class (subclass)</strong> gets all of the field and methods of the other <strong>base class (superclass)</strong></li>
+<li>&ldquo;The idea of inheritance is simple but powerful: When you want to create a new class and there is already a class that includes some of the code that you want, you can derive your new class from the existing class. In doing this, you can reuse the fields and methods of the existing class without having to write (and debug!) them yourself.&rdquo; (oracle).</li>
+</ul></li>
+</ul>
+
+<h2 id="inheritance-uml">Inheritance UML</h2>
+
+<ul>
+<li>Inheritance is used to implement an <strong>IS-A</strong> relationship</li>
+<li>For example, an <em>Employee</em> is a <em>Person</em></li>
+<li>In the UML diagram, use an arrow pointing from the <em>subclass</em> to the <em>superclass</em></li>
+<li>You do not list the inherited fields / methods in the <em>subclass</em></li>
+</ul>
+
+<p><img src="/images/cp2/unit-08/uml.png" alt="" /></p>
+
+<h2 id="superclass">Superclass</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Person {
+
+	<span style="color:#fff;font-weight:bold">private</span> String name;
+
+	<span style="color:#007f7f">// initialize to default value, e.g. &#34;anonymous&#34;
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> Person(){}
+
+    <span style="color:#007f7f">// initialize to parameter
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> Person(String n){ }
+
+	<span style="color:#007f7f">// return value of _name
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> String getName(){ <span style="color:#fff;font-weight:bold">return</span> name; }
+
+    <span style="color:#007f7f">// change value of _name
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> setName(String n){ name = n; }
+}</code></pre></div>
+<h2 id="subclass">Subclass</h2>
+
+<ul>
+<li>We can create a <em>subclass</em> of the Person class, for example, <strong>Employee</strong>
+
+<ul>
+<li>by <em>extending</em>, we automatically get all the fields and methods of the <em>superclass</em></li>
+<li>we can add more fields and methods</li>
+<li>when overriding the <em>constructor</em>, we call the constructor of the <em>superclass</em> using the <strong>super</strong> keyword</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Employee <span style="color:#fff;font-weight:bold">extends</span> Person {
+
+	<span style="color:#fff;font-weight:bold">int</span> employee_id;
+	String title;
+
+	<span style="color:#fff;font-weight:bold">public</span> Employee(<span style="color:#fff;font-weight:bold">int</span> id) {
+             <span style="color:#fff;font-weight:bold">super</span>();
+             employee_id = id;
+	}
+
+	<span style="color:#fff;font-weight:bold">public</span> Employee(<span style="color:#fff;font-weight:bold">int</span> id, String n) {
+             <span style="color:#fff;font-weight:bold">super</span>(n);
+             employee_id = id;
+	}
+
+    <span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">int</span> getId() {
+           <span style="color:#fff;font-weight:bold">return</span> employee_id;
+    }
+}</code></pre></div>
+<h2 id="polymorphism">Polymorphism</h2>
+
+<ul>
+<li><strong>Polymorphism</strong> is &ldquo;the condition of occurring in several different forms&rdquo;
+
+<ul>
+<li>In programming, it usually means using a <em>superclass</em> reference to refer to a <em>subclass</em></li>
+</ul></li>
+<li>For example, an <em>Employee</em> object can be stored in a a collection (List) of <em>Person</em></li>
+<li>You can determine if a <em>superclass</em> object is an instance of a particular <em>subclass</em> by using the <strong>instanceof</strong> keyword</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Person p = <span style="color:#fff;font-weight:bold">new</span> Employee( 0, <span style="color:#0ff;font-weight:bold">&#34;Jane&#34;</span> )
+
+<span style="color:#fff;font-weight:bold">if</span>( p <span style="color:#fff;font-weight:bold">instanceof</span> Employee ){
+    System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>( p.<span style="color:#007f7f">getName</span>() + <span style="color:#0ff;font-weight:bold">&#34; is employee #&#34;</span> + p.<span style="color:#007f7f">getId</span>() );
+} <span style="color:#fff;font-weight:bold">else</span> {
+	System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>( p.<span style="color:#007f7f">getName</span>() + <span style="color:#0ff;font-weight:bold">&#34; is unemployed.&#34;</span> );
+}</code></pre></div>
+<h2 id="reflection">Reflection</h2>
+
+<ul>
+<li>&ldquo;Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of application running in the Java virtual machine&rdquo;
+
+<ul>
+<li><strong>Reflection</strong> is a way to get information about an object at runtime</li>
+<li>It is an advanced topic, we will just scratch the surface</li>
+</ul></li>
+<li>Java has an <em>Object</em> class and a <em>Class</em> class!
+
+<ul>
+<li>Every Java class has the <strong>Object class</strong> at the top of the hierarchy</li>
+<li>The <strong>Class class</strong> contains information about a class</li>
+</ul></li>
+<li>Some Reflection methods</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>getClass()</td>
+<td>returns <em>Class</em> object of the given type</td>
+</tr>
+
+<tr>
+<td>getSuperClass()</td>
+<td>returns the <em>superclass</em> of a Class</td>
+</tr>
+
+<tr>
+<td>getDeclaredFields()</td>
+<td>gets the fields that are declared in that class (not superclass)</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

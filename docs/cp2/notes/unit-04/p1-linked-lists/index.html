@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Project 01 - Linked Lists</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="description">Description</h2>
+
+<ul>
+<li>This project consists of two(2) classes. The first class, <strong>Person</strong> is used to model, or store information, about a person.  The second class, <strong>List</strong>, is an implementation of a linked list that stores <strong>Person</strong> objects. These classes might be used in a personnel management system.</li>
+</ul>
+
+<h2 id="person">Person</h2>
+
+<ul>
+<li>Constructors
+
+<ul>
+<li><strong>Person()</strong> - default constructor</li>
+<li><strong>Person(string, string)</strong> - two(2) argument constructor, sets first and last name</li>
+</ul></li>
+<li>Methods
+
+<ul>
+<li><strong>setName(first, last)</strong> - sets object&rsquo;s first and last name</li>
+<li><strong>toString()</strong> - returns a string representation of a Person</li>
+<li><strong>compareTo(Person)</strong> compares this Person against the Person parameter
+
+<ul>
+<li>returns -1 if this comes before param</li>
+<li>returns 0 if this and param are equal</li>
+<li>return 1 if this comes after param</li>
+</ul></li>
+<li>Note: first compare by last name, then first name, finally by id (ids are guaranteed to be unique)</li>
+</ul></li>
+<li>Testing
+
+<ul>
+<li>(For the full tests see Main.java and test/PersonTest.java)</li>
+<li>When you create new instances of a Person, you will invoke the constructors</li>
+<li>Other methods are invoked using the dot operator (<strong>.</strong>)
+```java
+// invokes the default constructor, Person()
+Person p1 = new Person();</li>
+</ul></li>
+</ul>
+
+<p>//invokes the 2-arg constructor, Person(String, String)
+Person p2 = new Person(&ldquo;John&rdquo;, &ldquo;Doe&rdquo;);</p>
+
+<p>p1.setName(&ldquo;Jane&rdquo;, &ldquo;Doe&rdquo;);</p>
+
+<p>// use the toString method for output
+System.out.println(p1.toString());</p>
+
+<p>//use the compareTo method, compare p1 and p2
+System.out.println(p1.compareTo(p2));
+```</p>
+
+<h2 id="list">List</h2>
+
+<ul>
+<li>This list is specifically designed to hold Person objects</li>
+<li>Methods (Tier 1)
+
+<ul>
+<li><strong>length()</strong> - returns length of list</li>
+<li><strong>toString()</strong> - returns a string representation of this list</li>
+<li><strong>push(Person)</strong> - adds a person to the list</li>
+<li><strong>pop()</strong> - removes item from the end of list and return reference to popped item</li>
+<li><strong>find(Person)</strong> - returns index of param or -1 if not found</li>
+<li><strong>get(index)</strong> - return the Person object at index</li>
+</ul></li>
+<li>Methods (Tier 2)
+
+<ul>
+<li><strong>insert(index, Person)</strong> - insert Person at specified index</li>
+<li><strong>pop(index)</strong> - remove Person at index, return reference to popped item</li>
+<li><strong>sort()</strong> - sort the list using the Person <strong>compareTo</strong> method</li>
+</ul></li>
+</ul>
+
+<h2 id="main">Main</h2>
+
+<ul>
+<li>The provided <strong>Main.java</strong> has some simple tests for Person and List</li>
+<li>I would recommend commenting out the tests and then un-comment them as they are implemented</li>
+<li>You may modify Main.java as you see fit</li>
+</ul>
+
+<h2 id="tips">Tips</h2>
+
+<ul>
+<li><strong>length()</strong>
+
+<ul>
+<li>set a <em>count</em> variable to 0</li>
+<li>iterate over the list, incrementing <em>count</em></li>
+<li>return <em>count</em></li>
+</ul></li>
+<li><strong>toString()</strong>
+
+<ul>
+<li>create an empty string</li>
+<li>iterate over the list
+
+<ul>
+<li>call the element&rsquo;s toString() method and append it to string</li>
+</ul></li>
+<li>return the string</li>
+</ul></li>
+<li><strong>push(Person)</strong>
+
+<ul>
+<li>create a new node and set it&rsquo;s Person data to the parameter</li>
+<li>case 1 - adding first element to the list (root is <strong>null</strong>)
+
+<ul>
+<li>set root to reference the newly created node</li>
+</ul></li>
+<li>case 2 - general case, adding an element to the end of the list
+
+<ul>
+<li>iterate to the last node in the list</li>
+<li>set the newly created node&rsquo;s <strong>next</strong> to null</li>
+<li>set the last node&rsquo;s <strong>next</strong> to the new node</li>
+<li>(Doubly Linked List) set the new Node&rsquo;s <strong>prev</strong> to last node</li>
+</ul></li>
+</ul></li>
+<li><strong>pop()</strong>
+
+<ul>
+<li>case 1 - empty list
+
+<ul>
+<li>return <strong>null</strong></li>
+</ul></li>
+<li>case 2 - single item in list
+
+<ul>
+<li>set root to <strong>null</strong> (make sure you keep a reference to the Node)</li>
+<li>return data</li>
+</ul></li>
+<li>case 3 - general case
+
+<ul>
+<li>iterate to the last node in the list</li>
+<li>set the next-to-last node&rsquo;s <strong>next</strong> to null (make sure you keep a
+reference to the last node)</li>
+<li>return data</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

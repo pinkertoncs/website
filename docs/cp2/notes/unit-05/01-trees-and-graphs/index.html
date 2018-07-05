@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 01 - Trees and Graphs</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="readings-and-references">Readings and References</h2>
+
+<ol>
+<li><a href="http://www.tutorialspoint.com/data_structures_algorithms/index.htm">Primary Reference</a></li>
+<li><a href="http://www.algolist.net/Data_structures/Binary_search_tree">BST</a></li>
+</ol>
+
+<p>Note: These tutorials are in C++ but the main concepts and graphics apply to Java as well</p>
+
+<h2 id="recursion">Recursion</h2>
+
+<ul>
+<li>Recursion is when a function calls itself!</li>
+<li>In the follow example, we will implement a recursive factorial function
+
+<ul>
+<li><strong>factorial(n)</strong> is defined (for a positive integer) as the product of all integers
+between <strong>1</strong> and <strong>n</strong></li>
+</ul></li>
+<li>Consider the following:</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">int</span> factorial(<span style="color:#fff;font-weight:bold">int</span> n) {
+	<span style="color:#fff;font-weight:bold">if</span>( n &lt;= 0 ) {
+    	<span style="color:#fff;font-weight:bold">return</span> 0;
+    }
+
+    <span style="color:#fff;font-weight:bold">if</span>( n == 1 ) {
+    	<span style="color:#fff;font-weight:bold">return</span> 1;
+    }
+
+    <span style="color:#fff;font-weight:bold">return</span> n * factorial(n-1);
+}</code></pre></div>
+<ul>
+<li>Let&rsquo;s trace the code for <strong>factorial(3)</strong>
+
+<ul>
+<li>factorial(3) -&gt; 3 * factorial(2)
+
+<ul>
+<li>factorial(2) -&gt; 2 * factorial(1)
+
+<ul>
+<li>factorial(1) -&gt; 1</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Notice the returns <strong>cascade</strong> back from <strong>factorial(1)</strong> to <strong>factorial(3)</strong></li>
+<li>Now trace it back:
+
+<ul>
+<li><strong>factorial(3)</strong> -&gt; 3 * 2 * 1</li>
+</ul></li>
+<li>In our example, the <strong>recursion depth</strong> is 3 because there are 3 calls to factorial
+on the call stack before the returns start cascading back</li>
+</ul>
+
+<h2 id="trees">Trees</h2>
+
+<ul>
+<li>Reference
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">Tree Data Structure</a></li>
+</ul></li>
+<li>A <strong>tree</strong> is a data structure that simulates a hierarchical tree structure</li>
+<li>Terminology
+
+<ul>
+<li>A <strong>node</strong> is an item in the tree</li>
+<li>The <strong>root</strong> of a tree is the top level item</li>
+<li>An <strong>edge</strong> is a link connecting two nodes</li>
+</ul></li>
+<li><img src="/images/cp2/unit-05/tree.png" alt="" /></li>
+</ul>
+
+<h3 id="types-of-trees">Types of Trees</h3>
+
+<ul>
+<li>Reference
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Binary_search_tree">Binary Search Tree</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trie">Trie</a></li>
+</ul></li>
+<li>The diagram above depicts a Binary Search Tree. Note, that for any given node, every node
+to the left has a lesser value, and every node to the right has a greater value.</li>
+</ul>
+
+<h3 id="binary-search-tree-insertion">Binary Search Tree Insertion</h3>
+
+<ul>
+<li>This can be done recursively or iteratively</li>
+<li>Recursive solution
+
+<ul>
+<li>Note, the first parameter is a reference to a Node</li>
+<li>In this example, the key and value will be the same number <strong>n</strong></li>
+<li>Code (adapted from Wikipedia)</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> insert(<span style="color:#fff;font-weight:bold">int</span> n) {
+	root = insertHelp(root, n);
+}
+
+<span style="color:#fff;font-weight:bold">public</span> Node insertHelp(Node n, <span style="color:#fff;font-weight:bold">int</span> val) {
+	<span style="color:#007f7f">// if n is null
+</span><span style="color:#007f7f"></span>		<span style="color:#007f7f">// create new node to store val, and return new node
+</span><span style="color:#007f7f"></span>	<span style="color:#007f7f">// if val &lt; n&#39;s number
+</span><span style="color:#007f7f"></span>		<span style="color:#007f7f">// recurse to the left
+</span><span style="color:#007f7f"></span>	<span style="color:#007f7f">// else
+</span><span style="color:#007f7f"></span>		<span style="color:#007f7f">// recurse to the right
+</span><span style="color:#007f7f"></span>}</code></pre></div>
+<ul>
+<li>In a public method, you won&rsquo;t want to &ldquo;reveal&rdquo; the underlying details (namely, the Node reference),
+so you will implement a <strong>helper function</strong>
+
+<ul>
+<li>In this example, we are assuming that root is a reference to the &ldquo;root&rdquo; node of the tree</li>
+</ul></li>
+</ul>
+
+<h3 id="binary-search-tree-traversal">Binary Search Tree traversal</h3>
+
+<ul>
+<li>Reference
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tree_traversal">Wikipedia Tree Traversal</a></li>
+</ul></li>
+<li><strong>Traversal</strong> is the process of visiting each node in the tree, analogous to iterating over a list</li>
+
+<li><p>There are two general ways to traverse a tree</p>
+
+<ul>
+<li>Depth first</li>
+<li>Breadth first</li>
+</ul></li>
+
+<li><p>With depth-first traversal, there are 3 approaches</p>
+
+<ul>
+<li>pre-order</li>
+<li>in-order</li>
+<li>post-order</li>
+</ul></li>
+
+<li><p>Recursive in-order traversal (pseudo-code)</p></li>
+</ul>
+
+<pre><code>inorder(node)
+	if node == null then return
+	inorder(node.left)
+	visit(node)
+	inorder(node.right)
+</code></pre>
+
+<h3 id="binary-search-tree-removal">Binary Search Tree removal</h3>
+
+<ul>
+<li>considerably more difficult than the previous operations</li>
+<li>See Deletion section on Wikipedia page for approach</li>
+</ul>
+
+<h2 id="graphs">Graphs</h2>
+
+<ul>
+<li>Reference
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Graph_(abstract_data_type)">Wikipedia Graph</a>
+-Terminology</li>
+<li>vertex</li>
+<li>edge</li>
+</ul></li>
+<li><img src="/images/cp2/unit-05/graph.png" alt="" /></li>
+</ul>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

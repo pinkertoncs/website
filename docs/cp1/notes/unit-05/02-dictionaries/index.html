@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 02 - Dictionaries</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>Tutorialspoint: <a href="http://www.tutorialspoint.com/python/python_dictionary.htm">Python Dictionaries</a></li>
+</ul>
+
+<h2 id="dictionaries">Dictionaries</h2>
+
+<ul>
+<li>In a nutshell, <strong>dictionaries</strong> are lists in which the elements are access by string rather than index number
+
+<ul>
+<li>Dictionaries are also called associative arrays, maps, or hashes</li>
+</ul></li>
+<li>A dictionary <strong>entry</strong> is composed of a <strong>key/value pair</strong>
+
+<ul>
+<li>The string is used to access the element is called the <strong>key</strong></li>
+<li>The element is called the <strong>value</strong></li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># make an empty dictionary</span>
+<span style="color:#007f7f"># use curly braces to distinguish from standard list</span>
+words = {}
+
+<span style="color:#007f7f"># add a key / value pair to words</span>
+words[ <span style="color:#0ff;font-weight:bold">&#39;python&#39;</span> ] = <span style="color:#0ff;font-weight:bold">&#34;A scary snake&#34;</span>
+
+<span style="color:#007f7f"># print the whole thing</span>
+<span style="color:#fff;font-weight:bold">print</span>( words )
+
+<span style="color:#007f7f"># print one value by key</span>
+<span style="color:#fff;font-weight:bold">print</span>( words[ <span style="color:#0ff;font-weight:bold">&#39;python&#39;</span> ] )</code></pre></div>
+<h2 id="safe-access">Safe access</h2>
+
+<ul>
+<li>The <strong>in</strong> operator can be used to check if a key exists in a dictionary</li>
+<li>Alternatively, you could attempt the access in a <strong>try</strong> statement and catch the error if one occurs</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">key = <span style="color:#0ff;font-weight:bold">&#39;python&#39;</span>
+
+<span style="color:#007f7f"># ask for permission</span>
+<span style="color:#fff;font-weight:bold">if</span> key in words:
+    <span style="color:#fff;font-weight:bold">print</span>( words[ key ] )
+<span style="color:#fff;font-weight:bold">else</span>:
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#39;key&#39;</span>, key, <span style="color:#0ff;font-weight:bold">&#39;not found&#39;</span> )</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># ask for forgiveness</span>
+<span style="color:#fff;font-weight:bold">try</span>:
+    <span style="color:#fff;font-weight:bold">print</span>( words[ key ] )
+<span style="color:#fff;font-weight:bold">except</span> KeyError:
+    <span style="color:#fff;font-weight:bold">print</span>( <span style="color:#0ff;font-weight:bold">&#39;key&#39;</span>,key,<span style="color:#0ff;font-weight:bold">&#39;not found&#39;</span> )</code></pre></div>
+<h2 id="iterating">Iterating</h2>
+
+<ul>
+<li>You can iterate using keys, values, or both</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># iterate with keys, 2 ways</span>
+<span style="color:#007f7f">#for key in words.keys():</span>
+<span style="color:#fff;font-weight:bold">for</span> key in words:
+    <span style="color:#fff;font-weight:bold">print</span>( key, <span style="color:#0ff;font-weight:bold">&#39;:&#39;</span>, words[key], end=<span style="color:#0ff;font-weight:bold">&#39;, &#39;</span> )
+<span style="color:#fff;font-weight:bold">print</span>()
+
+<span style="color:#007f7f"># iterate with values</span>
+<span style="color:#fff;font-weight:bold">for</span> value in words.values():
+    <span style="color:#fff;font-weight:bold">print</span>( value, end=<span style="color:#0ff;font-weight:bold">&#39;, &#39;</span> )
+<span style="color:#fff;font-weight:bold">print</span>()
+
+<span style="color:#007f7f"># iterate with keys and values</span>
+<span style="color:#fff;font-weight:bold">for</span> key, value in words.items():
+    <span style="color:#fff;font-weight:bold">print</span>( key, <span style="color:#0ff;font-weight:bold">&#39;:&#39;</span>, value, end=<span style="color:#0ff;font-weight:bold">&#39;, &#39;</span> )
+<span style="color:#fff;font-weight:bold">print</span>()</code></pre></div>
+<h2 id="updating">Updating</h2>
+
+<ul>
+<li>The <strong>update</strong> method can be used to
+
+<ul>
+<li>merge two dictionaries</li>
+<li>add multiple entries at once</li>
+<li>change the value for an existing key</li>
+</ul></li>
+<li>The <strong>pop</strong> method is used to remove key/value pair
+
+<ul>
+<li>pop also returns the value</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">words = {}
+
+<span style="color:#007f7f"># define another dict</span>
+words2 = {
+    <span style="color:#0ff;font-weight:bold">&#39;dictionary&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;a heavy book.&#39;</span>,
+    <span style="color:#0ff;font-weight:bold">&#39;class&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;a group of students.&#39;</span>
+}
+
+<span style="color:#007f7f"># add items from one dict to another</span>
+words.update( words2 )
+
+<span style="color:#007f7f"># add another key/item</span>
+words.update( { <span style="color:#0ff;font-weight:bold">&#39;object&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;something&#39;</span>} )
+
+<span style="color:#007f7f"># change a definition</span>
+words.update( { <span style="color:#0ff;font-weight:bold">&#39;class&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;an echelon of society&#39;</span>} )
+
+<span style="color:#007f7f"># remove a key/value pair</span>
+value = words.pop(<span style="color:#0ff;font-weight:bold">&#39;dictionary&#39;</span>)
+<span style="color:#fff;font-weight:bold">print</span>(value)
+
+<span style="color:#fff;font-weight:bold">print</span>(words)</code></pre></div>
+<h2 id="key-sorting-random-access">Key sorting / random access</h2>
+
+<ul>
+<li>To get a list of the keys, you can just cast the dict (or the keyset) to a list</li>
+<li>Dictionaries are unsorted
+
+<ul>
+<li>to get a sorted list of keys, use the <strong>sorted</strong> function</li>
+</ul></li>
+<li>to get a random key, you need to cast the dictionary keyset to a list</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># getting keys list</span>
+a_dict = { <span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;apple&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;c&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;cherry&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;b&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;banana&#39;</span> }
+<span style="color:#fff;font-weight:bold">print</span>(a_dict)
+<span style="color:#fff;font-weight:bold">print</span>(<span style="color:#fff;font-weight:bold">list</span>(a_dict))
+<span style="color:#fff;font-weight:bold">print</span>(<span style="color:#fff;font-weight:bold">sorted</span>(a_dict))
+
+<span style="color:#007f7f"># random key / value from dict</span>
+a_dict = { <span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;apple&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;b&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;banana&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;c&#39;</span>:<span style="color:#0ff;font-weight:bold">&#39;cherry&#39;</span> }
+keys = <span style="color:#fff;font-weight:bold">list</span>(a_dict)
+key = random.choice(keys)
+<span style="color:#fff;font-weight:bold">print</span>(a_dict[key])</code></pre></div>
+<h3 id="output">Output</h3>
+
+<pre><code>{'a': 'apple', 'c': 'cherry', 'b': 'banana'}
+['a', 'c', 'b']
+['a', 'b', 'c']
+apple
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

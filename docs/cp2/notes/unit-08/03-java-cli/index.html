@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 03 - Java CLI</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="command-line-interface-cli">Command-line Interface (CLI)</h2>
+
+<h2 id="object-oriented-cli">Object-oriented CLI</h2>
+
+<ul>
+<li>Our Java OO CLI subsystem will contain the following
+
+<ul>
+<li>The <strong>Command interface</strong>, which specifies the method that all Commands must implement <code>void run(String[] params)</code></li>
+<li>Each <strong>Command object</strong> is an instance of a unique class, which implements the <em>Command interface</em></li>
+<li>The <strong>CommandSet</strong> contains a <em>Hashmap</em> of <em>Command</em> objects</li>
+<li>The <strong>CLI</strong> class has a <em>CommandSet</em></li>
+</ul></li>
+</ul>
+
+<p><img src="/images/cp2/unit-08/cli.png" alt="" /></p>
+
+<h2 id="java-code">Java Code</h2>
+
+<h3 id="the-command-interface">The Command Interface</h3>
+
+<ul>
+<li>Specifies the <em>contract</em> that all &ldquo;Commands&rdquo; must adhere to</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">interface</span> Command {
+
+    <span style="color:#fff;font-weight:bold">void</span> run(String[] params);
+
+}</code></pre></div>
+<h3 id="the-commandset-class">The CommandSet class</h3>
+
+<ul>
+<li>The <em>Command</em> classes are defined inside the <em>CommandSet</em></li>
+<li>The <em>Command</em> objects are instantiated and added to the <em>HashMap</em> in the constructor</li>
+<li>The constructor is places before the <em>Command</em> definitions for our convenience, so we are able to see the commands in the <em>HashMap</em> neat the top of the file</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">import</span> java.util.HashMap;
+
+<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> CommandSet {
+
+	HashMap&lt;String, Command&gt; commands;
+
+    <span style="color:#007f7f">/************* CONSTRUCTOR ****************/</span>
+
+	<span style="color:#fff;font-weight:bold">public</span> CommandSet() {
+
+		commands=<span style="color:#fff;font-weight:bold">new</span> HashMap&lt;String, Command&gt;();
+
+		<span style="color:#007f7f">// add commands here
+</span><span style="color:#007f7f"></span>		commands.<span style="color:#007f7f">put</span>(<span style="color:#0ff;font-weight:bold">&#34;echo&#34;</span>, <span style="color:#fff;font-weight:bold">new</span> echoCmd());
+	}
+
+    <span style="color:#007f7f">/************* COMMAND DEFINITIONS ****************/</span>
+
+	<span style="color:#007f7f">/**
+</span><span style="color:#007f7f">	 * echo command - prints the parameters
+</span><span style="color:#007f7f">	 */</span>
+	<span style="color:#fff;font-weight:bold">class</span> echoCmd <span style="color:#fff;font-weight:bold">implements</span> Command {
+		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> run(String[] params) {
+
+			<span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">int</span> i=0; i&lt;params.<span style="color:#007f7f">length</span>; i++)
+				System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">print</span>( params[i] + <span style="color:#0ff;font-weight:bold">&#34; &#34;</span> );
+			System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>();
+		}
+	}
+}</code></pre></div>
+<h3 id="the-cli-class">The CLI class</h3>
+
+<ul>
+<li>The CLI class is the worker, running the command loop</li>
+<li>As long as there is valid input
+
+<ul>
+<li>Read a line</li>
+<li>Try to split into command name and parameters</li>
+<li>Process the command</li>
+</ul></li>
+<li>When processing the command
+
+<ul>
+<li>Use the command name to get the <em>Command</em> object from the <em>HashMap</em></li>
+<li>Invoke/Call/execute the <em>Command</em> object&rsquo;s run method with the argument list (params)</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">import</span> java.io.BufferedReader;
+<span style="color:#fff;font-weight:bold">import</span> java.io.FileReader;
+<span style="color:#fff;font-weight:bold">import</span> java.io.IOException;
+<span style="color:#fff;font-weight:bold">import</span> java.io.InputStreamReader;
+<span style="color:#fff;font-weight:bold">import</span> java.util.HashMap;
+
+<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> CLI {
+
+	BufferedReader reader;
+	HashMap&lt;String, Command&gt; commands;
+	CommandSet cmdSet;
+
+	<span style="color:#007f7f">/************CONSTRUCTOR**************/</span>
+
+	<span style="color:#007f7f">// initialize fields and add commands
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> CLI(){
+
+		CommandSet base = <span style="color:#fff;font-weight:bold">new</span> CommandSet();
+		commands = base.<span style="color:#007f7f">commands</span>;
+	}
+
+	<span style="color:#007f7f">/*********** ACCESSORS *********************/</span>
+
+	<span style="color:#fff;font-weight:bold">public</span> String getCmdList(){
+		String clist = <span style="color:#0ff;font-weight:bold">&#34;[ &#34;</span>;
+
+		<span style="color:#fff;font-weight:bold">for</span>( String key : commands.<span style="color:#007f7f">keySet</span>()){
+			clist += key + <span style="color:#0ff;font-weight:bold">&#34;, &#34;</span>;
+		}
+
+		clist += <span style="color:#0ff;font-weight:bold">&#34; ]&#34;</span>;
+		<span style="color:#fff;font-weight:bold">return</span> clist;
+	}
+
+	<span style="color:#007f7f">/************* MODIFIERS ************/</span>
+
+	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> setReader( BufferedReader in){
+		reader=in;
+	}
+
+	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> setCommandSet( CommandSet cs ){
+		commands = cs.<span style="color:#007f7f">commands</span>;
+	}
+
+	<span style="color:#007f7f">/************ PRIVATE METHODS ******************/</span>
+
+	<span style="color:#007f7f">// get a command and call it&#39;s run method with params
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">private</span> <span style="color:#fff;font-weight:bold">void</span> process(String cmd, String[] params){
+
+		<span style="color:#fff;font-weight:bold">if</span>(commands.<span style="color:#007f7f">containsKey</span>(cmd))
+			commands.<span style="color:#007f7f">get</span>(cmd).<span style="color:#007f7f">run</span>(params);
+		<span style="color:#fff;font-weight:bold">else</span>
+			System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Command not recognized&#34;</span>);
+
+	}
+
+    <span style="color:#007f7f">/************** PUBLIC METHODS ************************/</span>
+
+	<span style="color:#007f7f">// run the CLI loop
+</span><span style="color:#007f7f"></span>	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> start() <span style="color:#fff;font-weight:bold">throws</span> IOException{
+
+		String line, cmd;
+		String[] params;
+
+		<span style="color:#007f7f">// read until we run out of input
+</span><span style="color:#007f7f"></span>		<span style="color:#fff;font-weight:bold">while</span>((line = reader.<span style="color:#007f7f">readLine</span>()) != <span style="color:#fff;font-weight:bold">null</span>){
+
+			line = line.<span style="color:#007f7f">trim</span>();
+
+			<span style="color:#007f7f">// ignore whitespace lines and lines beginning with #
+</span><span style="color:#007f7f"></span>			<span style="color:#fff;font-weight:bold">if</span>(line.<span style="color:#007f7f">equals</span>(<span style="color:#0ff;font-weight:bold">&#34;&#34;</span>) || line.<span style="color:#007f7f">charAt</span>(0)==<span style="color:#0ff;font-weight:bold">&#39;#&#39;</span>)
+				<span style="color:#fff;font-weight:bold">continue</span>;
+
+			<span style="color:#007f7f">// does this command have params?
+</span><span style="color:#007f7f"></span>			<span style="color:#fff;font-weight:bold">int</span> i = line.<span style="color:#007f7f">indexOf</span>(<span style="color:#0ff;font-weight:bold">&#39; &#39;</span>);
+			<span style="color:#fff;font-weight:bold">if</span>( i &gt; -1){
+				cmd = line.<span style="color:#007f7f">substring</span>(0,i);
+				params = line.<span style="color:#007f7f">substring</span>(i+1).<span style="color:#007f7f">split</span>(<span style="color:#0ff;font-weight:bold">&#34; &#34;</span>);
+			}
+			<span style="color:#fff;font-weight:bold">else</span>{
+				cmd = line;
+				params = <span style="color:#fff;font-weight:bold">new</span> String[]{};
+			}
+
+			<span style="color:#007f7f">// run the command
+</span><span style="color:#007f7f"></span>			process(cmd, params);
+		}
+	}
+
+	<span style="color:#007f7f">/************ UNIT TESTING ****************/</span>
+
+	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args){
+
+		<span style="color:#007f7f">// read from consoleIn
+</span><span style="color:#007f7f"></span>		BufferedReader consoleIn;
+		consoleIn = <span style="color:#fff;font-weight:bold">new</span> BufferedReader(<span style="color:#fff;font-weight:bold">new</span> InputStreamReader(System.<span style="color:#007f7f">in</span>));
+
+		<span style="color:#007f7f">/* OR READ FROM A FILE:
+</span><span style="color:#007f7f">		// reading from a file
+</span><span style="color:#007f7f">		BufferedReader fileIn;
+</span><span style="color:#007f7f">		fileIn = new BufferedReader(new FileReader(&#34;testinput&#34;));
+</span><span style="color:#007f7f">		*/</span>
+
+		CLI cli = <span style="color:#fff;font-weight:bold">new</span> CLI();
+		cli.<span style="color:#007f7f">setReader</span>(consoleIn);
+
+		<span style="color:#fff;font-weight:bold">try</span> {
+			cli.<span style="color:#007f7f">start</span>();
+		} <span style="color:#fff;font-weight:bold">catch</span> (IOException e) {
+			<span style="color:#007f7f">// TODO Auto-generated catch block
+</span><span style="color:#007f7f"></span>			e.<span style="color:#007f7f">printStackTrace</span>();
+		}
+	}
+}</code></pre></div>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

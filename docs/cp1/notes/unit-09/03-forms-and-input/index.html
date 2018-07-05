@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PinkertonCS</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/intro/">Intro to Computer Science</a></li>
+      
+      <li><a href="/cp1/">Programming 1</a></li>
+      
+      <li><a href="/cp2/">Programming 2</a></li>
+      
+      <li><a href="/apcs/">AP Computer Science</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lesson 03 - Forms and Input</span></h1>
+
+
+</div>
+
+<main>
+
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>W3Schools Forms
+
+<ul>
+<li><a href="http://www.w3schools.com/html/html_form_elements.asp">Form Elements</a></li>
+<li><a href="http://www.w3schools.com/html/html_form_input_types.asp">Input Types</a></li>
+</ul></li>
+<li>W3Schools Document Object Model (DOM)
+
+<ul>
+<li><a href="http://www.w3schools.com/js/js_htmldom.asp">HTML DOM Tutorial</a></li>
+<li><a href="http://www.w3schools.com/jsref/default.asp">HTML DOM Reference</a></li>
+</ul></li>
+</ul>
+
+<h2 id="html-inputs">HTML Inputs</h2>
+
+<ul>
+<li>Allow you to get input from the user
+
+<ul>
+<li>You can enclose inputs in a <code>&lt;form&gt;</code> element, but it is not required</li>
+<li>If you use a <code>&lt;form&gt;</code> element, you should place the submit button outside of the form to prevent the page from reloading</li>
+</ul></li>
+</ul>
+
+<h3 id="simple-text-input-example">Simple text input example</h3>
+
+<ul>
+<li>In the HTML
+
+<ul>
+<li>Use the <strong>onclick</strong> attribute of the <code>&lt;button&gt;</code> to specify the function to execute when the button is clicked (the <strong>event handler</strong>)</li>
+</ul></li>
+<li>In the event handler
+
+<ul>
+<li>Use <strong>document.getElementById</strong> to get a JS object representing the HTML element</li>
+<li>Use the <strong>value</strong> property of a text input to get the data</li>
+<li>Set the <strong>innerHTML</strong> of a display element to show the results</li>
+</ul></li>
+
+<li><p>Note</p>
+
+<ul>
+<li>In Google Chrome, an element id automatically becomes a global JS variable</li>
+</ul></li>
+
+<li><p>Example:</p></li>
+</ul>
+
+<h4 id="html">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Name: &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;nameinput&#39;</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;text&#39;</span>&gt;&lt;/<span style="font-weight:bold">input</span>&gt; &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;submit()&#39;</span>&gt; Submit &lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">hr</span>&gt;
+&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;result&#39;</span>&gt;&lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></div>
+<h4 id="js">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> submit(){
+
+    <span style="color:#007f7f">// get references to the elements
+</span><span style="color:#007f7f"></span>    <span style="color:#007f7f">// not required since ids become global variables!
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">var</span> nameinput = <span style="color:#fff;font-weight:bold">document</span>.getElementById(<span style="color:#0ff;font-weight:bold">&#39;nameinput&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> result = <span style="color:#fff;font-weight:bold">document</span>.getElementById(<span style="color:#0ff;font-weight:bold">&#39;result&#39;</span>)
+
+    <span style="color:#fff;font-weight:bold">var</span> name = nameinput.value
+    result.innerHTML = <span style="color:#0ff;font-weight:bold">&#34;Hello &#34;</span> + name
+}
+</code></pre></div>
+<h4 id="result">Result</h4>
+
+<p><img src="/images/cp1/unit-09/input1.png" alt="" /></p>
+
+<h2 id="other-text-input-types">Other text input types</h2>
+
+<ul>
+<li>Passwords</li>
+<li>Text Areas</li>
+<li>You can use <strong>document.getElementsByTagName</strong> to get all of your inputs in an array</li>
+</ul>
+
+<h4 id="html-1">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Name: &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;text&#39;</span>/&gt; &lt;<span style="font-weight:bold">br</span>&gt;
+Password: &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;password&#39;</span>/&gt; &lt;<span style="font-weight:bold">br</span>&gt;
+Message: &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">textarea</span>&gt;&lt;/<span style="font-weight:bold">textarea</span>&gt; &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;submit()&#39;</span>&gt; Submit &lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">hr</span>&gt;
+&lt;<span style="font-weight:bold">div</span>&gt; &lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></div>
+<h4 id="js-1">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> submit(){
+
+    <span style="color:#007f7f">// get elements using tagnames
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">var</span> inputs = <span style="color:#fff;font-weight:bold">document</span>.getElementsByTagName(<span style="color:#0ff;font-weight:bold">&#39;input&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> textarea = <span style="color:#fff;font-weight:bold">document</span>.getElementsByTagName(<span style="color:#0ff;font-weight:bold">&#39;textarea&#39;</span>)[<span style="color:#ff0;font-weight:bold">0</span>]
+    <span style="color:#fff;font-weight:bold">var</span> div = <span style="color:#fff;font-weight:bold">document</span>.getElementsByTagName(<span style="color:#0ff;font-weight:bold">&#39;div&#39;</span>)[<span style="color:#ff0;font-weight:bold">0</span>]
+
+    <span style="color:#007f7f">// get values
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">var</span> name = inputs[<span style="color:#ff0;font-weight:bold">0</span>].value
+    <span style="color:#fff;font-weight:bold">var</span> pass = inputs[<span style="color:#ff0;font-weight:bold">1</span>].value
+    <span style="color:#fff;font-weight:bold">var</span> msg = textarea.value
+
+    <span style="color:#007f7f">// update result
+</span><span style="color:#007f7f"></span>    div.innerHTML = <span style="color:#0ff;font-weight:bold">&#34;Name: &#34;</span> + name +
+        <span style="color:#0ff;font-weight:bold">&#34;&lt;br&gt; Pass: &#34;</span> + pass +
+        <span style="color:#0ff;font-weight:bold">&#34;&lt;br&gt; Message: &#34;</span> + msg
+}
+</code></pre></div>
+<h4 id="result-1">Result</h4>
+
+<p><img src="/images/cp1/unit-09/input2.png" alt="" /></p>
+
+<h2 id="select-dropdown-menus">Select (dropdown) menus</h2>
+
+<ul>
+<li>Use a select menu to provide options for a user to choose</li>
+</ul>
+
+<h4 id="html-2">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">select</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#34;cars&#34;</span>&gt;
+  &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;Volvo&#34;</span>&gt;Volvo&lt;/<span style="font-weight:bold">option</span>&gt;
+  &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;Saab&#34;</span>&gt;Saab&lt;/<span style="font-weight:bold">option</span>&gt;
+  &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;Fiat&#34;</span>&gt;Fiat&lt;/<span style="font-weight:bold">option</span>&gt;
+  &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;Audi&#34;</span>&gt;Audi&lt;/<span style="font-weight:bold">option</span>&gt;
+&lt;/<span style="font-weight:bold">select</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;submit()&#39;</span>&gt;Submit&lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">hr</span>&gt;
+&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;result&#39;</span>&gt;&lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></div>
+<h4 id="js-2">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> submit(){
+    result.innerHTML = cars.value
+}
+</code></pre></div>
+<h4 id="result-2">Result</h4>
+
+<p><img src="/images/cp1/unit-09/input3.png" alt="" /></p>
+
+<h2 id="checkboxes-and-radio-buttons">Checkboxes and Radio buttons</h2>
+
+<ul>
+<li>Elements
+
+<ul>
+<li>Radio buttons are functionally similar to selects - you use them to choose a single option</li>
+<li>Checkboxes are used when you want to select multiple options</li>
+</ul></li>
+<li>Attributes / Properties
+
+<ul>
+<li>Use <strong>name</strong> to group checkboxes and radio buttons</li>
+<li>Use can use <strong>disabled</strong> to disable elements</li>
+<li>Use <strong>checked</strong> to check elements by default and to determine which selection(s) in a group the use clicked</li>
+</ul></li>
+</ul>
+
+<h4 id="html-3">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#007f7f">&lt;!-- select one --&gt;</span>
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;radio&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;species&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;human&#34;</span> <span style="color:#007f7f">checked</span>&gt; human &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;radio&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;species&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;dog&#34;</span>&gt; dog &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;radio&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;species&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;bird&#34;</span>&gt; bird &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;radio&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;species&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;fish&#34;</span>&gt; fish &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;radio&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;species&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;alien&#34;</span> <span style="color:#007f7f">disabled</span>&gt; alien &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">br</span>&gt;
+<span style="color:#007f7f">&lt;!-- select many --&gt;</span>
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;checkbox&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;vehicle&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;bike&#34;</span>&gt;bike &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;checkbox&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;vehicle&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;car&#34;</span>&gt;car &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;checkbox&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;vehicle&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;seg&#34;</span>&gt;segway &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;checkbox&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;vehicle&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;scoot&#34;</span>&gt;scooter &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;checkbox&#34;</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#34;vehicle&#34;</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#34;plane&#34;</span>&gt;airplane &lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">br</span>&gt;
+&lt;<span style="font-weight:bold">button</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;submit()&#39;</span>&gt;Submit&lt;/<span style="font-weight:bold">button</span>&gt;
+&lt;<span style="font-weight:bold">hr</span>&gt;
+&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#39;result&#39;</span>&gt;&lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></div>
+<h4 id="js-3">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> submit(){
+
+    <span style="color:#007f7f">// get species
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">var</span> species = <span style="color:#fff;font-weight:bold">document</span>.getElementsByName(<span style="color:#0ff;font-weight:bold">&#39;species&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> s;
+    <span style="color:#fff;font-weight:bold">for</span>( <span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;species.length; i++ ){
+        <span style="color:#fff;font-weight:bold">if</span>(species[i].checked){
+            s = species[i].value
+            <span style="color:#fff;font-weight:bold">break</span>
+        }
+    }
+
+    <span style="color:#007f7f">// get all vehicles
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">var</span> vehicles=<span style="color:#fff;font-weight:bold">document</span>.getElementsByName(<span style="color:#0ff;font-weight:bold">&#39;vehicle&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> v=[]
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;vehicles.length; i++){
+      <span style="color:#fff;font-weight:bold">if</span>(vehicles[i].checked){
+        v.push(vehicles[i].value)
+      }
+    }
+
+    <span style="color:#007f7f">// the array will be converted to a string
+</span><span style="color:#007f7f"></span>    <span style="color:#007f7f">// same as calling v.toString()
+</span><span style="color:#007f7f"></span>    result.innerHTML = <span style="color:#0ff;font-weight:bold">&#34;I am a &#34;</span> + s + <span style="color:#0ff;font-weight:bold">&#34; and I have &#34;</span> + v
+}
+</code></pre></div>
+<h4 id="result-3">Result</h4>
+
+<p><img src="/images/cp1/unit-09/input4.png" alt="" /></p>
+
+<h2 id="css-selectors">CSS selectors</h2>
+
+<ul>
+<li>Additionally, HTML elements can be accessed using CSS selectors
+
+<ul>
+<li><strong>document.querySelector</strong></li>
+<li><strong>document.querySelectorAll</strong></li>
+</ul></li>
+<li>Some more advanced CSS selectors are</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>[attribute=value]</code></td>
+<td>select elements with matching attribute/value pairs</td>
+</tr>
+
+<tr>
+<td><code>:checked</code></td>
+<td>select checked input elements</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="html-result-see-above-checkboxes-and-radio-buttons">HTML &amp; Result (see above checkboxes and radio buttons)</h4>
+
+<h4 id="js-4">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">function</span> submit(){
+    <span style="color:#fff;font-weight:bold">var</span> species = <span style="color:#fff;font-weight:bold">document</span>.querySelector(<span style="color:#0ff;font-weight:bold">&#39;[name=species]:checked&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> s = species.value
+
+    <span style="color:#fff;font-weight:bold">var</span> vehicles = <span style="color:#fff;font-weight:bold">document</span>.querySelectorAll(<span style="color:#0ff;font-weight:bold">&#39;[name=vehicle]:checked&#39;</span>)
+    <span style="color:#fff;font-weight:bold">var</span> v = []
+    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">var</span> i=<span style="color:#ff0;font-weight:bold">0</span>; i&lt;vehicles.length; i++){
+        v.push(vehicles[i].value)
+    }
+
+    result.innerHTML = <span style="color:#0ff;font-weight:bold">&#34;I am a &#34;</span> + s + <span style="color:#0ff;font-weight:bold">&#34; and I have &#34;</span> + v
+}
+</code></pre></div>
+<h2 id="using-the-form-element">Using the form element</h2>
+
+<ul>
+<li>The <code>&lt;form&gt;</code> element allows you to group inputs
+
+<ul>
+<li>A page&rsquo;s form(s) are access using <strong>document.forms</strong></li>
+<li>The form elements become properties of the form object by <strong>name</strong></li>
+<li>You can also use the <code>&lt;output&gt;</code> element</li>
+</ul></li>
+</ul>
+
+<h4 id="html-4">HTML</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#007f7f">&lt;!-- DO set these values for method and onsubmit --&gt;</span>
+&lt;<span style="font-weight:bold">form</span> <span style="color:#007f7f">method</span>=<span style="color:#0ff;font-weight:bold">&#39;post&#39;</span> <span style="color:#007f7f">onsubmit</span>=<span style="color:#0ff;font-weight:bold">&#39;return false&#39;</span>&gt;
+    &lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;in1&#39;</span>/&gt; &lt;<span style="font-weight:bold">output</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;out1&#39;</span>&gt;&lt;/<span style="font-weight:bold">output</span>&gt; &lt;<span style="font-weight:bold">br</span>/&gt;
+    &lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;in2&#39;</span>/&gt; &lt;<span style="font-weight:bold">output</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;out2&#39;</span>&gt;&lt;/<span style="font-weight:bold">output</span>&gt; &lt;<span style="font-weight:bold">br</span>/&gt;
+    &lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;in3&#39;</span>/&gt; &lt;<span style="font-weight:bold">output</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;out3&#39;</span>&gt;&lt;/<span style="font-weight:bold">output</span>&gt; &lt;<span style="font-weight:bold">br</span>/&gt;
+    &lt;<span style="font-weight:bold">select</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;in4&#39;</span>&gt;
+        &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#39;A&#39;</span>&gt; A &lt;/<span style="font-weight:bold">option</span>&gt;
+        &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#39;B&#39;</span>&gt; B &lt;/<span style="font-weight:bold">option</span>&gt;
+        &lt;<span style="font-weight:bold">option</span> <span style="color:#007f7f">value</span>=<span style="color:#0ff;font-weight:bold">&#39;C&#39;</span>&gt; C &lt;/<span style="font-weight:bold">option</span>&gt;
+    &lt;/<span style="font-weight:bold">select</span>&gt; &lt;<span style="font-weight:bold">output</span> <span style="color:#007f7f">name</span>=<span style="color:#0ff;font-weight:bold">&#39;out4&#39;</span>&gt;&lt;/<span style="font-weight:bold">output</span>&gt; &lt;<span style="font-weight:bold">br</span>/&gt;
+    &lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#39;submit&#39;</span> <span style="color:#007f7f">onclick</span>=<span style="color:#0ff;font-weight:bold">&#39;process()&#39;</span>/&gt;
+&lt;/<span style="font-weight:bold">form</span>&gt;</code></pre></div>
+<h4 id="js-5">JS</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007f7f">// DON&#39;T name the function submit()
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">function</span> process(){
+  <span style="color:#fff;font-weight:bold">var</span> form = <span style="color:#fff;font-weight:bold">document</span>.forms[<span style="color:#ff0;font-weight:bold">0</span>]
+
+  form.out1.value = form.in1.value
+  form.out2.value = form.in2.value
+  form.out3.value = form.in3.value
+  form.out4.value = form.in4.value
+}
+</code></pre></div>
+<h4 id="result-4">Result</h4>
+
+<p><img src="/images/cp1/unit-09/input5.png" alt="" /></p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Michael B. Kulik 2018 | <a href="https://github.com/pinkertoncs">Github</a>
+  
+  </footer>
+  </body>
+</html>
+
