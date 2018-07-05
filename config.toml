@@ -5,7 +5,6 @@ theme = "hugo-xmin"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 PygmentsCodeFences = true
 PygmentsStyle = "default"
-publishDir = "docs"
 
 [[menu.main]]
     name = "Home"
