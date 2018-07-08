@@ -1,7 +1,6 @@
 ---
 title: "Pinkerton CTE Summer Coding Camp"
 date: 2018-07-05T13:52:46-04:00
-draft: true
 ---
 
 ### Coding & Computer Science with the RaspberryPi
