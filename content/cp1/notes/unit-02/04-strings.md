@@ -27,3 +27,4 @@ Just like numbers, there are operations that can be performed on strings.
 
 'hi' * 5
 # expression with value 'hihihihihi'
+```
