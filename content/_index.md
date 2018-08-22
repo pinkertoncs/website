@@ -9,6 +9,11 @@ This website serves as a resource for students enrolled in computer programming 
 
 ## Courses
 
+- [Introduction to Computer Science](/intro) (Block-based)
+  - Internet and networks
+  - Data representation
+  - Programming fundamentals
+  - Big data and Privacy
 - [Computer Programming 1](/cp1) (Python, HTML, CSS, and JavaScript)
   - Introduction to computer programming
   - Programming fundamentals
