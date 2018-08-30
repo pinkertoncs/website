@@ -12,6 +12,15 @@ This full-year (1 credit) Running Start course expands on the concepts of comput
 - [Syllabus](https://docs.google.com/document/d/1wH5fL_dCbtQHmk4MtEYN7_XrIMUeTEbdZX2CYA-pgec/edit?usp=sharing)
 - [Notes](/cp2/notes/)
 
+## Running Start
+
+You have the opportunity to take computer programming 2 for RunningStart credit. This program
+is a dual-enrollment with Manchester Community College.
+
+- [Semester 1 - Intro to Programming using Java](https://docs.google.com/document/d/1I0ENJp-7_SwApib3CsbnGk81QE4nKcVBEgzKvwIf0sI/edit?usp=sharing)
+- [Semester 2 - Object-Oriented Programming](https://docs.google.com/document/d/1hq6vbEcy7zljV6EWIEPLHlhPfKBk-ecw1aJURhm2Jkc/edit?usp=sharing)
+
+
 ## External References
 
 - Java

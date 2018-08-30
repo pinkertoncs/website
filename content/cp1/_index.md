@@ -17,6 +17,14 @@ This full-year (1 credit) course introduces students to the philosophy, theory, 
 - [NH CTE State Standards](http://www.education.nh.gov/career/career/documents/pc_info_cp.pdf)
 - [CSTA K-12 CS Standards](http://www.csteachers.org/page/standards)
 
+## Running Start
+
+You have the opportunity to take computer programming 1 for RunningStart credit. This program
+is a dual-enrollment with Manchester Community College.
+
+- [Semester 1 - Introduction to Python](https://docs.google.com/document/d/1YPjf8VF-l0WjoNe-AzxqOdb6cdupprm9OyUjjOG3inA/edit?usp=sharing)
+- [Semester 2 - Web Programming 1](https://docs.google.com/document/d/1Ii3FRNEhugBDcgggrwKte0LJGNFyHOUqynJyoib1moI/edit?usp=sharing)
+
 ## External References
 
 - Official Documentation
