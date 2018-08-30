@@ -13,6 +13,10 @@ This full-year (1 credit) Running Start course is equivalent to a first-semester
 - [Syllabus](https://docs.google.com/document/d/14KQUgHFHc_9PoRToWnVl-FD-NpJoCOv3veHemr9RmwU/edit?usp=sharing)
 - [Notes](/apcs/notes/)
 
+## Text book
+
+- [Eck, David J. Introduction to Programming Using Java, Seventh Edition](http://math.hws.edu/eck/cs124/downloads/javanotes7-linked.pdf)
+
 ## Running Start
 
 You have the opportunity to take computer programming 2 for RunningStart credit. This program

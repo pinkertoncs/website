@@ -12,6 +12,10 @@ This full-year (1 credit) Running Start course expands on the concepts of comput
 - [Syllabus](https://docs.google.com/document/d/1wH5fL_dCbtQHmk4MtEYN7_XrIMUeTEbdZX2CYA-pgec/edit?usp=sharing)
 - [Notes](/cp2/notes/)
 
+## Text book
+
+- [Eck, David J. Introduction to Programming Using Java, Seventh Edition](http://math.hws.edu/eck/cs124/downloads/javanotes7-linked.pdf)
+
 ## Running Start
 
 You have the opportunity to take computer programming 2 for RunningStart credit. This program
