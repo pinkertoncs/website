@@ -22,13 +22,13 @@ x = 5
 
 y = x + 1
 # assign variable from expression
-# (y is now 5)
+# (y is now 6)
 
 y = y + 2
 # update y using it's original value
-# (y is now 10)
+# (y is now 8)
 
 y += 2
-# shortcut fro previous statement
-# (y is now 12)
+# shorthand for  previous statement
+# (y is now 10)
 ```
