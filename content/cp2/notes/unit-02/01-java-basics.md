@@ -48,7 +48,7 @@ a = 5;
 System.out.println(a);
 
 // declare and initialize float b
-float b = 3.14;
+float b = 3.14f;
 
 // declare and initialize char c
 char c = 'A';
