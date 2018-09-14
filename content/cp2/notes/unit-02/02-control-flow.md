@@ -194,7 +194,8 @@ public static void main(String[] args) {
 ```
 
 ### Multiple statements in loop header
-    - You can have **multiple initializations and/or multiple variable changes
+
+- You can have **multiple** initializations and/or multiple variable changes
 
 ### Demo
 ```java
