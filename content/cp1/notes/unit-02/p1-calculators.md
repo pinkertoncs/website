@@ -11,9 +11,8 @@ title: "Project 01 - Calculators"
 
 ### 1. Elapsed Time
 
-In the provided template file ```time.py```, write a python program that
-will ask for the starting time in 24 four format and duration and output (print)
-the end time.
+Design and write a python program that will ask for the starting time in 24 four format and 
+duration and output (print) the end time.
 
 - Input
   - Starting time (24 hour format)
@@ -26,9 +25,8 @@ the end time.
 
 ### 2. Tips
 
-In the provided template file ```tips.py```, write a python program that will ask
-for the cost of a meal, the tax rate (as decimal), and tip rate (as decimal) and output
-(print) the total amount to pay
+Design and write a python program that will ask for the cost of a meal, 
+the tax rate (as decimal), and tip rate (as decimal) and output (print) the total amount to pay
 
 - Input
     - cost of a meal
@@ -45,8 +43,8 @@ for the cost of a meal, the tax rate (as decimal), and tip rate (as decimal) and
 
 ### 3. Celsius to Fahrenheit
 
-In the provided template file ```ctof.py```, write a python program that will ask for the
-temperature in degrees Celsius and output (print) the degrees in Fahrenheit.
+Design and write a python program that will ask for the temperature in degrees Celsius and 
+output (print) the degrees in Fahrenheit.
 
 - Formula
 
@@ -62,8 +60,8 @@ temperature in degrees Celsius and output (print) the degrees in Fahrenheit.
 
 ### 4. Fahrenheit to Celsius
 
-In the provided template file ```ftoc.py```, write a python program that will ask for the
-temperature in degrees Fahrenheit and output (print) the degrees in Celsius.
+Design and write a python program that will ask for the temperature in degrees 
+Fahrenheit and output (print) the degrees in Celsius.
 
 - Formula
   - $$C^{\circ} = (F^{\circ} - 32) \cdot \frac{5}{9}$$
@@ -77,9 +75,8 @@ temperature in degrees Fahrenheit and output (print) the degrees in Celsius.
 
 ### 5. Interest
 
-In the provided template file ```interest.py```, write a python program that will ask for the
-principal, annual interest rate, number of times compounded, and number of years and output
-(print) the final amount.
+Design and write a python program that will ask for the principal, annual interest rate, 
+number of times compounded, and number of years and output (print) the final amount.
 
 - Formula
 
@@ -97,8 +94,8 @@ principal, annual interest rate, number of times compounded, and number of years
 
 ### 6. Distance
 
-In the provided template file ```distance.py```, write a python program that will ask for
-two points: x1, y1, x2, and y2 and output (print) the distance between the two points
+Design and write a python program that will ask for two points: x1, y1, x2, and y2 and 
+output (print) the distance between the two points
 
 - Formula
 
@@ -116,9 +113,8 @@ two points: x1, y1, x2, and y2 and output (print) the distance between the two p
 
 ### 7. Change
 
-In the provided template file ```change.py```, write a python program that will ask for a price
-and the amount of given currency and will output (print) the numbers of 20s, 10s, 5s, 1s, .25s,
-,10s, .05s, and .01s
+Design and write a python program that will ask for a price and the amount of given 
+currency and will output (print) the numbers of 20s, 10s, 5s, 1s, .25s, ,10s, .05s, and .01s
 
 - Input
     - price
