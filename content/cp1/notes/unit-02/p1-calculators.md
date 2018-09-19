@@ -11,7 +11,7 @@ title: "Project 01 - Calculators"
 
 ### 1. Elapsed Time
 
-Design and write a python program that will ask for the starting time in 24 four format and 
+Design and write a python program that will ask for the starting time in 24 four format and
 duration and output (print) the end time.
 
 - Input
@@ -25,7 +25,7 @@ duration and output (print) the end time.
 
 ### 2. Tips
 
-Design and write a python program that will ask for the cost of a meal, 
+Design and write a python program that will ask for the cost of a meal,
 the tax rate (as decimal), and tip rate (as decimal) and output (print) the total amount to pay
 
 - Input
@@ -43,7 +43,7 @@ the tax rate (as decimal), and tip rate (as decimal) and output (print) the tota
 
 ### 3. Celsius to Fahrenheit
 
-Design and write a python program that will ask for the temperature in degrees Celsius and 
+Design and write a python program that will ask for the temperature in degrees Celsius and
 output (print) the degrees in Fahrenheit.
 
 - Formula
@@ -60,7 +60,7 @@ output (print) the degrees in Fahrenheit.
 
 ### 4. Fahrenheit to Celsius
 
-Design and write a python program that will ask for the temperature in degrees 
+Design and write a python program that will ask for the temperature in degrees
 Fahrenheit and output (print) the degrees in Celsius.
 
 - Formula
@@ -75,7 +75,7 @@ Fahrenheit and output (print) the degrees in Celsius.
 
 ### 5. Interest
 
-Design and write a python program that will ask for the principal, annual interest rate, 
+Design and write a python program that will ask for the principal, annual interest rate,
 number of times compounded, and number of years and output (print) the final amount.
 
 - Formula
@@ -94,7 +94,7 @@ number of times compounded, and number of years and output (print) the final amo
 
 ### 6. Distance
 
-Design and write a python program that will ask for two points: x1, y1, x2, and y2 and 
+Design and write a python program that will ask for two points: x1, y1, x2, and y2 and
 output (print) the distance between the two points
 
 - Formula
@@ -113,8 +113,9 @@ output (print) the distance between the two points
 
 ### 7. Change
 
-Design and write a python program that will ask for a price and the amount of given 
-currency and will output (print) the numbers of 20s, 10s, 5s, 1s, .25s, ,10s, .05s, and .01s
+Design and write a python program that will ask for a price and the amount of given
+currency and will output (print) the numbers of 20s, 10s, 5s, 1s, .25s (quarters),
+.10s (dimes), .05s (nickels), and .01s (pennies).
 
 - Input
     - price
