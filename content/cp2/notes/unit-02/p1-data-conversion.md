@@ -18,7 +18,7 @@ title: "Project 01 - Data Conversion"
         - *Data()*
             - creates a new **Data** object without initializing the number
         - *Data(int i)*
-            - creates anew **Data** and initialize using the parameter *i*
+            - creates a new **Data** and initialize using the parameter *i*
     - **Setter** methods
         - *setInt(int i)*
             - set value using integer *i*
@@ -78,19 +78,4 @@ DEC     HEX     BIN
 
 - Before submitting your work, please make sure all the supplied test succeed.
 
-1. Open a Terminal
-    - Window -> New Terminal
-
-2. Navigate to the project directory
-
-    ```
-    cd ~/workspace/cp2-workspace/semester-1/unit-02/p1-data-conversion
-    ```
-
-3. Run test
-
-    ```
-    make test
-    ```
-
-4. Read through TestReport.txt
+![](/images/cp2/unit-02/running_tests.gif)
