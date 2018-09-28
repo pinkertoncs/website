@@ -72,7 +72,7 @@ def hoo():
 
 
 def main():
-    note = msg() # 1. function hoo is invoked
+    note = hoo() # 1. function hoo is invoked
                  # 4. note gets returned value "hi!"
     print(note)
 
