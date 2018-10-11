@@ -6,9 +6,14 @@ title: "Enrichment 01 - Interactive Turtle"
 - Use turtle event handling to create a program that allows the user to draw using the keyboard and/or mouse
 - There is some starter code here
     - [Think CS Ch. 10: Event-driven programming](http://openbookproject.net/thinkcs/python/english3e/events.html)
+    - **NOTE to make the starter code work in repl.it**:
+      - delete line 3: ```turtle.setup(400,500)```
+      - delete line 5: ```wn.title("Handling keypresses!")```
+
 - On the [turtle graphics reference](https://docs.python.org/3.5/library/turtle.html), see sections on
     - Using events
     - Using screen events
+
 
 ## Features
 
