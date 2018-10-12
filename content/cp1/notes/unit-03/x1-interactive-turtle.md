@@ -26,3 +26,7 @@ title: "Enrichment 01 - Interactive Turtle"
 - Turtle attributes
     - use the RGB keys to set the color to red, green, blue respectively
     - use the +/- keys to increase or decrease the pen width (use the num pad for testing)
+
+## Helpful links
+
+- [Key codes for Turtle Graphics (TK)](http://tcl.tk/man/tcl8.4/TkCmd/keysyms.htm)
