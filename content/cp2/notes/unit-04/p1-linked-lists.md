@@ -22,21 +22,22 @@ title: "Project 01 - Linked Lists"
     - (For the full tests see Main.java and test/PersonTest.java)
     - When you create new instances of a Person, you will invoke the constructors
     - Other methods are invoked using the dot operator (**.**)
-```java
-// invokes the default constructor, Person()
-Person p1 = new Person();
 
-//invokes the 2-arg constructor, Person(String, String)
-Person p2 = new Person("John", "Doe");
+    ```java
+    // invokes the default constructor, Person()
+    Person p1 = new Person();
 
-p1.setName("Jane", "Doe");
+    //invokes the 2-arg constructor, Person(String, String)
+    Person p2 = new Person("John", "Doe");
 
-// use the toString method for output
-System.out.println(p1.toString());
+    p1.setName("Jane", "Doe");
 
-//use the compareTo method, compare p1 and p2
-System.out.println(p1.compareTo(p2));
-```
+    // use the toString method for output
+    System.out.println(p1.toString());
+
+    //use the compareTo method, compare p1 and p2
+    System.out.println(p1.compareTo(p2));
+    ```
 
 ## List
 
