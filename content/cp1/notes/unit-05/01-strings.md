@@ -126,7 +126,7 @@ KULIK
 ## String split & join
 - **split()** will split a string using whitespace and return a list of strings
 - **split(separator)** will split a string using a specified separator and return a list of strings
-- **joinlist)** will return a list as a string joined with the calling object
+- **join(list)** will return a list as a string joined with the calling object
 
 ```python
 # define & print string with spaces
