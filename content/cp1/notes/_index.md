@@ -37,7 +37,7 @@ date: 2018-06-06T07:46:59-04:00
   - [Lesson 02 - Dictionaries](unit-05/02-dictionaries/)
   - [Lesson 03 - File Input and Output](unit-05/03-file-io/)
   - [Lesson 04 - Graphing Data](unit-05/04-graphing-data/)
-  - [Project 01 - Letter Frequency Analysis](unit-05/p1-letter-frequency-analysis/)
+  - [Project 01 - Song Lyric Analysis](unit-05/p1-song-lyric-analysis/)
 - Unit 06 - Classes & Objects
   - [Lesson 01 - Object Oriented Programming](unit-06/01-object-oriented-programming/)
   - [Lesson 02 - Command Line Interface](unit-06/02-command-line-interface/)
