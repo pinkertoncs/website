@@ -6,9 +6,6 @@ title: "Project 01 - NetTech Webpage"
 
 - Do not use inline CSS!
     - Keep your styles separate from your structure (use internal or external CSS)
-- You will create one or two files for this assignment
-    - NetTech.html
-    - NetTech.css (optional - you could use internal CSS)
 
 ## Page Structure
 
