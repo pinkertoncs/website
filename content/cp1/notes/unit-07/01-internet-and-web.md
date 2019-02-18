@@ -92,7 +92,7 @@ In a basic **client-server** network
 ### The Mobile Web and Ubicomp
 
 - With the increased adoption of Internet connect **smartphones** and **tablets**, the Web went mobile
-- **Ubiquitous computing (Ubicomp) refers to the concept of computing everywhere and in many forms
+- **Ubiquitous computing** (Ubicomp) refers to the concept of computing everywhere and in many forms
 
 <img src='/images/cp1/unit-07/ubicomp.png' width='60%' />
 
