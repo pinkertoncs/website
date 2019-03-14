@@ -3,7 +3,7 @@ title: Home
 ---
 
 *"Computer Science is no more about computers than astronomy is about telescopes"*
--Edger W. Dijkstra
+-Edsger W. Dijkstra
 
 This website serves as a resource for students enrolled in computer programming courses at Pinkerton Academy.
 
