@@ -18,7 +18,7 @@ title: "Lesson 02 - HTML DOM"
 
 ## DOM Methods
 
-- *See previous motes for examples*
+- *See previous notes for examples*
 - The *document* object is at the top of the hierarchy
 - Getting elements
     - ```document.getElementById```
