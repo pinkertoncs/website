@@ -21,9 +21,11 @@ title: "Lesson 01 - Drawing and Animation"
 
 ### HTML
 ```html
-<h1> Canvas! </h1>
-<canvas id="game" width="400" height="250"></canvas>
-<script> initialize() </script>
+<body onload="initialize()">
+    <h1> Canvas! </h1>
+    <canvas id="game" width="400" height="250"></canvas>
+    <script src="script.js"></script>
+</body>
 ```
 
 ### JS
