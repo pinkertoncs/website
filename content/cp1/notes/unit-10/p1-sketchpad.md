@@ -5,7 +5,7 @@ title: "Project 01 - Sketchpad"
 ## Directions
 
 - Create a drawing app where you move a 'pen' using the arrow keys
-  - Refer back to the [Event handling](/cp1/motes/unit-09-04-event-handling) notes and your
+  - Refer back to the [Event handling](/cp1/notes/unit-09-04-event-handling) notes and your
   activities in the DOM worksheet
 
 - Assign other keys to these tasks

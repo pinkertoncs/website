@@ -64,6 +64,5 @@ date: 2018-06-06T07:46:59-04:00
   - [Lesson 01 - Drawing and Animation](unit-10/01-drawing-and-animation/)
   - [Lesson 02 - Game Physics](unit-10/02-game-physics/)
   - [Lesson 03 - JavaScript OOP](unit-10/03-js-oop/)
-  - [Worksheet 01- Web Graphics](unit-10/ws1-web-graphics/)
   - [Project 01 - SketchPad](unit-10/p1-sketchpad)
   - [Enrichment 01 - JS Game](unit-10/x1-jsgame/)
