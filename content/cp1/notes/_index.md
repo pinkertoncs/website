@@ -65,4 +65,4 @@ date: 2018-06-06T07:46:59-04:00
   - [Lesson 02 - Game Physics](unit-10/02-game-physics/)
   - [Lesson 03 - JavaScript OOP](unit-10/03-js-oop/)
   - [Project 01 - SketchPad](unit-10/p1-sketchpad)
-  - [Enrichment 01 - JS Game](unit-10/x1-jsgame/)
+  - [Project 02 - JS Game](unit-10/x1-jsgame/)
