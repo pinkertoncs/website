@@ -21,8 +21,17 @@ We will learn:
   - [Getting Started with the RaspberryPi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started)
   - [Getting Started with Edublocks](https://learn.edublocks.org/tutorial/getting-started-py#0)
   - Building Blocks of Python
+      - imports
       - variables
-      - LIST ALL THE SECTIONS FROM EDUBLOCKS
+      - statements
+      - logic
+      - lists
+      - loops
+      - definitions
+      - math
+      - turtle
+      - graphs
+      - random
   - [Project: Happy Birthday Song](https://learn.edublocks.org/tutorial/happy-birthday#0)
   - [Project: Create a Graph](https://learn.edublocks.org/tutorial/create-a-graph#0)
   - [Project: Turtle Spirals](https://learn.edublocks.org/tutorial/turtle-spiral#0)
