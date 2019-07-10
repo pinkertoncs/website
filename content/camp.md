@@ -43,14 +43,15 @@ We will learn:
   - [Project: Traffic Lights](https://learn.edublocks.org/tutorial/traffic-lights#0)
 
 - Wednesday
+  - 20 minutes for finishing up Traffic Lights Project
   - Edublocks to Python
       - Introduction to Thonny Editor
+  - [PyGame Zero Introduction](https://pygame-zero.readthedocs.io/en/stable/introduction.html)
   - [Physical Computing with Python](https://projects.raspberrypi.org/en/projects/physical-computing)
-  - [Getting started with the Sense HAT](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat)
 
 
 - Thursday
-  - [PyGame Zero Introduction](https://pygame-zero.readthedocs.io/en/stable/introduction.html)
+  - [Getting started with the Sense HAT](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat)
   - Individual Projects
       - Create a game using PyGame Zero
       - Draw a scene using Turtle
